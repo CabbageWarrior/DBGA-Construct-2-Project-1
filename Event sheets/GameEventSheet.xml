@@ -115,7 +115,22 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="239259654411433" title="BallMovement" />
+                <event-group description="" sid="239259654411433" title="BallMovement">
+                    <sub-events>
+                        <event-block sid="614018621775115">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="598077762149373" type="Ball">
+                                    <param id="0" name="Object">PlayerBar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="180591261030996" type="Ball">
+                                    <param id="0" name="Angle">angle(PlayerBar.ImagePointX(&quot;AngleDefiner&quot;), PlayerBar.ImagePointY(&quot;AngleDefiner&quot;), Ball.X, Ball.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
