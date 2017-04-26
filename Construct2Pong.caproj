@@ -10,12 +10,15 @@
     <unique-id>h1rwguczlx2</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -64,6 +67,49 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Border" sid="916834785075075">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="483891880379331">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170249720554008" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ball" sid="646891843161450">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="361987747890016">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="326377706564812">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="320170802894446">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148657605407932" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpawnBall" sid="476984606475743">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="985866420168622" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="726752285870714">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayerBar" plugin-id="Sprite" sid="298181731564416">
@@ -83,6 +129,11 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
+            <members>
+                <member>SpawnBall</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>Game.xml</layout>
@@ -93,6 +144,7 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
+        <global-instance type="Function" uid="7" />
     </global-instances>
     <sounds-folder />
     <music-folder />
