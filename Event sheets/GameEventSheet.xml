@@ -4,5 +4,61 @@
     <name>GameEventSheet</name>
     <events>
         <include>_GlobalEventSheet</include>
+        <event-group description="" sid="919855396414672" title="Player">
+            <sub-events>
+                <event-group description="" sid="165081137850587" title="PlayerMovement">
+                    <sub-events>
+                        <event-block sid="841464512297942">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="628608737090450" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="UpAndDown" id="7" name="Simulate control" sid="143487868098891" type="Player1Bar">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="849011648110337">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="507470068271360" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="UpAndDown" id="7" name="Simulate control" sid="131257736287902" type="Player1Bar">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="329097212520574">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="498659707000617" type="Keyboard">
+                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="UpAndDown" id="7" name="Simulate control" sid="306651660812794" type="Player2Bar">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="954725718370741">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="440623433146183" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="UpAndDown" id="7" name="Simulate control" sid="528155673160620" type="Player2Bar">
+                                    <param id="0" name="Control">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
