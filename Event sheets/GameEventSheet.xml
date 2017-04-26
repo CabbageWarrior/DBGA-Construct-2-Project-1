@@ -16,6 +16,63 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="661776011809535">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="445708220168730" type="System">
+                                    <param id="0" name="Object">PlayerBar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="936276577846963" type="Function">
+                                    <param id="0" name="Name">&quot;ChangeGateDimension&quot;</param>
+                                    <param id="1" name="Parameter {n}">PlayerBar.UID{###}DEF_GATE_DIMENSION</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="470067538550200">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="442262136216315" type="BorderVerticalTop">
+                                            <param id="0" name="Instance variable">PlayerRef</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PlayerBar.PlayerRef</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="120036810095509" type="BorderVerticalTop">
+                                            <param id="0" name="Angle">choose(-90, 90)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="629471470124220">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="463767687627051" type="BorderVerticalBottom">
+                                                    <param id="0" name="Instance variable">PlayerRef</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">PlayerBar.PlayerRef</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="519688052656984" type="BorderVerticalBottom">
+                                                    <param id="0" name="Angle">BorderVerticalTop.Bullet.AngleOfMotion</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="308829025289008">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="102965938926929" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="966795521643960" type="DebugText">
+                            <param id="0" name="Text">&quot;Max Y: &quot; &amp; (BorderVerticalTop.Height / 2 + DEF_GRID_DIMENSION - BorderVerticalTop.Height) &amp; newline &amp; &quot;Actual Y: &quot; &amp; BorderVerticalTop.Y</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -75,6 +132,142 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-group description="" sid="613693530481476" title="VerticalGates">
+            <sub-events>
+                <event-block sid="701981735153297">
+                    <conditions>
+                        <condition id="0" name="On function" sid="342572441511047" type="Function">
+                            <param id="0" name="Name">&quot;ChangeGateDimension&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="677171621551160">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="443680230667084" type="PlayerBar">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="949107233613305">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="960541874002201" type="BorderVerticalTop">
+                                            <param id="0" name="Instance variable">PlayerRef</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PlayerBar.PlayerRef</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="851747078318862" type="BorderVerticalTop">
+                                            <param id="0" name="Y">Self.Y + ((PlayerBar.GateDimension-Function.Param(1)) / 2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="790547512447909">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="899682314417462" type="BorderVerticalBottom">
+                                            <param id="0" name="Instance variable">PlayerRef</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">PlayerBar.PlayerRef</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="962477146467009" type="BorderVerticalBottom">
+                                            <param id="0" name="Y">Self.Y - ((PlayerBar.GateDimension-Function.Param(1)) / 2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="213474242546159">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="167615612171909" type="PlayerBar">
+                                            <param id="0" name="Instance variable">GateDimension</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="626827341234174">
+                    <conditions>
+                        <condition id="0" name="On function" sid="830822007467343" type="Function">
+                            <param id="0" name="Name">&quot;ChangeGateDirection&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="259087776829519">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="654758167099266" type="BorderVertical">
+                                    <param id="0" name="Instance variable">PlayerRef</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="956670493620734" type="BorderVerticalTop">
+                                    <param id="0" name="Angle">Self.Bullet.AngleOfMotion * -1</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="704406710590935" type="BorderVerticalBottom">
+                                    <param id="0" name="Angle">Self.Bullet.AngleOfMotion * -1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="454507191315738">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="115355347083592" type="System">
+                            <param id="0" name="Object">BorderVerticalTop</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="737088777528540">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="751861874842998" type="BorderVerticalTop">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">(LayoutHeight - DEF_GRID_DIMENSION) * -1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="672876043049148" type="Function">
+                                    <param id="0" name="Name">&quot;ChangeGateDirection&quot;</param>
+                                    <param id="1" name="Parameter {n}">BorderVerticalTop.PlayerRef</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="448576964861266">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="666109812433292" type="System">
+                            <param id="0" name="Object">BorderVerticalBottom</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="452111970800551">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="173798566447693" type="BorderVerticalBottom">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">(LayoutHeight - DEF_GRID_DIMENSION)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="621530618390223" type="Function">
+                                    <param id="0" name="Name">&quot;ChangeGateDirection&quot;</param>
+                                    <param id="1" name="Parameter {n}">BorderVerticalBottom.PlayerRef</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="991334836977307" title="Ball">
             <sub-events>
                 <event-block sid="803213586220529">
@@ -97,7 +290,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="556144389456861" type="Ball">
-                            <param id="0" name="Angle">random(360)</param>
+                            <param id="0" name="Angle">choose(random(-70, 70), random(110, 290))</param>
                         </action>
                     </actions>
                 </event-block>

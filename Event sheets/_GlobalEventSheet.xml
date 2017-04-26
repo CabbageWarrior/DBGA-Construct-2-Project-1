@@ -2,5 +2,8 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>_GlobalEventSheet</name>
-    <events />
+    <events>
+        <variable constant="1" name="DEF_GATE_DIMENSION" sid="931003979285292" static="0" type="number">300</variable>
+        <variable constant="1" name="DEF_GRID_DIMENSION" sid="477816339912341" static="0" type="number">50</variable>
+    </events>
 </c2eventsheet>

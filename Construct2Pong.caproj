@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -71,13 +72,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Border" sid="916834785075075">
+        <object-type name="BorderHorizontal" sid="916834785075075">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="483891880379331">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="170249720554008" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
@@ -114,6 +110,49 @@
         <object-type name="Function" sid="726752285870714">
             <plugin id="Function" />
         </object-type>
+        <object-type name="BorderVerticalTop" sid="673573750039950">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="966899675096595">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697094218713970" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BorderVerticalBottom" sid="343203715073630">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="872276310396388">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="519075170737893" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DebugText" sid="140430659013010">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="PlayerBar" plugin-id="Sprite" sid="298181731564416">
@@ -121,6 +160,10 @@
                 <member>Player1Bar</member>
                 <member>Player2Bar</member>
             </members>
+            <instance-variables>
+                <instance-variable name="PlayerRef" sid="766313407074340" type="number" />
+                <instance-variable name="GateDimension" sid="183314820894675" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="736419341070504">
                     <behavior id="solid" />
@@ -137,6 +180,27 @@
             <members>
                 <member>SpawnBall</member>
             </members>
+        </family>
+        <family name="Border" plugin-id="Sprite" sid="713454777150640">
+            <members>
+                <member>BorderHorizontal</member>
+                <member>BorderVerticalBottom</member>
+                <member>BorderVerticalTop</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Solid" sid="386515513630703">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="BorderVertical" plugin-id="Sprite" sid="114674167729137">
+            <members>
+                <member>BorderVerticalBottom</member>
+                <member>BorderVerticalTop</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="PlayerRef" sid="508780189609608" type="number" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>
