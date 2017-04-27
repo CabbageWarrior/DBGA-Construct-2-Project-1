@@ -18,6 +18,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -92,6 +93,9 @@
                 <behavior-type name="DestroyOutsideLayout" sid="320170802894446">
                     <behavior id="destroy" />
                 </behavior-type>
+                <behavior-type name="Sine" sid="240390094134765">
+                    <behavior id="Sin" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148657605407932" speed="5">
@@ -119,7 +123,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697094218713970" speed="5">
-                    <frame duration="1" hotspotX="1" hotspotY="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
                         <collision-poly>
                             <point x="1" y="0" />
                             <point x="1" y="1" />
@@ -151,6 +155,17 @@
             </animation-folder>
         </object-type>
         <object-type name="DebugText" sid="140430659013010">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite" sid="890122763459844">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="393974145764388" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="357542435796099">
             <plugin id="Text" />
         </object-type>
     </object-folder>
@@ -200,6 +215,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="PlayerRef" sid="508780189609608" type="number" />
+                <instance-variable name="Direction" sid="793898737320629" type="string" />
             </instance-variables>
         </family>
     </families>
