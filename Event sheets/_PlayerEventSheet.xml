@@ -20,13 +20,16 @@
                             <sub-events>
                                 <event-group description="" sid="763855699221762" title="Player 1 Movement">
                                     <sub-events>
-                                        <event-block sid="190900556129185">
+                                        <event-block any="1" sid="190900556129185">
                                             <conditions>
                                                 <condition id="5" name="Compare axis" sid="330315065102631" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
                                                     <param id="1" name="Axis">0</param>
                                                     <param id="2" name="Comparison">2</param>
                                                     <param id="3" name="Value">0</param>
+                                                </condition>
+                                                <condition id="2" name="Key is down" sid="626058798577788" type="Keyboard">
+                                                    <param id="0" name="Key">37 (Left arrow)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -36,13 +39,16 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="433038079586362">
+                                        <event-block any="1" sid="433038079586362">
                                             <conditions>
                                                 <condition id="5" name="Compare axis" sid="304157665474225" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
                                                     <param id="1" name="Axis">0</param>
                                                     <param id="2" name="Comparison">4</param>
                                                     <param id="3" name="Value">0</param>
+                                                </condition>
+                                                <condition id="2" name="Key is down" sid="667169077936433" type="Keyboard">
+                                                    <param id="0" name="Key">39 (Right arrow)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -52,13 +58,16 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="386790182895673">
+                                        <event-block any="1" sid="386790182895673">
                                             <conditions>
                                                 <condition id="5" name="Compare axis" sid="256174233803256" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
                                                     <param id="1" name="Axis">1</param>
                                                     <param id="2" name="Comparison">2</param>
                                                     <param id="3" name="Value">0</param>
+                                                </condition>
+                                                <condition id="2" name="Key is down" sid="188425544483156" type="Keyboard">
+                                                    <param id="0" name="Key">38 (Up arrow)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -68,7 +77,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="537661772689426">
+                                        <event-block any="1" sid="537661772689426">
                                             <conditions>
                                                 <condition id="5" name="Compare axis" sid="346637549544618" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
@@ -76,61 +85,12 @@
                                                     <param id="2" name="Comparison">4</param>
                                                     <param id="3" name="Value">0</param>
                                                 </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="134888669366608" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="794783549785191">
-                                            <conditions>
-                                                <condition id="2" name="Key is down" sid="626058798577788" type="Keyboard">
-                                                    <param id="0" name="Key">37 (Left arrow)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="492180800778494" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Left&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="731257696539880">
-                                            <conditions>
-                                                <condition id="2" name="Key is down" sid="667169077936433" type="Keyboard">
-                                                    <param id="0" name="Key">39 (Right arrow)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="121093066067124" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Right&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="200037426900354">
-                                            <conditions>
-                                                <condition id="2" name="Key is down" sid="337196582051985" type="Keyboard">
-                                                    <param id="0" name="Key">38 (Up arrow)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="915375650668857" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Up&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="278681403584366">
-                                            <conditions>
-                                                <condition id="2" name="Key is down" sid="493271772679763" type="Keyboard">
+                                                <condition id="2" name="Key is down" sid="337498795077783" type="Keyboard">
                                                     <param id="0" name="Key">40 (Down arrow)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="369087496725839" type="Function">
+                                                <action id="0" name="Call function" sid="134888669366608" type="Function">
                                                     <param id="0" name="Name">&quot;PlayerMove&quot;</param>
                                                     <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
                                                 </action>
@@ -688,7 +648,7 @@
                                         </action>
                                         <action behavior="Pin" id="1" name="Unpin" sid="980597671207984" type="LifeBar" />
                                         <action id="-2" name="Set Y" sid="695477211744097" type="LifeBar">
-                                            <param id="0" name="Y">LifeBarBackground.Y - LifeBarBackground.Height / Player.HPTotal + LifeBarBackground.Height / Player.HP</param>
+                                            <param id="0" name="Y">LifeBarBackground.Y - (LifeBarBackground.Height * Player.HP / Player.HPTotal) / 2</param>
                                         </action>
                                         <action behavior="Pin" id="0" name="Pin to object" sid="231147636708906" type="LifeBar">
                                             <param id="0" name="Pin to">Player</param>
