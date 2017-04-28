@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Prototype1EventSheet</name>
+    <events>
+        <include>_GlobalEventSheet</include>
+        <include>_PlayerEventSheet</include>
+        <event-block sid="505421257834110">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="212073954403541" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="641415736594887" type="Function">
+                    <param id="0" name="Name">&quot;PlayerCreate&quot;</param>
+                    <param id="1" name="Parameter {n}">1000{###}500{###}1{###}1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
