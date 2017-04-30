@@ -24,7 +24,6 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
-        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -96,6 +95,9 @@
                 <instance-variables>
                     <instance-variable comment="Last team who controlled the ball. 1: Stark; 2: Cap." name="LastTeam" sid="899644538489256" type="number" />
                     <instance-variable comment="Last Player Number of the player who controlled the ball. 1-4 = Player Number." name="LastPlayerNumber" sid="865514842274887" type="number" />
+                    <instance-variable name="DefaultSpeed" sid="602519304237523" type="number" />
+                    <instance-variable name="DefaultDamage" sid="250006956807136" type="number" />
+                    <instance-variable name="Damage" sid="564350853660523" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="361987747890016">
@@ -104,8 +106,11 @@
                     <behavior-type name="Bullet" sid="326377706564812">
                         <behavior id="Bullet" />
                     </behavior-type>
-                    <behavior-type name="DestroyOutsideLayout" sid="320170802894446">
-                        <behavior id="destroy" />
+                    <behavior-type name="BlinkSine" sid="553523782788779">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="860061782276998">
+                        <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -136,6 +141,9 @@
                     <instance-variable name="VelTotal" sid="877324444502908" type="number" />
                     <instance-variable name="Pow" sid="469756034753470" type="number" />
                     <instance-variable name="PowTotal" sid="658942924274822" type="number" />
+                    <instance-variable name="SkillGrabBallEnabled" sid="486677607566552" type="number" />
+                    <instance-variable name="SkillGrabBallTryingToGrab" sid="171465504804379" type="number" />
+                    <instance-variable name="SkillGrabBallIsGrabbing" sid="747493869920378" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="903587181961033">
@@ -152,7 +160,10 @@
                 </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="675822147814457" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="BounceLeft" x="1.3" y="0.5" />
+                            <image-point name="BounceRight" x="-0.3" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>

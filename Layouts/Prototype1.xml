@@ -319,6 +319,9 @@
                     <instance-variables>
                         <LastTeam>0</LastTeam>
                         <LastPlayerNumber>0</LastPlayerNumber>
+                        <DefaultSpeed>600</DefaultSpeed>
+                        <DefaultDamage>1</DefaultDamage>
+                        <Damage>1</Damage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -328,15 +331,28 @@
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>600</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>Yes</bounce-off-solids>
                                 <set-angle>No</set-angle>
-                                <initial-state>Disabled</initial-state>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="BlinkSine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Opacity</movement>
+                                <wave>Square</wave>
+                                <period>1</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -370,6 +386,9 @@
                         <VelTotal>0</VelTotal>
                         <Pow>0</Pow>
                         <PowTotal>0</PowTotal>
+                        <SkillGrabBallEnabled>1</SkillGrabBallEnabled>
+                        <SkillGrabBallTryingToGrab>0</SkillGrabBallTryingToGrab>
+                        <SkillGrabBallIsGrabbing>0</SkillGrabBallIsGrabbing>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -878,10 +897,10 @@
             <instances>
                 <instance type="Text2" uid="45">
                     <properties>
-                        <text>Barra muovibile con frecce, perde vita con spazio.</text>
+                        <text>Barra muovibile con frecce, cattura la palla con spazio. Work in progress.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -891,8 +910,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>850</x>
-                        <y>300</y>
+                        <x>700</x>
+                        <y>375</y>
                         <z>0</z>
                         <width>275</width>
                         <height>100</height>

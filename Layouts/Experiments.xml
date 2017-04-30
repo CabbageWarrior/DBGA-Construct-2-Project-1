@@ -39,6 +39,9 @@
                     <instance-variables>
                         <LastTeam>0</LastTeam>
                         <LastPlayerNumber>0</LastPlayerNumber>
+                        <DefaultSpeed>600</DefaultSpeed>
+                        <DefaultDamage>1</DefaultDamage>
+                        <Damage>1</Damage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -48,7 +51,7 @@
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>600</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>Yes</bounce-off-solids>
@@ -56,7 +59,20 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="BlinkSine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Opacity</movement>
+                                <wave>Square</wave>
+                                <period>1</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -239,24 +255,40 @@
                     <instance-variables>
                         <LastTeam>0</LastTeam>
                         <LastPlayerNumber>0</LastPlayerNumber>
+                        <DefaultSpeed>600</DefaultSpeed>
+                        <DefaultDamage>1</DefaultDamage>
+                        <Damage>1</Damage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Disabled</initial-state>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>200</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>Yes</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
+                                <set-angle>No</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="BlinkSine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Opacity</movement>
+                                <wave>Square</wave>
+                                <period>1</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -290,6 +322,9 @@
                         <VelTotal>0</VelTotal>
                         <Pow>0</Pow>
                         <PowTotal>0</PowTotal>
+                        <SkillGrabBallEnabled>1</SkillGrabBallEnabled>
+                        <SkillGrabBallTryingToGrab>0</SkillGrabBallTryingToGrab>
+                        <SkillGrabBallIsGrabbing>0</SkillGrabBallIsGrabbing>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
