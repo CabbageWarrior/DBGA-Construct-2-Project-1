@@ -10,6 +10,7 @@
     <unique-id>h1rwguczlx2</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
@@ -26,7 +27,9 @@
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="setcolor">Set color</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -104,9 +107,6 @@
                     <behavior-type name="DestroyOutsideLayout" sid="320170802894446">
                         <behavior id="destroy" />
                     </behavior-type>
-                    <behavior-type name="Sine" sid="240390094134765">
-                        <behavior id="Sin" />
-                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148657605407932" speed="5">
@@ -127,10 +127,15 @@
             <object-type name="Player" sid="630767457233651">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="647201793282606" type="number" />
                     <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="427794266003993" type="number" />
+                    <instance-variable name="CharacterNumber" sid="930006056575049" type="number" />
+                    <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="647201793282606" type="number" />
                     <instance-variable name="HP" sid="402025276858831" type="number" />
                     <instance-variable comment="Total amount of HP." name="HPTotal" sid="321058058233023" type="number" />
+                    <instance-variable name="Vel" sid="731549782333269" type="number" />
+                    <instance-variable name="VelTotal" sid="877324444502908" type="number" />
+                    <instance-variable name="Pow" sid="469756034753470" type="number" />
+                    <instance-variable name="PowTotal" sid="658942924274822" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="903587181961033">
@@ -140,6 +145,11 @@
                         <behavior id="EightDir" />
                     </behavior-type>
                 </behaviors>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="675822147814457" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -150,6 +160,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="264548491010704" type="number" />
+                    <instance-variable name="Used" sid="875426463971964" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="559380962477695" speed="5">
@@ -190,6 +201,9 @@
                         <frame duration="1" hotspotX="0.52" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type global="1" name="CharactersArray" sid="603423552914452">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
         <object-folder name="Power-Up">

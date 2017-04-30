@@ -425,9 +425,25 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-group description="" sid="384742301337729" title="Player Behaviors">
+            <sub-events>
+                <event-block any="1" sid="266148419860331">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="358539724705218" type="Player">
+                            <param id="0" name="Object">HalfWayLine</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="490610167782156" type="Player">
+                            <param id="0" name="Vector X">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="157863677218887" title="Player Functions">
             <sub-events>
-                <comment>Parametri: 0: X, 1: Y, 2: Team, 3: numero giocatore</comment>
+                <comment>Parametri: 0: X, 1: Y, 2: Character Number, 3: numero giocatore</comment>
                 <event-block sid="219212973633841">
                     <conditions>
                         <condition id="0" name="On function" sid="949030487150199" type="Function">
@@ -451,53 +467,84 @@
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="281311219451195" type="Player">
-                            <param id="0" name="Instance variable">Team</param>
-                            <param id="1" name="Value">Function.Param(2)</param>
-                        </action>
                         <action id="-10" name="Set value" sid="254482214050372" type="Player">
                             <param id="0" name="Instance variable">PlayerNumber</param>
                             <param id="1" name="Value">Function.Param(3)</param>
                         </action>
+                        <action id="-10" name="Set value" sid="281311219451195" type="Player">
+                            <param id="0" name="Instance variable">CharacterNumber</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="661277899536384" type="Player">
+                            <param id="0" name="Instance variable">Team</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="307521220440199" type="Player">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 3)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="336731224257642" type="Player">
+                            <param id="0" name="Instance variable">HPTotal</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 3)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="993412161785571" type="Player">
+                            <param id="0" name="Instance variable">Vel</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 4)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="941713298642168" type="Player">
+                            <param id="0" name="Instance variable">VelTotal</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 4)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="644868577184160" type="Player">
+                            <param id="0" name="Instance variable">Pow</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 5)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="589419321231910" type="Player">
+                            <param id="0" name="Instance variable">PowTotal</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 5)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="536628313941379" type="Player">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">CharactersArray.At(Function.Param(2), 6)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="441225642153525" type="Player">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">CharactersArray.At(Function.Param(2), 7)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="446836154193655" type="Player">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">CharactersArray.At(Function.Param(2), 8)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="309547943369599" type="LifeBarBackground">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="435899964681641" type="LifeBarBackground">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Value">Function.Param(3)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="241357450103343" type="LifeBarBackground">
+                            <param id="0" name="Instance variable">Team</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="274137342826032" type="LifeBarBackground" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="200223355766695" type="LifeBar">
+                            <param id="0" name="Pin to">Player</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="718199958847187" type="LifeBar">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Value">Function.Param(3)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="311855049689528" type="LifeBar">
+                            <param id="0" name="Instance variable">Team</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="225718098715419" type="LifeBar" />
                     </actions>
-                    <sub-events>
-                        <event-block sid="469528996730850">
-                            <conditions />
-                            <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="309547943369599" type="LifeBarBackground">
-                                    <param id="0" name="Pin to">Player</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="241357450103343" type="LifeBarBackground">
-                                    <param id="0" name="Instance variable">Team</param>
-                                    <param id="1" name="Value">Function.Param(2)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="435899964681641" type="LifeBarBackground">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Value">Function.Param(3)</param>
-                                </action>
-                                <action id="-24" name="Move to top" sid="274137342826032" type="LifeBarBackground" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="324681227772485">
-                            <conditions />
-                            <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="200223355766695" type="LifeBar">
-                                    <param id="0" name="Pin to">Player</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="311855049689528" type="LifeBar">
-                                    <param id="0" name="Instance variable">Team</param>
-                                    <param id="1" name="Value">Function.Param(2)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="718199958847187" type="LifeBar">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Value">Function.Param(3)</param>
-                                </action>
-                                <action id="-24" name="Move to top" sid="225718098715419" type="LifeBar" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <comment>Parametri: 0: UID del Player, 1: Direzione (&quot;Up&quot;, &quot;Down&quot;, &quot;Left&quot;, &quot;Right&quot;)</comment>
                 <event-block sid="773955778479747">
@@ -549,11 +596,25 @@
                                     <param id="2" name="Value">&quot;Left&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="906899252167250" type="Player">
-                                    <param id="0" name="Control">0</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="845751028301912">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="149172560588932" type="Player">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">HalfWayLine.X</param>
+                                        </condition>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="269417055690206" type="Player">
+                                            <param id="0" name="Object">HalfWayLine</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="982005840671044" type="Player">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="806478753638029">
                             <conditions>
@@ -564,11 +625,25 @@
                                     <param id="2" name="Value">&quot;Right&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="8Direction" id="7" name="Simulate control" sid="901646721268158" type="Player">
-                                    <param id="0" name="Control">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="365725069283239">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="575301828970918" type="Player">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">HalfWayLine.X</param>
+                                        </condition>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="997893128338976" type="Player">
+                                            <param id="0" name="Object">HalfWayLine</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="901646721268158" type="Player">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -648,7 +723,7 @@
                                         </action>
                                         <action behavior="Pin" id="1" name="Unpin" sid="980597671207984" type="LifeBar" />
                                         <action id="-2" name="Set Y" sid="695477211744097" type="LifeBar">
-                                            <param id="0" name="Y">LifeBarBackground.Y - (LifeBarBackground.Height * Player.HP / Player.HPTotal) / 2</param>
+                                            <param id="0" name="Y">LifeBarBackground.Y + LifeBarBackground.Height / 2 - (LifeBarBackground.Height * Player.HP / Player.HPTotal) / 2</param>
                                         </action>
                                         <action behavior="Pin" id="0" name="Pin to object" sid="231147636708906" type="LifeBar">
                                             <param id="0" name="Pin to">Player</param>
