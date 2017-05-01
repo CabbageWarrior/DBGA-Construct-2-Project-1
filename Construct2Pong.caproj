@@ -24,6 +24,7 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -151,6 +152,12 @@
                     </behavior-type>
                     <behavior-type name="8Direction" sid="841699245598175">
                         <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="PrepareGrabbingTimer" sid="169203146179591">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                    <behavior-type name="GrabTimer" sid="949835769917895">
+                        <behavior id="Timer" />
                     </behavior-type>
                 </behaviors>
                 <effects>

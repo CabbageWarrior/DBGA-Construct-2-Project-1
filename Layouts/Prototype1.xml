@@ -407,6 +407,8 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="PrepareGrabbingTimer" />
+                        <behavior-instance type="GrabTimer" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">
