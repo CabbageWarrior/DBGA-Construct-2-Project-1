@@ -303,8 +303,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text" sid="357542435796099">
+        <object-type name="TextYouWin" sid="357542435796099">
             <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Team" sid="288548731465194" type="number" />
+            </instance-variables>
         </object-type>
         <object-type name="Gamepad" sid="233666243575668">
             <plugin id="gamepad" />
@@ -316,11 +319,39 @@
         <object-type name="Text2" sid="540707769703792">
             <plugin id="Text" />
         </object-type>
+        <object-type name="TimeTextHours" sid="581123435047362">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TimeTextMinutes" sid="466671675925464">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TimeTextSeparator" sid="507637769316447">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextYouLose" sid="926234843223166">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Team" sid="871541018781262" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="TextDraft" sid="194625547946754">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
             <members>
                 <member>SpawnBall</member>
+            </members>
+        </family>
+        <family name="MonkeyIslandText" plugin-id="Text" sid="868286174038958">
+            <members>
+                <member>TextDraft</member>
+                <member>TextYouLose</member>
+                <member>TextYouWin</member>
+                <member>TimeTextHours</member>
+                <member>TimeTextMinutes</member>
+                <member>TimeTextSeparator</member>
             </members>
         </family>
     </families>
@@ -355,5 +386,9 @@
         <file name="monkeyisland-1991-refined.woff" />
         <file name="monkeyisland-1991-refined.woff2" />
         <file name="stylesheet.css" />
+        <file name="monkeyisland-1991-refined.ttf" />
+        <file name="MonkeyIsland-1990-refined.ttf" />
+        <file name="MonkeyIsland-1990-refined.woff" />
+        <file name="MonkeyIsland-1990-refined.woff2" />
     </files-folder>
 </c2project>

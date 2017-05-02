@@ -501,12 +501,22 @@
                             <param id="0" name="Object">Ball</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="981999665122676" type="Ball">
-                            <param id="0" name="Speed">Ball.DefaultSpeed</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="316473796267522">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="321161792091297" type="Ball">
+                                    <param id="0" name="Instance variable">LastPlayerUID</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="981999665122676" type="Ball">
+                                    <param id="0" name="Speed">Ball.DefaultSpeed</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Primo contatto della partita con la palla.</comment>
                         <event-block disabled="1" sid="674020315274169">
                             <conditions>
@@ -610,6 +620,11 @@
                         <condition id="0" name="On collision with another object" sid="503207369921367" type="Ball">
                             <param id="0" name="Object">Border</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="868166994943222" type="Ball">
+                            <param id="0" name="Instance variable">LastPlayerUID</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="0" name="Set speed" sid="191510658303877" type="Ball">
@@ -621,6 +636,11 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="477090908675429" type="Ball">
                             <param id="0" name="Object">Ball</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="283584102642480" type="Ball">
+                            <param id="0" name="Instance variable">LastPlayerUID</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1106,6 +1126,39 @@
                                         </action>
                                         <action id="-25" name="Move to bottom" sid="552278383346357" type="PlayerGrabCollider" />
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="438385487486841">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="335048195481354" type="Player">
+                                                    <param id="0" name="Instance variable">Team</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="161288892760259" type="System">
+                                                    <param id="0" name="Variable">HowManyTeam1</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="921311977860625">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="652928035157626" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="306629151883900" type="Player">
+                                                    <param id="0" name="Instance variable">Team</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="132103347770561" type="System">
+                                                    <param id="0" name="Variable">HowManyTeam2</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1402,6 +1455,37 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="581495086330413">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="809242916441552" type="Player">
+                                    <param id="0" name="Instance variable">Team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="115507781039824" type="System">
+                                    <param id="0" name="Variable">HowManyTeam1</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="362979559772717">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="133970855919649" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="203737614451665" type="Player">
+                                    <param id="0" name="Instance variable">Team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="251795854343900" type="System">
+                                    <param id="0" name="Variable">HowManyTeam2</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="621969275290735">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="489713474231292" type="LifeBar">
@@ -1442,6 +1526,10 @@
                             <conditions />
                             <actions>
                                 <action id="-9" name="Destroy" sid="596474355477704" type="Player" />
+                                <action id="0" name="Call function" sid="822164388836057" type="Function">
+                                    <param id="0" name="Name">&quot;CheckVictory&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
