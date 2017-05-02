@@ -5,6 +5,15 @@
     <events>
         <variable constant="1" name="DEF_GATE_DIMENSION" sid="931003979285292" static="0" type="number">300</variable>
         <variable constant="1" name="DEF_GRID_DIMENSION" sid="477816339912341" static="0" type="number">50</variable>
+        <variable constant="1" name="CHARACTER_TYPE_DEFAULT" sid="525126073600669" static="0" type="number">1</variable>
+        <variable constant="1" name="CHARACTER_TYPE_TANK" sid="497758715841600" static="0" type="number">2</variable>
+        <variable constant="1" name="CHARACTER_TYPE_POWERED" sid="850440388461698" static="0" type="number">3</variable>
+        <variable constant="1" name="CHARACTER_TYPE_RUNNER" sid="186745166713780" static="0" type="number">4</variable>
+        <variable constant="1" name="CHARACTER_STAT_POINTS_DEFAULT" sid="732834791996443" static="0" type="number">3</variable>
+        <variable constant="1" name="CHARACTER_DEFAULT_HEIGHT" sid="567042304574400" static="0" type="number">200</variable>
+        <variable constant="1" name="CHARACTER_DEFAULT_WIDTH" sid="484529372780017" static="0" type="number">50</variable>
+        <variable constant="1" name="CHARACTER_DEFAULT_SPEED" sid="830332573322609" static="0" type="number">800</variable>
+        <variable constant="1" name="CHARACTER_GRAB_COLLISION_RANGE" sid="885289075493017" static="0" type="number">75</variable>
         <event-block sid="310475909449286">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="693286711239400" type="System" />
@@ -38,7 +47,7 @@
                                 <action id="3" name="Set at XY" sid="986122821702970" type="CharactersArray">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">CHARACTER_TYPE_DEFAULT</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="371030664892122" type="CharactersArray">
                                     <param id="0" name="X">0</param>
@@ -48,31 +57,31 @@
                                 <action id="3" name="Set at XY" sid="118276190759180" type="CharactersArray">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="748753477961563" type="CharactersArray">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="936302417238020" type="CharactersArray">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="945621166763538" type="CharactersArray">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">6</param>
                                     <param id="2" name="Value">255</param>
                                 </action>
-                                <action id="3" name="Set at XY" sid="228076825475539" type="CharactersArray">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">7</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
                                 <action id="3" name="Set at XY" sid="855986064793036" type="CharactersArray">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">8</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="228076825475539" type="CharactersArray">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">7</param>
                                     <param id="2" name="Value">0</param>
                                 </action>
                             </actions>
@@ -88,7 +97,7 @@
                                 <action id="3" name="Set at XY" sid="132396163351718" type="CharactersArray">
                                     <param id="0" name="X">1</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">CHARACTER_TYPE_TANK</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="527162296990311" type="CharactersArray">
                                     <param id="0" name="X">1</param>
@@ -98,17 +107,17 @@
                                 <action id="3" name="Set at XY" sid="263333200199443" type="CharactersArray">
                                     <param id="0" name="X">1</param>
                                     <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT + 2</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="349794784567482" type="CharactersArray">
                                     <param id="0" name="X">1</param>
                                     <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="946422180537086" type="CharactersArray">
                                     <param id="0" name="X">1</param>
                                     <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="316686076930872" type="CharactersArray">
                                     <param id="0" name="X">1</param>
@@ -138,7 +147,7 @@
                                 <action id="3" name="Set at XY" sid="411554420503075" type="CharactersArray">
                                     <param id="0" name="X">2</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_TYPE_POWERED</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="107431969219176" type="CharactersArray">
                                     <param id="0" name="X">2</param>
@@ -148,17 +157,17 @@
                                 <action id="3" name="Set at XY" sid="729761684875001" type="CharactersArray">
                                     <param id="0" name="X">2</param>
                                     <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="574569028614967" type="CharactersArray">
                                     <param id="0" name="X">2</param>
                                     <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="726060493784276" type="CharactersArray">
                                     <param id="0" name="X">2</param>
                                     <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT + 2</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="141985251055137" type="CharactersArray">
                                     <param id="0" name="X">2</param>
@@ -188,7 +197,7 @@
                                 <action id="3" name="Set at XY" sid="140479290512171" type="CharactersArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">4</param>
+                                    <param id="2" name="Value">CHARACTER_TYPE_RUNNER</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="614501750857172" type="CharactersArray">
                                     <param id="0" name="X">3</param>
@@ -198,17 +207,17 @@
                                 <action id="3" name="Set at XY" sid="654809234086710" type="CharactersArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="504028613462107" type="CharactersArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT + 2</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="166513173974454" type="CharactersArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="698874802399907" type="CharactersArray">
                                     <param id="0" name="X">3</param>
@@ -238,7 +247,7 @@
                                 <action id="3" name="Set at XY" sid="753554761519338" type="CharactersArray">
                                     <param id="0" name="X">4</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">CHARACTER_TYPE_DEFAULT</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="178679044014103" type="CharactersArray">
                                     <param id="0" name="X">4</param>
@@ -248,17 +257,17 @@
                                 <action id="3" name="Set at XY" sid="135426017098513" type="CharactersArray">
                                     <param id="0" name="X">4</param>
                                     <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="968113015178186" type="CharactersArray">
                                     <param id="0" name="X">4</param>
                                     <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="500886191282987" type="CharactersArray">
                                     <param id="0" name="X">4</param>
                                     <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="516617016348502" type="CharactersArray">
                                     <param id="0" name="X">4</param>
@@ -288,7 +297,7 @@
                                 <action id="3" name="Set at XY" sid="478476204724017" type="CharactersArray">
                                     <param id="0" name="X">5</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">CHARACTER_TYPE_TANK</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="116783227242042" type="CharactersArray">
                                     <param id="0" name="X">5</param>
@@ -298,17 +307,17 @@
                                 <action id="3" name="Set at XY" sid="759053450957654" type="CharactersArray">
                                     <param id="0" name="X">5</param>
                                     <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT + 2</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="206871335764365" type="CharactersArray">
                                     <param id="0" name="X">5</param>
                                     <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="600523977707567" type="CharactersArray">
                                     <param id="0" name="X">5</param>
                                     <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="895417133569434" type="CharactersArray">
                                     <param id="0" name="X">5</param>
@@ -338,7 +347,7 @@
                                 <action id="3" name="Set at XY" sid="637515611642511" type="CharactersArray">
                                     <param id="0" name="X">6</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_TYPE_POWERED</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="837174361916627" type="CharactersArray">
                                     <param id="0" name="X">6</param>
@@ -348,17 +357,17 @@
                                 <action id="3" name="Set at XY" sid="934243088775351" type="CharactersArray">
                                     <param id="0" name="X">6</param>
                                     <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="106023157460689" type="CharactersArray">
                                     <param id="0" name="X">6</param>
                                     <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">3</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="758726579176306" type="CharactersArray">
                                     <param id="0" name="X">6</param>
                                     <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT + 2</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="337934649432354" type="CharactersArray">
                                     <param id="0" name="X">6</param>
@@ -388,7 +397,7 @@
                                 <action id="3" name="Set at XY" sid="436537509959001" type="CharactersArray">
                                     <param id="0" name="X">7</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">4</param>
+                                    <param id="2" name="Value">CHARACTER_TYPE_RUNNER</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="718089109465372" type="CharactersArray">
                                     <param id="0" name="X">7</param>
@@ -398,17 +407,17 @@
                                 <action id="3" name="Set at XY" sid="632912290654011" type="CharactersArray">
                                     <param id="0" name="X">7</param>
                                     <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="474991691621824" type="CharactersArray">
                                     <param id="0" name="X">7</param>
                                     <param id="1" name="Y">4</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT + 2</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="391717888143227" type="CharactersArray">
                                     <param id="0" name="X">7</param>
                                     <param id="1" name="Y">5</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">CHARACTER_STAT_POINTS_DEFAULT - 1</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="591361845715349" type="CharactersArray">
                                     <param id="0" name="X">7</param>

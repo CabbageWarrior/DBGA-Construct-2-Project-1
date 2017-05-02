@@ -22,9 +22,9 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
-        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -34,8 +34,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>2000</width>
-        <height>1000</height>
+        <width>3000</width>
+        <height>1600</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -96,9 +96,12 @@
                 <instance-variables>
                     <instance-variable comment="Last team who controlled the ball. 1: Stark; 2: Cap." name="LastTeam" sid="899644538489256" type="number" />
                     <instance-variable comment="Last Player Number of the player who controlled the ball. 1-4 = Player Number." name="LastPlayerNumber" sid="865514842274887" type="number" />
+                    <instance-variable name="LastPlayerUID" sid="720312124280558" type="number" />
                     <instance-variable name="DefaultSpeed" sid="602519304237523" type="number" />
                     <instance-variable name="DefaultDamage" sid="250006956807136" type="number" />
                     <instance-variable name="Damage" sid="564350853660523" type="number" />
+                    <instance-variable name="BlinkSeconds" sid="902357064926555" type="number" />
+                    <instance-variable name="CurrentNormalSpeed" sid="300282142526611" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="361987747890016">
@@ -124,7 +127,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831756479786413" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="SpawnToLeft" x="-0.2" y="0.5" />
+                            <image-point name="SpawnToRight" x="1.2" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -153,11 +159,8 @@
                     <behavior-type name="8Direction" sid="841699245598175">
                         <behavior id="EightDir" />
                     </behavior-type>
-                    <behavior-type name="PrepareGrabbingTimer" sid="169203146179591">
-                        <behavior id="Timer" />
-                    </behavior-type>
-                    <behavior-type name="GrabTimer" sid="949835769917895">
-                        <behavior id="Timer" />
+                    <behavior-type name="Flash" sid="972984145052342">
+                        <behavior id="Flash" />
                     </behavior-type>
                 </behaviors>
                 <effects>
@@ -168,6 +171,7 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="675822147814457" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="LifePin" x="0.5" y="0.8" />
                             <image-point name="BounceLeft" x="1.3" y="0.5" />
                             <image-point name="BounceRight" x="-0.3" y="0.5" />
                         </frame>
@@ -191,6 +195,7 @@
                 <instance-variables>
                     <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="387491472830790" type="number" />
                     <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="995638912094275" type="number" />
+                    <instance-variable name="PlayerUID" sid="892929521261137" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="561232080372539">
@@ -199,7 +204,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506938514484861" speed="5">
-                        <frame duration="1" hotspotX="0.52" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.52" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -208,6 +213,7 @@
                 <instance-variables>
                     <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="205693405155105" type="number" />
                     <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="948327105049986" type="number" />
+                    <instance-variable name="PlayerUID" sid="370989306626139" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="514413528380115">
@@ -216,12 +222,31 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916155589376750" speed="5">
-                        <frame duration="1" hotspotX="0.52" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.52" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type global="1" name="CharactersArray" sid="603423552914452">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type name="PlayerGrabCollider" sid="457532051117181">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="PlayerNumber" sid="532272351057615" type="number" />
+                    <instance-variable name="Team" sid="886496001632203" type="number" />
+                    <instance-variable name="PlayerUID" sid="174837232172656" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="992381750368493">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="465109584474639" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Power-Up">
@@ -301,10 +326,8 @@
     </families>
     <layout-folder>
         <layout>Prototype1.xml</layout>
-        <layout>Experiments.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>ExperimentsEventSheet.xml</event-sheet>
         <event-sheet>_GlobalEventSheet.xml</event-sheet>
         <event-sheet>Prototype1EventSheet.xml</event-sheet>
         <event-sheet>_PlayerEventSheet.xml</event-sheet>
