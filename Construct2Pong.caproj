@@ -22,6 +22,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -133,6 +134,10 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="BallExplosion" sid="350214413588686">
+                <plugin id="Particles" />
+                <texture />
             </object-type>
         </object-folder>
         <object-folder name="Player">
@@ -312,11 +317,7 @@
         <object-type name="Gamepad" sid="233666243575668">
             <plugin id="gamepad" />
         </object-type>
-        <object-type name="Particles" sid="416186410061312">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
-        <object-type name="Text2" sid="540707769703792">
+        <object-type name="EndGameMenuText" sid="540707769703792">
             <plugin id="Text" />
         </object-type>
         <object-type name="TimeTextHours" sid="581123435047362">
@@ -337,6 +338,154 @@
         <object-type name="TextDraft" sid="194625547946754">
             <plugin id="Text" />
         </object-type>
+        <object-type name="EndGameMenuButton" sid="815740255920253">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Order" sid="879779701366457" type="number" />
+                <instance-variable name="Value" sid="297980759819382" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="595835464837313" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EndGameMenuSelected" sid="189899688531490">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="SelectedOrder" sid="647169623874674" type="number" />
+                <instance-variable name="SelectedValue" sid="546186641207064" type="string" />
+                <instance-variable name="NextOrder" sid="940760261358920" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617942397518242" speed="5">
+                    <frame duration="1" hotspotX="0.498576" hotspotY="0.497512" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="550332241793807">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text2" sid="118361306579356">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text3" sid="569587348422272">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text4" sid="985788833512446">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite2" sid="793676802141480">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="649366902952660" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Sfondo menù principale.JPG" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="IntroTitleBackground" sid="643411696009957">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="363016685171413">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="420615114372520" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameTitle" sid="674189731833874">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="466068365431882">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="GameStory" sid="231532100537160">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="135804003910080">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="IntroTitleOverlay" sid="222114385091844">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="107097121360018">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="337483767391534" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="247722835704548">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="690153136130590" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="IntroMenuSelected" sid="406115174045210">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="SelectedOrder" sid="317244700977887" type="number" />
+                <instance-variable name="SelectedValue" sid="285515786111940" type="string" />
+                <instance-variable name="NextOrder" sid="966016421327497" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="136353127870763" speed="5">
+                    <frame duration="1" hotspotX="0.498576" hotspotY="0.497512" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="IntroMenuText" sid="401709950229373">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Order" sid="572063524396222" type="number" />
+            </instance-variables>
+            <effects>
+                <effect-type name="SetColor">
+                    <effect id="setcolor" />
+                </effect-type>
+            </effects>
+        </object-type>
+        <object-type name="IntroMenuButton" sid="401085813405458">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Order" sid="910478971539995" type="number" />
+                <instance-variable name="Value" sid="361571481049055" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="789988018087296" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles" sid="223839296851019">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Particles2" sid="802147741736769">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="PlayerExplosion" sid="669083922991446">
+            <plugin id="Particles" />
+            <effects>
+                <effect-type name="SetColor">
+                    <effect id="setcolor" />
+                </effect-type>
+            </effects>
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -346,6 +495,10 @@
         </family>
         <family name="MonkeyIslandText" plugin-id="Text" sid="868286174038958">
             <members>
+                <member>EndGameMenuText</member>
+                <member>GameStory</member>
+                <member>GameTitle</member>
+                <member>IntroMenuText</member>
                 <member>TextDraft</member>
                 <member>TextYouLose</member>
                 <member>TextYouWin</member>
@@ -354,14 +507,24 @@
                 <member>TimeTextSeparator</member>
             </members>
         </family>
+        <family name="Coriandols" plugin-id="Particles" sid="653566921356647">
+            <members>
+                <member>Particles</member>
+                <member>Particles2</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
-        <layout>Prototype1.xml</layout>
+        <layout>Intro.xml</layout>
+        <layout>CharacterSelection.xml</layout>
+        <layout>Game.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>_GlobalEventSheet.xml</event-sheet>
-        <event-sheet>Prototype1EventSheet.xml</event-sheet>
+        <event-sheet>GameEventSheet.xml</event-sheet>
         <event-sheet>_PlayerEventSheet.xml</event-sheet>
+        <event-sheet>IntroEventSheet.xml</event-sheet>
+        <event-sheet>CharacterSelectionEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

@@ -6,477 +6,489 @@
         <include>_GlobalEventSheet</include>
         <event-group description="" sid="630690809544065" title="Player Personal Controls">
             <sub-events>
-                <event-group description="" sid="240455412710435" title="Player 1">
+                <event-block sid="381495702823132">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="520407352072967" type="System">
+                            <param id="0" name="Variable">CommandType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="819859265514198">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="981573452524542" type="Player">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        <event-group description="" sid="240455412710435" title="Player 1">
                             <sub-events>
-                                <event-group description="" sid="763855699221762" title="Player 1 Movement">
+                                <event-block sid="819859265514198">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="981573452524542" type="Player">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block any="1" sid="190900556129185">
+                                        <event-group description="" sid="763855699221762" title="Player 1 Movement">
+                                            <sub-events>
+                                                <event-block any="1" sid="190900556129185">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="330315065102631" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">0</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="2" name="Key is down" sid="626058798577788" type="Keyboard">
+                                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="583855829533791" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Left&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="433038079586362">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="304157665474225" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">0</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="2" name="Key is down" sid="667169077936433" type="Keyboard">
+                                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="955588520741660" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Right&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="386790182895673">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="256174233803256" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="2" name="Key is down" sid="188425544483156" type="Keyboard">
+                                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="146580042941425" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Up&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block any="1" sid="537661772689426">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="346637549544618" type="Gamepad">
+                                                            <param id="0" name="Gamepad">0</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                        <condition id="2" name="Key is down" sid="337498795077783" type="Keyboard">
+                                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="134888669366608" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
+                                        <event-block any="1" sid="314980967248599">
                                             <conditions>
-                                                <condition id="5" name="Compare axis" sid="330315065102631" type="Gamepad">
+                                                <condition id="6" name="On button pressed" sid="402135574232313" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
-                                                    <param id="1" name="Axis">0</param>
-                                                    <param id="2" name="Comparison">2</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                                <condition id="2" name="Key is down" sid="626058798577788" type="Keyboard">
-                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                    <param id="1" name="Button">7</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="583855829533791" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Left&quot;</param>
+                                                <action id="0" name="Call function" sid="365540132941929" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block any="1" sid="433038079586362">
+                                        <event-block any="1" sid="244535024884498">
                                             <conditions>
-                                                <condition id="5" name="Compare axis" sid="304157665474225" type="Gamepad">
+                                                <condition id="3" name="Is button down" sid="595495247656954" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
-                                                    <param id="1" name="Axis">0</param>
-                                                    <param id="2" name="Comparison">4</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                                <condition id="2" name="Key is down" sid="667169077936433" type="Keyboard">
-                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                    <param id="1" name="Button">7</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="955588520741660" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Right&quot;</param>
+                                                <action id="0" name="Call function" sid="303868437055745" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block any="1" sid="386790182895673">
+                                        <event-block any="1" sid="217193746256575">
                                             <conditions>
-                                                <condition id="5" name="Compare axis" sid="256174233803256" type="Gamepad">
+                                                <condition id="7" name="On button released" sid="466894121398539" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
-                                                    <param id="1" name="Axis">1</param>
-                                                    <param id="2" name="Comparison">2</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                                <condition id="2" name="Key is down" sid="188425544483156" type="Keyboard">
-                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                    <param id="1" name="Button">7</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="146580042941425" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Up&quot;</param>
+                                                <action id="0" name="Call function" sid="621705876773245" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}angle(0, 0, abs(Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2)) * (Player.Team = 1 ? 1 : -1), Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)){###}1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block any="1" sid="537661772689426">
+                                        <event-block sid="710439224165959">
                                             <conditions>
-                                                <condition id="5" name="Compare axis" sid="346637549544618" type="Gamepad">
-                                                    <param id="0" name="Gamepad">0</param>
-                                                    <param id="1" name="Axis">1</param>
-                                                    <param id="2" name="Comparison">4</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                                <condition id="2" name="Key is down" sid="337498795077783" type="Keyboard">
-                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                <condition id="0" name="On key pressed" sid="737270343953296" type="Keyboard">
+                                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="134888669366608" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
+                                                <action id="0" name="Call function" sid="781572415484108" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="113299194492334">
+                                            <conditions>
+                                                <condition id="2" name="Key is down" sid="615594852145355" type="Keyboard">
+                                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="375889462170053" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="167512050873794">
+                                            <conditions>
+                                                <condition id="3" name="On key released" sid="613988639937075" type="Keyboard">
+                                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="536284273068580" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}Player.Team = 1 ? 0 : 180{###}1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-group>
-                                <event-block any="1" sid="314980967248599">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="402135574232313" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">7</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="365540132941929" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block any="1" sid="244535024884498">
-                                    <conditions>
-                                        <condition id="3" name="Is button down" sid="595495247656954" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">7</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="303868437055745" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block any="1" sid="217193746256575">
-                                    <conditions>
-                                        <condition id="7" name="On button released" sid="466894121398539" type="Gamepad">
-                                            <param id="0" name="Gamepad">0</param>
-                                            <param id="1" name="Button">7</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="621705876773245" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID{###}angle(0, 0, abs(Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2)) * (Player.Team = 1 ? 1 : -1), Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)){###}1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="710439224165959">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="737270343953296" type="Keyboard">
-                                            <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="781572415484108" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="113299194492334">
-                                    <conditions>
-                                        <condition id="2" name="Key is down" sid="615594852145355" type="Keyboard">
-                                            <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="375889462170053" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="167512050873794">
-                                    <conditions>
-                                        <condition id="3" name="On key released" sid="613988639937075" type="Keyboard">
-                                            <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="536284273068580" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID{###}Player.Team = 1 ? 0 : 180{###}1</param>
-                                        </action>
-                                    </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="817397174032524" title="Player 2">
-                    <sub-events>
-                        <event-block sid="983969178637103">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="402540069207009" type="Player">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        </event-group>
+                        <event-group description="" sid="817397174032524" title="Player 2">
                             <sub-events>
-                                <event-group description="" sid="205694892401378" title="Player 2 Movement">
+                                <event-block sid="983969178637103">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="402540069207009" type="Player">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="177121466507746">
+                                        <event-group description="" sid="205694892401378" title="Player 2 Movement">
+                                            <sub-events>
+                                                <event-block sid="177121466507746">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="382261675452257" type="Gamepad">
+                                                            <param id="0" name="Gamepad">1</param>
+                                                            <param id="1" name="Axis">0</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="544084681211078" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Left&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="651073941475437">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="979364555676510" type="Gamepad">
+                                                            <param id="0" name="Gamepad">1</param>
+                                                            <param id="1" name="Axis">0</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="599004706778546" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Right&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="563241118237031">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="912648341409012" type="Gamepad">
+                                                            <param id="0" name="Gamepad">1</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="320776558601725" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Up&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="322972576033325">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="270208014855792" type="Gamepad">
+                                                            <param id="0" name="Gamepad">1</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="858413351601580" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
+                                        <event-block sid="910365222284957">
                                             <conditions>
-                                                <condition id="5" name="Compare axis" sid="382261675452257" type="Gamepad">
+                                                <condition id="6" name="On button pressed" sid="202453499921942" type="Gamepad">
                                                     <param id="0" name="Gamepad">1</param>
-                                                    <param id="1" name="Axis">0</param>
-                                                    <param id="2" name="Comparison">2</param>
-                                                    <param id="3" name="Value">0</param>
+                                                    <param id="1" name="Button">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="544084681211078" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Left&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="651073941475437">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="979364555676510" type="Gamepad">
-                                                    <param id="0" name="Gamepad">1</param>
-                                                    <param id="1" name="Axis">0</param>
-                                                    <param id="2" name="Comparison">4</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="599004706778546" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Right&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="563241118237031">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="912648341409012" type="Gamepad">
-                                                    <param id="0" name="Gamepad">1</param>
-                                                    <param id="1" name="Axis">1</param>
-                                                    <param id="2" name="Comparison">2</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="320776558601725" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Up&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="322972576033325">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="270208014855792" type="Gamepad">
-                                                    <param id="0" name="Gamepad">1</param>
-                                                    <param id="1" name="Axis">1</param>
-                                                    <param id="2" name="Comparison">4</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="858413351601580" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
+                                                <action disabled="1" id="0" name="Call function" sid="813509258993772" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerGrabBall&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-group>
-                                <event-block sid="910365222284957">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="202453499921942" type="Gamepad">
-                                            <param id="0" name="Gamepad">1</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action disabled="1" id="0" name="Call function" sid="813509258993772" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerGrabBall&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID</param>
-                                        </action>
-                                    </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="642028821567087" title="Player 3">
-                    <sub-events>
-                        <event-block sid="355290169531753">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="645463676132877" type="Player">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        </event-group>
+                        <event-group description="" sid="642028821567087" title="Player 3">
                             <sub-events>
-                                <event-group description="" sid="287213786141155" title="Player 3 Movement">
+                                <event-block sid="355290169531753">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="645463676132877" type="Player">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="568489966298794">
+                                        <event-group description="" sid="287213786141155" title="Player 3 Movement">
+                                            <sub-events>
+                                                <event-block sid="568489966298794">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="796861584026422" type="Gamepad">
+                                                            <param id="0" name="Gamepad">2</param>
+                                                            <param id="1" name="Axis">0</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="171594730992638" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Left&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="964954883066647">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="706776297249849" type="Gamepad">
+                                                            <param id="0" name="Gamepad">2</param>
+                                                            <param id="1" name="Axis">0</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="747212623734219" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Right&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="440662624596527">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="542214930634375" type="Gamepad">
+                                                            <param id="0" name="Gamepad">2</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="598181912146386" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Up&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="658258379006827">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="148877192915578" type="Gamepad">
+                                                            <param id="0" name="Gamepad">2</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="252132203751401" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
+                                        <event-block sid="494143903155840">
                                             <conditions>
-                                                <condition id="5" name="Compare axis" sid="796861584026422" type="Gamepad">
+                                                <condition id="6" name="On button pressed" sid="205024782189203" type="Gamepad">
                                                     <param id="0" name="Gamepad">2</param>
-                                                    <param id="1" name="Axis">0</param>
-                                                    <param id="2" name="Comparison">2</param>
-                                                    <param id="3" name="Value">0</param>
+                                                    <param id="1" name="Button">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="171594730992638" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Left&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="964954883066647">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="706776297249849" type="Gamepad">
-                                                    <param id="0" name="Gamepad">2</param>
-                                                    <param id="1" name="Axis">0</param>
-                                                    <param id="2" name="Comparison">4</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="747212623734219" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Right&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="440662624596527">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="542214930634375" type="Gamepad">
-                                                    <param id="0" name="Gamepad">2</param>
-                                                    <param id="1" name="Axis">1</param>
-                                                    <param id="2" name="Comparison">2</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="598181912146386" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Up&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="658258379006827">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="148877192915578" type="Gamepad">
-                                                    <param id="0" name="Gamepad">2</param>
-                                                    <param id="1" name="Axis">1</param>
-                                                    <param id="2" name="Comparison">4</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="252132203751401" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
+                                                <action disabled="1" id="0" name="Call function" sid="115269023903822" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerGrabBall&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-group>
-                                <event-block sid="494143903155840">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="205024782189203" type="Gamepad">
-                                            <param id="0" name="Gamepad">2</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action disabled="1" id="0" name="Call function" sid="115269023903822" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerGrabBall&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID</param>
-                                        </action>
-                                    </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="316348334689116" title="Player 4">
-                    <sub-events>
-                        <event-block sid="867358874944967">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="959278925882217" type="Player">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">4</param>
-                                </condition>
-                            </conditions>
-                            <actions />
+                        </event-group>
+                        <event-group description="" sid="316348334689116" title="Player 4">
                             <sub-events>
-                                <event-group description="" sid="739532763995167" title="Player 4 Movement">
+                                <event-block sid="867358874944967">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="959278925882217" type="Player">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
                                     <sub-events>
-                                        <event-block sid="353013940892636">
+                                        <event-group description="" sid="739532763995167" title="Player 4 Movement">
+                                            <sub-events>
+                                                <event-block sid="353013940892636">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="307878938446432" type="Gamepad">
+                                                            <param id="0" name="Gamepad">3</param>
+                                                            <param id="1" name="Axis">0</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="775698363107894" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Left&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="886270451583652">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="126316584372957" type="Gamepad">
+                                                            <param id="0" name="Gamepad">3</param>
+                                                            <param id="1" name="Axis">0</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="563978806903254" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Right&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="472323628345719">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="419610112750162" type="Gamepad">
+                                                            <param id="0" name="Gamepad">3</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">2</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="328886042639116" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Up&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="152329530860393">
+                                                    <conditions>
+                                                        <condition id="5" name="Compare axis" sid="466469146853159" type="Gamepad">
+                                                            <param id="0" name="Gamepad">3</param>
+                                                            <param id="1" name="Axis">1</param>
+                                                            <param id="2" name="Comparison">4</param>
+                                                            <param id="3" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="303761193117454" type="Function">
+                                                            <param id="0" name="Name">&quot;PlayerMove&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-group>
+                                        <event-block sid="928998162382591">
                                             <conditions>
-                                                <condition id="5" name="Compare axis" sid="307878938446432" type="Gamepad">
+                                                <condition id="6" name="On button pressed" sid="916474228684518" type="Gamepad">
                                                     <param id="0" name="Gamepad">3</param>
-                                                    <param id="1" name="Axis">0</param>
-                                                    <param id="2" name="Comparison">2</param>
-                                                    <param id="3" name="Value">0</param>
+                                                    <param id="1" name="Button">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="775698363107894" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Left&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="886270451583652">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="126316584372957" type="Gamepad">
-                                                    <param id="0" name="Gamepad">3</param>
-                                                    <param id="1" name="Axis">0</param>
-                                                    <param id="2" name="Comparison">4</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="563978806903254" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Right&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="472323628345719">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="419610112750162" type="Gamepad">
-                                                    <param id="0" name="Gamepad">3</param>
-                                                    <param id="1" name="Axis">1</param>
-                                                    <param id="2" name="Comparison">2</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="328886042639116" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Up&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="152329530860393">
-                                            <conditions>
-                                                <condition id="5" name="Compare axis" sid="466469146853159" type="Gamepad">
-                                                    <param id="0" name="Gamepad">3</param>
-                                                    <param id="1" name="Axis">1</param>
-                                                    <param id="2" name="Comparison">4</param>
-                                                    <param id="3" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="303761193117454" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerMove&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}&quot;Down&quot;</param>
+                                                <action disabled="1" id="0" name="Call function" sid="681636635000333" type="Function">
+                                                    <param id="0" name="Name">&quot;PlayerGrabBall&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID</param>
                                                 </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
-                                </event-group>
-                                <event-block sid="928998162382591">
-                                    <conditions>
-                                        <condition id="6" name="On button pressed" sid="916474228684518" type="Gamepad">
-                                            <param id="0" name="Gamepad">3</param>
-                                            <param id="1" name="Button">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action disabled="1" id="0" name="Call function" sid="681636635000333" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerGrabBall&quot;</param>
-                                            <param id="1" name="Parameter {n}">Player.UID</param>
-                                        </action>
-                                    </actions>
                                 </event-block>
                             </sub-events>
-                        </event-block>
+                        </event-group>
                     </sub-events>
-                </event-group>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="384742301337729" title="Player Behaviors">
@@ -1188,9 +1200,6 @@
                             <param id="0" name="Instance variable">SkillGrabBallTryingToGrab</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="138671982174903" type="Player">
-                            <param id="0" name="Opacity">10</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="704652112552450">
@@ -1248,9 +1257,6 @@
                             <param id="0" name="Instance variable">SkillGrabBallEnabled</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="960612533761942" type="Player">
-                            <param id="0" name="Opacity">100</param>
-                        </action>
                     </actions>
                 </event-block>
                 <comment>Parametri: 0: UID del Player, 1: UID della palla.</comment>
@@ -1274,9 +1280,6 @@
                         <action id="-10" name="Set value" sid="281765965223681" type="Player">
                             <param id="0" name="Instance variable">SkillGrabBallIsGrabbing</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="156828314415759" type="Player">
-                            <param id="0" name="Opacity">50</param>
                         </action>
                         <action id="-1" name="Set X" sid="637762687581763" type="Ball">
                             <param id="0" name="X">Player.X + ((Player.Width + Ball.Width) / 2 * (Player.Team = 1 ? 1 : -1))</param>
@@ -1348,9 +1351,6 @@
                         <action id="-10" name="Set value" sid="807000789673985" type="Player">
                             <param id="0" name="Instance variable">SkillGrabBallEnabled</param>
                             <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="890379071323519" type="Player">
-                            <param id="0" name="Opacity">100</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="592465432790486" type="Ball">
                             <param id="0" name="Angle">Function.Param(1)</param>
@@ -1525,6 +1525,26 @@
                         <event-block sid="814583973146503">
                             <conditions />
                             <actions>
+                                <action id="0" name="Spawn another object" sid="823566744076543" type="Player">
+                                    <param id="0" name="Object">PlayerExplosion</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">&quot;Origin&quot;</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="732551257734373" type="PlayerExplosion">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 6)</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="605287510591714" type="PlayerExplosion">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 7)</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="579698946088497" type="PlayerExplosion">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 8)</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="596474355477704" type="Player" />
                                 <action id="0" name="Call function" sid="822164388836057" type="Function">
                                     <param id="0" name="Name">&quot;CheckVictory&quot;</param>

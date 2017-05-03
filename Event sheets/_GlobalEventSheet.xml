@@ -14,11 +14,17 @@
         <variable constant="1" name="CHARACTER_DEFAULT_WIDTH" sid="484529372780017" static="0" type="number">50</variable>
         <variable constant="1" name="CHARACTER_DEFAULT_SPEED" sid="830332573322609" static="0" type="number">800</variable>
         <variable constant="1" name="CHARACTER_GRAB_COLLISION_RANGE" sid="885289075493017" static="0" type="number">75</variable>
+        <variable comment="0: No; 1: Sì." constant="0" name="IsIntroViewed" sid="332694909704563" static="0" type="number">0</variable>
+        <variable comment="0: Main Menu; 1: Player; 2: End Game Menu." constant="0" name="CommandType" sid="413793904628628" static="0" type="number">0</variable>
         <event-block sid="310475909449286">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="693286711239400" type="System" />
             </conditions>
             <actions>
+                <action id="5" name="Set web font" sid="101732803250879" type="MonkeyIslandText">
+                    <param id="0" name="Family name">&quot;monkey_island_1990_refinedRg&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
                 <action id="0" name="Call function" sid="131811325817715" type="Function">
                     <param id="0" name="Name">&quot;CharactersArrayCreate&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
@@ -402,7 +408,7 @@
                                 <action id="3" name="Set at XY" sid="718089109465372" type="CharactersArray">
                                     <param id="0" name="X">7</param>
                                     <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">&quot;Quicksilver&quot;</param>
+                                    <param id="2" name="Value">&quot;Falcon&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="632912290654011" type="CharactersArray">
                                     <param id="0" name="X">7</param>
