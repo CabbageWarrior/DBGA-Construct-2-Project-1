@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>QuitEventSheet</name>
+    <events>
+        <include>_GlobalEventSheet</include>
+        <event-block sid="586385508244501">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="702952494675115" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="363199758790733">
+                    <conditions>
+                        <condition id="-2" inverted="1" name="Compare Y" sid="858383452559091" type="QuitTextFromTop">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="594852371990603">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="983765654010332" type="QuitTextFromTop">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="328912364590998" type="QuitTextFromTop">
+                                    <param id="0" name="Y">Self.Y + dt * 200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="787616584720030">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="326940736545334" type="QuitTextFromTop">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="538630209266871" type="QuitTextFromTop">
+                                    <param id="0" name="Y">Self.Height / 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="798051214900698">
+                    <conditions>
+                        <condition id="-2" inverted="1" name="Compare Y" sid="867310240181991" type="QuitTextFromBottom">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">LayoutHeight - Self.Height / 2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="565562274454065">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="525729766287230" type="QuitTextFromBottom">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">LayoutHeight - Self.Height / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="953840330175545" type="QuitTextFromBottom">
+                                    <param id="0" name="Y">Self.Y - dt * 50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="489359830951196">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="455217440303415" type="QuitTextFromBottom">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">LayoutHeight - Self.Height / 2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="127354450224309" type="QuitTextFromBottom">
+                                    <param id="0" name="Y">LayoutHeight - Self.Height / 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

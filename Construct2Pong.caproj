@@ -486,6 +486,20 @@
             </effects>
             <texture />
         </object-type>
+        <object-type name="Sprite4" sid="617862385960400">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="520533579495254" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\dbga_53\Desktop\maxresdefault.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="QuitTextFromTop" sid="816218266930379">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="QuitTextFromBottom" sid="737939517266051">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -499,6 +513,8 @@
                 <member>GameStory</member>
                 <member>GameTitle</member>
                 <member>IntroMenuText</member>
+                <member>QuitTextFromBottom</member>
+                <member>QuitTextFromTop</member>
                 <member>TextDraft</member>
                 <member>TextYouLose</member>
                 <member>TextYouWin</member>
@@ -518,6 +534,7 @@
         <layout>Intro.xml</layout>
         <layout>CharacterSelection.xml</layout>
         <layout>Game.xml</layout>
+        <layout>Quit.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>_GlobalEventSheet.xml</event-sheet>
@@ -525,6 +542,7 @@
         <event-sheet>_PlayerEventSheet.xml</event-sheet>
         <event-sheet>IntroEventSheet.xml</event-sheet>
         <event-sheet>CharacterSelectionEventSheet.xml</event-sheet>
+        <event-sheet>QuitEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
