@@ -14,8 +14,16 @@
         <variable constant="1" name="CHARACTER_DEFAULT_WIDTH" sid="484529372780017" static="0" type="number">50</variable>
         <variable constant="1" name="CHARACTER_DEFAULT_SPEED" sid="830332573322609" static="0" type="number">800</variable>
         <variable constant="1" name="CHARACTER_GRAB_COLLISION_RANGE" sid="885289075493017" static="0" type="number">75</variable>
+        <variable constant="1" name="HUMAN_1_DEFAULT_CHARACTER" sid="952579267319169" static="0" type="number">1</variable>
+        <variable constant="1" name="HUMAN_2_DEFAULT_CHARACTER" sid="798923984598612" static="0" type="number">2</variable>
+        <variable constant="1" name="HUMAN_3_DEFAULT_CHARACTER" sid="816149502991344" static="0" type="number">5</variable>
+        <variable constant="1" name="HUMAN_4_DEFAULT_CHARACTER" sid="650220921466025" static="0" type="number">6</variable>
         <variable comment="0: No; 1: Sì." constant="0" name="IsIntroViewed" sid="332694909704563" static="0" type="number">0</variable>
         <variable comment="0: Main Menu; 1: Player; 2: End Game Menu; 3: Pause Menu; 4: Tutorial opened." constant="0" name="CommandType" sid="413793904628628" static="0" type="number">0</variable>
+        <variable constant="0" name="Human_1_SelectedCharacter" sid="260329936874057" static="0" type="number">1</variable>
+        <variable constant="0" name="Human_2_SelectedCharacter" sid="351818965695792" static="0" type="number">2</variable>
+        <variable constant="0" name="Human_3_SelectedCharacter" sid="453149333797764" static="0" type="number">5</variable>
+        <variable constant="0" name="Human_4_SelectedCharacter" sid="849802142424756" static="0" type="number">6</variable>
         <event-block sid="310475909449286">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="693286711239400" type="System" />
@@ -41,7 +49,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <comment>[Asse Y] 0: Team, 1: Tipo, 2: Nome, 3: HP Max, 4: Vel. Max, 5: Power Max, 6: Colore (R), 7: Colore (G), 8: Colore (B)</comment>
+                        <comment>[Asse Y] 0: Team, 1: Tipo, 2: Nome, 3: HP Max, 4: Vel. Max, 5: Power Max, 6: Colore (R), 7: Colore (G), 8: Colore (B). NB: Le tonalità RGB in questo caso vanno da 0 a 100!</comment>
                         <event-block sid="913204772615419">
                             <conditions />
                             <actions>
@@ -78,7 +86,7 @@
                                 <action id="3" name="Set at XY" sid="945621166763538" type="CharactersArray">
                                     <param id="0" name="X">0</param>
                                     <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">255</param>
+                                    <param id="2" name="Value">100</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="855986064793036" type="CharactersArray">
                                     <param id="0" name="X">0</param>
@@ -178,12 +186,12 @@
                                 <action id="3" name="Set at XY" sid="141985251055137" type="CharactersArray">
                                     <param id="0" name="X">2</param>
                                     <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">255</param>
+                                    <param id="2" name="Value">100</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="100497924421216" type="CharactersArray">
                                     <param id="0" name="X">2</param>
                                     <param id="1" name="Y">7</param>
-                                    <param id="2" name="Value">69</param>
+                                    <param id="2" name="Value">30</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="979550278101798" type="CharactersArray">
                                     <param id="0" name="X">2</param>
@@ -228,17 +236,17 @@
                                 <action id="3" name="Set at XY" sid="698874802399907" type="CharactersArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">20</param>
+                                    <param id="2" name="Value">0</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="467390544539231" type="CharactersArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">7</param>
-                                    <param id="2" name="Value">20</param>
+                                    <param id="2" name="Value">0</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="988525098853291" type="CharactersArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">8</param>
-                                    <param id="2" name="Value">20</param>
+                                    <param id="2" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -288,7 +296,7 @@
                                 <action id="3" name="Set at XY" sid="849536038972209" type="CharactersArray">
                                     <param id="0" name="X">4</param>
                                     <param id="1" name="Y">8</param>
-                                    <param id="2" name="Value">255</param>
+                                    <param id="2" name="Value">100</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -328,17 +336,17 @@
                                 <action id="3" name="Set at XY" sid="895417133569434" type="CharactersArray">
                                     <param id="0" name="X">5</param>
                                     <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">120</param>
+                                    <param id="2" name="Value">0</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="806679656830007" type="CharactersArray">
                                     <param id="0" name="X">5</param>
                                     <param id="1" name="Y">7</param>
-                                    <param id="2" name="Value">120</param>
+                                    <param id="2" name="Value">0</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="246517620832148" type="CharactersArray">
                                     <param id="0" name="X">5</param>
                                     <param id="1" name="Y">8</param>
-                                    <param id="2" name="Value">120</param>
+                                    <param id="2" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -378,7 +386,7 @@
                                 <action id="3" name="Set at XY" sid="337934649432354" type="CharactersArray">
                                     <param id="0" name="X">6</param>
                                     <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">255</param>
+                                    <param id="2" name="Value">100</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="304866208240707" type="CharactersArray">
                                     <param id="0" name="X">6</param>
@@ -388,7 +396,7 @@
                                 <action id="3" name="Set at XY" sid="371715010756394" type="CharactersArray">
                                     <param id="0" name="X">6</param>
                                     <param id="1" name="Y">8</param>
-                                    <param id="2" name="Value">255</param>
+                                    <param id="2" name="Value">100</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -428,17 +436,17 @@
                                 <action id="3" name="Set at XY" sid="591361845715349" type="CharactersArray">
                                     <param id="0" name="X">7</param>
                                     <param id="1" name="Y">6</param>
-                                    <param id="2" name="Value">192</param>
+                                    <param id="2" name="Value">60</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="373585910821630" type="CharactersArray">
                                     <param id="0" name="X">7</param>
                                     <param id="1" name="Y">7</param>
-                                    <param id="2" name="Value">192</param>
+                                    <param id="2" name="Value">60</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="385413854316169" type="CharactersArray">
                                     <param id="0" name="X">7</param>
                                     <param id="1" name="Y">8</param>
-                                    <param id="2" name="Value">192</param>
+                                    <param id="2" name="Value">60</param>
                                 </action>
                             </actions>
                         </event-block>

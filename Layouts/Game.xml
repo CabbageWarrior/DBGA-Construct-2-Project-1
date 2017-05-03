@@ -406,6 +406,15 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0.8</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1164,7 +1173,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Particles" uid="25">
+                <instance type="WinnerParticles1" uid="25">
                     <properties>
                         <rate>0</rate>
                         <spray-cone>180</spray-cone>
@@ -1203,7 +1212,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Particles2" uid="26">
+                <instance type="WinnerParticles2" uid="26">
                     <properties>
                         <rate>0</rate>
                         <spray-cone>180</spray-cone>

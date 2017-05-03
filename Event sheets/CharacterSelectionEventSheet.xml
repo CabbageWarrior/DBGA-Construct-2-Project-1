@@ -4,5 +4,750 @@
     <name>CharacterSelectionEventSheet</name>
     <events>
         <include>_GlobalEventSheet</include>
+        <event-block sid="991821666540234">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="812521210217568" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="337352947875761" type="Function">
+                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                    <param id="1" name="Parameter {n}">1{###}Human_1_SelectedCharacter</param>
+                </action>
+                <action id="0" name="Call function" sid="902081269708628" type="Function">
+                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                    <param id="1" name="Parameter {n}">2{###}Human_2_SelectedCharacter</param>
+                </action>
+                <action id="0" name="Call function" sid="256715196035316" type="Function">
+                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                    <param id="1" name="Parameter {n}">3{###}Human_3_SelectedCharacter</param>
+                </action>
+                <action id="0" name="Call function" sid="952857599336576" type="Function">
+                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                    <param id="1" name="Parameter {n}">4{###}Human_4_SelectedCharacter</param>
+                </action>
+                <action id="-9" name="Set value" sid="465991908986086" type="System">
+                    <param id="0" name="Variable">CommandType</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="298810847353940" title="Menu CharSelection">
+            <sub-events>
+                <event-group description="" sid="867904645835800" title="Menu CharSelection Controls">
+                    <sub-events>
+                        <event-block sid="299661218630252">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="436182179033286" type="System">
+                                    <param id="0" name="Variable">CommandType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>Up</comment>
+                                <event-block sid="781017847375569">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="981077216963899" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">12</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="264660986411391" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="316061574775784" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="566993860902037" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="708212619542798">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="484110506268980" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">12</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="271679007150993" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="649797418843490" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="172245817224964" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="431600597465740">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="562406059789530" type="Gamepad">
+                                            <param id="0" name="Gamepad">2</param>
+                                            <param id="1" name="Button">12</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="869372326309718" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="881824194025853" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="256475371207436" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="805180794359680">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="927530549752874" type="Gamepad">
+                                            <param id="0" name="Gamepad">3</param>
+                                            <param id="1" name="Button">12</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="756446767673918" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="374391729057896" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="305933011150139" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="788765551092454">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="555545355973725" type="Keyboard">
+                                            <param id="0" name="Key">38 (Up arrow)</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="835658104061213" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="493205236097314" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="785223424302322" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Down</comment>
+                                <event-block sid="336652808091302">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="386814348895737" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">13</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="770483805818170" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="250430759655100" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="988945081105418" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="278097818249177">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="636315848514155" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">13</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="595004206890221" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="801629086859703" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="148486871909186" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="810183548315920">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="601322444319129" type="Gamepad">
+                                            <param id="0" name="Gamepad">2</param>
+                                            <param id="1" name="Button">13</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="806933837035260" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="723314306572241" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="703884448024287" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="816731117651087">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="566404671133232" type="Gamepad">
+                                            <param id="0" name="Gamepad">3</param>
+                                            <param id="1" name="Button">13</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="824052388784038" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="597541532018767" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="395449608790969" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="270466784654511">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="596307724274859" type="Keyboard">
+                                            <param id="0" name="Key">40 (Down arrow)</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="463107113266444" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="480769308697832" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="309673781394487" type="Function">
+                                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Selection</comment>
+                                <event-block sid="545999702558672">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="298526695064576" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="983873147721477" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="538753357958254" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="846331003616921" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="605669604926766">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="412856455528474" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="463849523577043" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="212222035552484" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="609248787127651" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="399036820643537">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="132622850583401" type="Gamepad">
+                                            <param id="0" name="Gamepad">2</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="927335287982841" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="841194676490563" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="328843311537283" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="745698745237412">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="790746058346613" type="Gamepad">
+                                            <param id="0" name="Gamepad">3</param>
+                                            <param id="1" name="Button">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="161556038374244" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="672258745680483" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="700089088482077" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="372688587981548">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="629155810997135" type="Keyboard">
+                                            <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="492097567730898" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="592869180527873" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="867984259173627" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="410847415848692" title="Menu CharSelection Functions">
+                    <sub-events>
+                        <comment>Parametri: 0: Umano da settare; 1: Voce di menu da selezionare.</comment>
+                        <event-block sid="780057185908108">
+                            <conditions>
+                                <condition id="0" name="On function" sid="735687481861928" type="Function">
+                                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="PreviousSelectedValue" sid="890706948188936" static="0" type="number">0</variable>
+                                <variable constant="0" name="ValueToTest" sid="985840479545592" static="0" type="number">0</variable>
+                                <variable constant="0" name="ValueMin" sid="927275936413140" static="0" type="number">0</variable>
+                                <variable constant="0" name="ValueMax" sid="111867304707102" static="0" type="number">0</variable>
+                                <variable constant="0" name="Direction" sid="262821350868563" static="0" type="number">0</variable>
+                                <event-block sid="228587661283361">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="853433794858350" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Function.Param(0)</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="627348544640990" type="CharacterSelectorBackground">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Function.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="160132616457827" type="System">
+                                            <param id="0" name="Variable">PreviousSelectedValue</param>
+                                            <param id="1" name="Value">CharacterSelectorText.SelectedCharacterNumber</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="577723905918312" type="System">
+                                            <param id="0" name="Variable">ValueToTest</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="966851563031575">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="345982039729165" type="System">
+                                                    <param id="0" name="First value">CharactersArray.At(PreviousSelectedValue - 1, 0)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="905848598599833" type="System">
+                                                    <param id="0" name="Variable">ValueMin</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="134639074510890" type="System">
+                                                    <param id="0" name="Variable">ValueMax</param>
+                                                    <param id="1" name="Value">4</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="299759719993809">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="448950848998179" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="452547775900306" type="System">
+                                                    <param id="0" name="Variable">ValueMin</param>
+                                                    <param id="1" name="Value">5</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="205765406712698" type="System">
+                                                    <param id="0" name="Variable">ValueMax</param>
+                                                    <param id="1" name="Value">8</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="850886338294207">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="304728258221537" type="System">
+                                                    <param id="0" name="Variable">ValueToTest</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">PreviousSelectedValue</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="505523891698602">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="577141253891639" type="System">
+                                                            <param id="0" name="Variable">ValueToTest</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">PreviousSelectedValue</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="692152422885835" type="System">
+                                                            <param id="0" name="Variable">Direction</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="615026656656130">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="789410926479478" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="978633776191247" type="System">
+                                                            <param id="0" name="Variable">Direction</param>
+                                                            <param id="1" name="Value">-1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="901850269859688">
+                                                    <conditions>
+                                                        <condition id="-23" name="While" sid="492851696316823" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="270532269209295">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="378725719462234" type="System">
+                                                                    <param id="0" name="Variable">Human_1_SelectedCharacter</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">ValueToTest</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="177432415053268" type="System">
+                                                                    <param id="0" name="Variable">Human_2_SelectedCharacter</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">ValueToTest</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="888765065118431" type="System">
+                                                                    <param id="0" name="Variable">Human_3_SelectedCharacter</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">ValueToTest</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="635807127238462" type="System">
+                                                                    <param id="0" name="Variable">Human_4_SelectedCharacter</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">ValueToTest</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="788791627183293" type="System">
+                                                                    <param id="0" name="Variable">ValueToTest</param>
+                                                                    <param id="1" name="Value">ValueToTest + Direction</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="342801597435550">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="565629083048970" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-24" name="Stop loop" sid="104994070110752" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="349860939733088">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="481995988020006" type="System">
+                                                    <param id="0" name="Variable">ValueToTest</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">ValueMin</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="468676175942634" type="System">
+                                                    <param id="0" name="Variable">ValueToTest</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">ValueMax</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="357824171602459">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="867231767526089" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">CharacterNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">ValueToTest</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="846455858508918" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">IsAlreadySelected</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="871854923727478" type="CharacterSelectorText">
+                                                            <param id="0" name="Instance variable">SelectedCharacterNumber</param>
+                                                            <param id="1" name="Value">CharacterSelector.CharacterNumber</param>
+                                                        </action>
+                                                        <action id="-29" name="Move to object" sid="326466915700640" type="CharacterSelectorText">
+                                                            <param id="0" name="Where">0</param>
+                                                            <param id="1" name="Object">CharacterSelector</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="371924030466100" type="CharacterSelectorText">
+                                                            <param id="0" name="X">CharacterSelector.X</param>
+                                                            <param id="1" name="Y">CharacterSelector.Y</param>
+                                                        </action>
+                                                        <action id="-25" name="Move to bottom" sid="904011309922937" type="CharacterSelectorBackground" />
+                                                        <action id="-3" name="Set position" sid="127649747179435" type="CharacterSelectorBackground">
+                                                            <param id="0" name="X">CharacterSelector.ImagePointX(1)</param>
+                                                            <param id="1" name="Y">CharacterSelector.ImagePointY(1)</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="397312665800592" type="CharacterSelectorBackground">
+                                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">CharactersArray.At(ValueToTest - 1, 6)</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="428195874930011" type="CharacterSelectorBackground">
+                                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">CharactersArray.At(ValueToTest - 1, 7)</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="263619077612410" type="CharacterSelectorBackground">
+                                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">CharactersArray.At(ValueToTest - 1, 8)</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="331962908385097">
+                                                            <conditions>
+                                                                <condition id="1" name="Compare parameter" sid="914481706667657" type="Function">
+                                                                    <param id="0" name="Index">0</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="971820982802598" type="System">
+                                                                    <param id="0" name="Variable">Human_1_SelectedCharacter</param>
+                                                                    <param id="1" name="Value">ValueToTest</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="461400648488671">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="808449716325976" type="System" />
+                                                                <condition id="1" name="Compare parameter" sid="887533718120682" type="Function">
+                                                                    <param id="0" name="Index">0</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">2</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="714292282325750" type="System">
+                                                                    <param id="0" name="Variable">Human_2_SelectedCharacter</param>
+                                                                    <param id="1" name="Value">ValueToTest</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="857269385958523">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="867887896083598" type="System" />
+                                                                <condition id="1" name="Compare parameter" sid="309108030528692" type="Function">
+                                                                    <param id="0" name="Index">0</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">3</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="559582830023507" type="System">
+                                                                    <param id="0" name="Variable">Human_3_SelectedCharacter</param>
+                                                                    <param id="1" name="Value">ValueToTest</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="181703938537089">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="143898701641254" type="System" />
+                                                                <condition id="1" name="Compare parameter" sid="219340727639990" type="Function">
+                                                                    <param id="0" name="Index">0</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">4</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="675049578795036" type="System">
+                                                                    <param id="0" name="Variable">Human_4_SelectedCharacter</param>
+                                                                    <param id="1" name="Value">ValueToTest</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="388307829160768">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="127272905815818" type="System">
+                                                            <param id="0" name="Object">CharacterSelector</param>
+                                                        </condition>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="636817587721516" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">IsAlreadySelected</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="345875416093403" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">CharacterNumber</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">Human_1_SelectedCharacter</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="682593667982099" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">CharacterNumber</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">Human_2_SelectedCharacter</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="550265766350200" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">CharacterNumber</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">Human_3_SelectedCharacter</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="841780821283475" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">CharacterNumber</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Value">Human_4_SelectedCharacter</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="205196610091313" type="CharacterSelector">
+                                                            <param id="0" name="Instance variable">IsAlreadySelected</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Parametri: 0: Umano da settare; 1: Operazione da eseguire.</comment>
+                        <event-block sid="511274402529161">
+                            <conditions>
+                                <condition id="0" name="On function" sid="353038897161347" type="Function">
+                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="716253358359043">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="354154603263875" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Confirm&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="921042068946387" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Function.Param(0)</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="252316406337467" type="CharacterSelectorBackground">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Function.Param(0)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="202047048651567" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="340327811022275" type="CharacterSelectorBackground">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
