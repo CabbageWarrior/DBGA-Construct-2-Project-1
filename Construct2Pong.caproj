@@ -500,6 +500,14 @@
         <object-type name="QuitTextFromBottom" sid="737939517266051">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Sprite5" sid="451812803006138">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248450162436532" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
