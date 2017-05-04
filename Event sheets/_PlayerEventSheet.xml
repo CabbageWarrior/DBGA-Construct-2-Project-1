@@ -602,35 +602,9 @@
                         <comment>Primo contatto della partita con la palla.</comment>
                         <event-block sid="674020315274169">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="101634442558576" type="Ball">
-                                    <param id="0" name="Instance variable">LastPlayerUID</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
+                                <condition behavior="BlinkSine" id="0" name="Is active" sid="101634442558576" type="Ball" />
                             </conditions>
-                            <actions>
-                                <action behavior="BlinkSine" disabled="1" id="0" name="Set active" sid="594560595761880" type="Ball">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action disabled="1" id="-16" name="Set opacity" sid="593768796792539" type="Ball">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                                <action disabled="1" id="-10" name="Set value" sid="788532026905515" type="Ball">
-                                    <param id="0" name="Instance variable">LastTeam</param>
-                                    <param id="1" name="Value">Player.Team</param>
-                                </action>
-                                <action disabled="1" id="-10" name="Set value" sid="750565122249240" type="Ball">
-                                    <param id="0" name="Instance variable">LastPlayerNumber</param>
-                                    <param id="1" name="Value">Player.PlayerNumber</param>
-                                </action>
-                                <action disabled="1" id="-10" name="Set value" sid="162675309987093" type="Ball">
-                                    <param id="0" name="Instance variable">LastPlayerUID</param>
-                                    <param id="1" name="Value">Player.UID</param>
-                                </action>
-                                <action behavior="Bullet" disabled="1" id="0" name="Set speed" sid="895562237056511" type="Ball">
-                                    <param id="0" name="Speed">Ball.DefaultSpeed</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <comment>È attivo il comando di grab, quindi devo grabbare la palla.</comment>
                         <event-block sid="427854506450879">
@@ -713,17 +687,33 @@
                         <condition id="0" name="On collision with another object" sid="477090908675429" type="Ball">
                             <param id="0" name="Object">Ball</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="283584102642480" type="Ball">
-                            <param id="0" name="Instance variable">LastPlayerUID</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="388446026807154" type="Ball">
-                            <param id="0" name="Speed">Ball.DefaultSpeed</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="133209181184002">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="504292360549059" type="System">
+                                    <param id="0" name="Object">Ball</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="272853582364477" type="Ball" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="388446026807154" type="Ball">
+                                    <param id="0" name="Speed">Ball.DefaultSpeed</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="973207462627390">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="BlinkSine" id="0" name="Set active" sid="412047063250496" type="Ball">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

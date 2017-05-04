@@ -10,28 +10,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="332985299808955">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="271447863295266" type="System">
-                            <param id="0" name="Object">GamePadComponent</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="643890929488876" type="CharacterSelectorBackground">
-                            <param id="0" name="Instance variable">PlayerNumber</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">GamePadComponent.PlayerNumber</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="360005064444449" type="GamePadComponent">
-                            <param id="0" name="X">CharacterSelectorBackground.ImagePointX(Self.PlayerNumber &lt;= 2 ? 1 : 2)</param>
-                            <param id="1" name="Y">CharacterSelectorBackground.ImagePointY(Self.PlayerNumber &lt;= 2 ? 1 : 2)</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="914901363366563" type="GamePadComponent">
-                            <param id="0" name="Pin to">CharacterSelectorBackground</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="458896980838011">
                     <conditions />
                     <actions>
@@ -77,16 +55,6 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="751196922296725">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="980876327158659" type="System">
-                            <param id="0" name="Object">GamePadComponent</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="238863629833534" type="GamePadComponent" />
-                    </actions>
-                </event-block>
                 <event-block sid="874463614416112">
                     <conditions />
                     <actions>
@@ -1003,11 +971,6 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">Function.Param(0)</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="655823194165646" type="GamePadComponent">
-                                    <param id="0" name="Instance variable">PlayerNumber</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Function.Param(0)</param>
-                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -1027,9 +990,6 @@
                                         <action id="-16" name="Set opacity" sid="340327811022275" type="CharacterSelectorBackground">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
-                                        <action id="5" name="Set frame" sid="130152463249595" type="GamePadComponent">
-                                            <param id="0" name="Frame number">1</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="356877873539666">
@@ -1048,9 +1008,6 @@
                                         </action>
                                         <action id="-16" name="Set opacity" sid="891847679071019" type="CharacterSelectorBackground">
                                             <param id="0" name="Opacity">50</param>
-                                        </action>
-                                        <action id="5" name="Set frame" sid="352711485611850" type="GamePadComponent">
-                                            <param id="0" name="Frame number">0</param>
                                         </action>
                                     </actions>
                                 </event-block>

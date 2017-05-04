@@ -68,6 +68,7 @@
             </conditions>
             <actions />
             <sub-events>
+                <comment>Correzione posizione su spostamento linea di centro campo.</comment>
                 <event-block sid="261661825734413">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="502767531549739" type="Player">
@@ -102,23 +103,6 @@
                     <actions>
                         <action id="-1" name="Set X" sid="990548066976829" type="Player">
                             <param id="0" name="X">HalfWayLine.X + (Player.Width / 2) + 1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="991368178200541">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="540950061945715" type="System">
-                            <param id="0" name="Variable">IsFinished</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="154537013573856" type="TimeTextHours">
-                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout) / 60 % 60), 2)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="927709395517414" type="TimeTextMinutes">
-                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout) % 60), 2)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -205,6 +189,63 @@
                                     <param id="0" name="Y">Self.Height / 2</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Time Counter</comment>
+                <event-block sid="991368178200541">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="540950061945715" type="System">
+                            <param id="0" name="Variable">IsFinished</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="154537013573856" type="TimeTextHours">
+                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout) / 60 % 60), 2)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="927709395517414" type="TimeTextMinutes">
+                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout) % 60), 2)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="907678159151769">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="635390658418532" type="System">
+                                    <param id="0" name="Object">Ball</param>
+                                </condition>
+                                <condition behavior="BlinkSine" id="0" inverted="1" name="Is active" sid="447624088472673" type="Ball" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="182650220480228" type="Ball">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="519454327813739">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="160091464019016" type="Ball">
+                                            <param id="0" name="Object">PlayerGrabCollider</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="912165543961728" type="Ball">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="359186215081238">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="593701822710438" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="253520900677581" type="Ball">
+                                            <param id="0" name="Opacity">75</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
