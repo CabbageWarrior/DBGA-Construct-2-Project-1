@@ -164,7 +164,7 @@
                     <behavior-type name="8Direction" sid="841699245598175">
                         <behavior id="EightDir" />
                     </behavior-type>
-                    <behavior-type name="Flash" sid="972984145052342">
+                    <behavior-type name="FlashDamage" sid="972984145052342">
                         <behavior id="Flash" />
                     </behavior-type>
                 </behaviors>
@@ -353,6 +353,101 @@
             <object-type name="EndGameMenuText" sid="540707769703792">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="CharacterSelector" sid="863668077788482">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CharacterNumber" sid="498702146978231" type="number" />
+                    <instance-variable name="IsAlreadySelected" sid="978941691981344" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161135491042050" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\iron man.png">
+                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\war machine.png">
+                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\Black Widow.png">
+                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\black panther.png">
+                            <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\Captain America.png">
+                            <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\Winter Soldier.png">
+                            <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\Hawkeye.png">
+                            <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\falcon.png">
+                            <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CharacterSelectorBackground" sid="881033064990641">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="PlayerNumber" sid="600621533177558" type="number" />
+                </instance-variables>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="880268921151058" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="PadButtonAnchorTeam1" x="-0.181818" y="0.5" />
+                            <image-point name="PadButtonAnchorTeam2" x="1.18182" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CharacterSelectorText" sid="950150200580367">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="PlayerNumber" sid="162138462781840" type="number" />
+                    <instance-variable name="SelectedCharacterNumber" sid="943889379559464" type="number" />
+                    <instance-variable name="IsConfirmed" sid="607268161582451" type="boolean" />
+                </instance-variables>
+            </object-type>
+            <object-type name="CharacterRoleText" sid="807201377871587">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GamePadComponent" sid="679176403094257">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="PlayerNumber" sid="927899716079529" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Pin" sid="382266714109201">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="845324928182269" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Desktop\Xbox360PixelPad.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="542028558954637">
             <plugin id="Keyboard" />
@@ -515,75 +610,10 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="CharacterSelector" sid="863668077788482">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="CharacterNumber" sid="498702146978231" type="number" />
-                <instance-variable name="IsAlreadySelected" sid="978941691981344" type="boolean" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161135491042050" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\iron man.png">
-                        <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\war machine.png">
-                        <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\Black Widow.png">
-                        <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\black panther.png">
-                        <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\Captain America.png">
-                        <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\Winter Soldier.png">
-                        <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\Hawkeye.png">
-                        <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team captain america\falcon.png">
-                        <image-point name="SelectorBGPoint" x="0.804688" y="0.5" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="HalfwayMarker" sid="873104034646073">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="200471248686285" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="CharacterRoleText" sid="807201377871587">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="CharacterSelectorText" sid="950150200580367">
-            <plugin id="Text" />
-            <instance-variables>
-                <instance-variable name="PlayerNumber" sid="162138462781840" type="number" />
-                <instance-variable name="SelectedCharacterNumber" sid="943889379559464" type="number" />
-                <instance-variable name="IsConfirmed" sid="607268161582451" type="boolean" />
-            </instance-variables>
-        </object-type>
-        <object-type name="CharacterSelectorBackground" sid="881033064990641">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="PlayerNumber" sid="600621533177558" type="number" />
-            </instance-variables>
-            <effects>
-                <effect-type name="SetColor">
-                    <effect id="setcolor" />
-                </effect-type>
-            </effects>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="880268921151058" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>

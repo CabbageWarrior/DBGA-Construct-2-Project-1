@@ -8,28 +8,56 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="812521210217568" type="System" />
             </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="337352947875761" type="Function">
-                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                    <param id="1" name="Parameter {n}">1{###}Human_1_SelectedCharacter{###}1</param>
-                </action>
-                <action id="0" name="Call function" sid="902081269708628" type="Function">
-                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                    <param id="1" name="Parameter {n}">2{###}Human_2_SelectedCharacter{###}1</param>
-                </action>
-                <action id="0" name="Call function" sid="256715196035316" type="Function">
-                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                    <param id="1" name="Parameter {n}">3{###}Human_3_SelectedCharacter{###}1</param>
-                </action>
-                <action id="0" name="Call function" sid="952857599336576" type="Function">
-                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                    <param id="1" name="Parameter {n}">4{###}Human_4_SelectedCharacter{###}1</param>
-                </action>
-                <action id="-9" name="Set value" sid="465991908986086" type="System">
-                    <param id="0" name="Variable">CommandType</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="332985299808955">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="271447863295266" type="System">
+                            <param id="0" name="Object">GamePadComponent</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="643890929488876" type="CharacterSelectorBackground">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">GamePadComponent.PlayerNumber</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="360005064444449" type="GamePadComponent">
+                            <param id="0" name="X">CharacterSelectorBackground.ImagePointX(Self.PlayerNumber &lt;= 2 ? 1 : 2)</param>
+                            <param id="1" name="Y">CharacterSelectorBackground.ImagePointY(Self.PlayerNumber &lt;= 2 ? 1 : 2)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="914901363366563" type="GamePadComponent">
+                            <param id="0" name="Pin to">CharacterSelectorBackground</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="458896980838011">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="337352947875761" type="Function">
+                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                            <param id="1" name="Parameter {n}">1{###}Human_1_SelectedCharacter{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="902081269708628" type="Function">
+                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                            <param id="1" name="Parameter {n}">2{###}Human_2_SelectedCharacter{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="256715196035316" type="Function">
+                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                            <param id="1" name="Parameter {n}">3{###}Human_3_SelectedCharacter{###}1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="952857599336576" type="Function">
+                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                            <param id="1" name="Parameter {n}">4{###}Human_4_SelectedCharacter{###}1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="465991908986086" type="System">
+                            <param id="0" name="Variable">CommandType</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="656491096926398">
             <conditions>
@@ -45,15 +73,32 @@
             <actions>
                 <action id="-9" name="Set value" sid="389791556390878" type="System">
                     <param id="0" name="Variable">CommandType</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="158081597427367" type="System">
-                    <param id="0" name="Seconds">2</param>
-                </action>
-                <action id="-2" name="Go to layout" sid="308066011922118" type="System">
-                    <param id="0" name="Layout">Game</param>
+                    <param id="1" name="Value">-1</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="751196922296725">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="980876327158659" type="System">
+                            <param id="0" name="Object">GamePadComponent</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="238863629833534" type="GamePadComponent" />
+                    </actions>
+                </event-block>
+                <event-block sid="874463614416112">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="158081597427367" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="308066011922118" type="System">
+                            <param id="0" name="Layout">Game</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="298810847353940" title="Menu CharSelection">
             <sub-events>
@@ -958,6 +1003,11 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">Function.Param(0)</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="655823194165646" type="GamePadComponent">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(0)</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
@@ -977,6 +1027,9 @@
                                         <action id="-16" name="Set opacity" sid="340327811022275" type="CharacterSelectorBackground">
                                             <param id="0" name="Opacity">100</param>
                                         </action>
+                                        <action id="5" name="Set frame" sid="130152463249595" type="GamePadComponent">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="356877873539666">
@@ -995,6 +1048,9 @@
                                         </action>
                                         <action id="-16" name="Set opacity" sid="891847679071019" type="CharacterSelectorBackground">
                                             <param id="0" name="Opacity">50</param>
+                                        </action>
+                                        <action id="5" name="Set frame" sid="352711485611850" type="GamePadComponent">
+                                            <param id="0" name="Frame number">0</param>
                                         </action>
                                     </actions>
                                 </event-block>

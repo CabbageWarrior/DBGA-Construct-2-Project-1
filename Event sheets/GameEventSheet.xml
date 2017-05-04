@@ -34,14 +34,6 @@
                     <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
                     <param id="1" name="Parameter {n}">CharactersArray.At(Human_4_SelectedCharacter - 1, 0){###}Human_4_SelectedCharacter - 1{###}4</param>
                 </action>
-                <action id="0" name="Call function" sid="172579398907773" type="Function">
-                    <param id="0" name="Name">&quot;SpawnBallAtDirection&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Left&quot;</param>
-                </action>
-                <action id="0" name="Call function" sid="993643554753193" type="Function">
-                    <param id="0" name="Name">&quot;SpawnBallAtDirection&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Right&quot;</param>
-                </action>
             </actions>
             <sub-events>
                 <event-block sid="913548935459765">
@@ -61,6 +53,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Call function" sid="172579398907773" type="Function">
+                            <param id="0" name="Name">&quot;SpawnBall&quot;</param>
+                            <param id="1" name="Parameter {n}">BallSpawnPoint.UID</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="232998720361375" type="BallSpawnPoint" />
                     </actions>
                 </event-block>
@@ -686,55 +682,26 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Parametri: nessuno.</comment>
+                <comment>Parametri: 0: UID del punto di spawn.</comment>
                 <event-block sid="811906448479719">
                     <conditions>
                         <condition id="0" name="On function" sid="249162581971651" type="Function">
-                            <param id="0" name="Name">&quot;SpawnBallAtDirection&quot;</param>
+                            <param id="0" name="Name">&quot;SpawnBall&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="193425215664165" type="BallSpawnPoint">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="652405147143996">
-                            <conditions>
-                                <condition id="1" name="Compare parameter" sid="411473336044977" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Right&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="525445125758504" type="BallSpawnPoint">
-                                    <param id="0" name="Object">Ball</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">&quot;SpawnToRight&quot;</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="354105994996079" type="Ball">
-                                    <param id="0" name="Angle">random(-70, 70)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="697622641051059">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="546207318341182" type="System" />
-                                <condition id="1" name="Compare parameter" sid="424439590473008" type="Function">
-                                    <param id="0" name="Index">0</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Left&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="880575246051239" type="BallSpawnPoint">
-                                    <param id="0" name="Object">Ball</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">&quot;SpawnToLeft&quot;</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="956788340185648" type="Ball">
-                                    <param id="0" name="Angle">random(110, 250)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="525445125758504" type="BallSpawnPoint">
+                            <param id="0" name="Object">Ball</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action behavior="BlinkSine" id="0" name="Set active" sid="205643123111258" type="Ball">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <comment>Parametri: nessuno.</comment>
                 <event-block sid="818019019824705">
