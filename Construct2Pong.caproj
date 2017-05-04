@@ -258,6 +258,33 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PlayerGrabShadow" sid="330690955313748">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="565639611576775">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="226458198901943">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="SineWidth" sid="687306504722142">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="SineHeight" sid="713403816140060">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="494933203410024" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Power-Up">
             <object-type name="PowerUpSpawnPoint" sid="284767617379747">

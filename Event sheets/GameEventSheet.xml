@@ -57,7 +57,6 @@
                             <param id="0" name="Name">&quot;SpawnBall&quot;</param>
                             <param id="1" name="Parameter {n}">BallSpawnPoint.UID</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="232998720361375" type="BallSpawnPoint" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -217,11 +216,7 @@
                                 </condition>
                                 <condition behavior="BlinkSine" id="0" inverted="1" name="Is active" sid="447624088472673" type="Ball" />
                             </conditions>
-                            <actions>
-                                <action id="-16" name="Set opacity" sid="182650220480228" type="Ball">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="519454327813739">
                                     <conditions>
@@ -741,6 +736,10 @@
                         </action>
                         <action behavior="BlinkSine" id="0" name="Set active" sid="205643123111258" type="Ball">
                             <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="504572225353603" type="Ball">
+                            <param id="0" name="Pin to">BallSpawnPoint</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>

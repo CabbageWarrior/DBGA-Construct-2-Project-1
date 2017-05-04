@@ -118,34 +118,6 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="365540132941929" type="Function">
                                                     <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="244535024884498">
-                                            <conditions>
-                                                <condition id="3" name="Is button down" sid="595495247656954" type="Gamepad">
-                                                    <param id="0" name="Gamepad">0</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="303868437055745" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="217193746256575">
-                                            <conditions>
-                                                <condition id="7" name="On button released" sid="466894121398539" type="Gamepad">
-                                                    <param id="0" name="Gamepad">0</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="621705876773245" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
                                                     <param id="1" name="Parameter {n}">Player.UID{###}angle(0, 0, abs(Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2)) * (Player.Team = 1 ? 1 : -1), Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)){###}1</param>
                                                 </action>
                                             </actions>
@@ -157,35 +129,9 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="781572415484108" type="Function">
+                                                <action id="0" name="Call function" sid="721769440973952" type="Function">
                                                     <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="113299194492334">
-                                            <conditions>
-                                                <condition id="2" name="Key is down" sid="615594852145355" type="Keyboard">
-                                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="375889462170053" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="167512050873794">
-                                            <conditions>
-                                                <condition id="3" name="On key released" sid="613988639937075" type="Keyboard">
-                                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="536284273068580" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID{###}Player.Team = 1 ? 0 : 180{###}1</param>
+                                                    <param id="1" name="Parameter {n}">Player.UID{###}(Player.Team = 1 ? 0 : 180) + 30{###}1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -281,36 +227,8 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="758010520745227" type="Function">
+                                                <action id="0" name="Call function" sid="643039635114653" type="Function">
                                                     <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="324220487244526">
-                                            <conditions>
-                                                <condition id="3" name="Is button down" sid="115801390672176" type="Gamepad">
-                                                    <param id="0" name="Gamepad">1</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="374787163590040" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="323152776060900">
-                                            <conditions>
-                                                <condition id="7" name="On button released" sid="671526928579921" type="Gamepad">
-                                                    <param id="0" name="Gamepad">1</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="970427761199800" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
                                                     <param id="1" name="Parameter {n}">Player.UID{###}angle(0, 0, abs(Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2)) * (Player.Team = 1 ? 1 : -1), Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)){###}1</param>
                                                 </action>
                                             </actions>
@@ -407,36 +325,8 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="860041989672679" type="Function">
+                                                <action id="0" name="Call function" sid="835038099819246" type="Function">
                                                     <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="531220455621123">
-                                            <conditions>
-                                                <condition id="3" name="Is button down" sid="713203623105890" type="Gamepad">
-                                                    <param id="0" name="Gamepad">2</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="266466430714958" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="370820876640452">
-                                            <conditions>
-                                                <condition id="7" name="On button released" sid="617057702465666" type="Gamepad">
-                                                    <param id="0" name="Gamepad">2</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="871618148177137" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
                                                     <param id="1" name="Parameter {n}">Player.UID{###}angle(0, 0, abs(Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2)) * (Player.Team = 1 ? 1 : -1), Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)){###}1</param>
                                                 </action>
                                             </actions>
@@ -533,36 +423,8 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="630112726904126" type="Function">
+                                                <action id="0" name="Call function" sid="762747094757077" type="Function">
                                                     <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="946506324240383">
-                                            <conditions>
-                                                <condition id="3" name="Is button down" sid="295898161009976" type="Gamepad">
-                                                    <param id="0" name="Gamepad">3</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="639764421786720" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Player.UID</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="661459275289267">
-                                            <conditions>
-                                                <condition id="7" name="On button released" sid="236708222609546" type="Gamepad">
-                                                    <param id="0" name="Gamepad">3</param>
-                                                    <param id="1" name="Button">7</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="451808672781969" type="Function">
-                                                    <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
                                                     <param id="1" name="Parameter {n}">Player.UID{###}angle(0, 0, abs(Gamepad.Axis(Player.PlayerNumber - 1, 0 + 2)) * (Player.Team = 1 ? 1 : -1), Gamepad.Axis(Player.PlayerNumber - 1, 1 + 2)){###}1</param>
                                                 </action>
                                             </actions>
@@ -599,10 +461,10 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <comment>Primo contatto della partita con la palla.</comment>
-                        <event-block sid="674020315274169">
+                        <comment>La palla è grabbata, quindi non deve fare danno.</comment>
+                        <event-block sid="739721518283839">
                             <conditions>
-                                <condition behavior="BlinkSine" id="0" name="Is active" sid="101634442558576" type="Ball" />
+                                <condition behavior="Pin" id="0" name="Is pinned" sid="837643128318049" type="Ball" />
                             </conditions>
                             <actions />
                         </event-block>
@@ -615,7 +477,6 @@
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
-                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="200007369217713" type="Ball" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="724657741800182" type="Function">
@@ -623,14 +484,6 @@
                                     <param id="1" name="Parameter {n}">Player.UID{###}Ball.UID</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <comment>La palla è grabbata, quindi non deve fare danno.</comment>
-                        <event-block sid="739721518283839">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="279328282704357" type="System" />
-                                <condition behavior="Pin" id="0" name="Is pinned" sid="837643128318049" type="Ball" />
-                            </conditions>
-                            <actions />
                         </event-block>
                         <comment>Nessuna delle casistiche precedenti è soddisfatta. Vuol dire che il giocatore deve essere colpito.</comment>
                         <event-block sid="808476425094660">
@@ -690,28 +543,110 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="133209181184002">
+                        <variable constant="0" name="BallMovingUID" sid="583170791536203" static="0" type="number">0</variable>
+                        <variable constant="0" name="BallStayingUID" sid="329182184340694" static="0" type="number">0</variable>
+                        <variable constant="0" name="BallMovingAngle" sid="750190475546499" static="0" type="number">0</variable>
+                        <event-block sid="376473536260121">
                             <conditions>
-                                <condition id="-11" name="For Each" sid="504292360549059" type="System">
+                                <condition id="-11" name="For Each" sid="789676283012258" type="System">
                                     <param id="0" name="Object">Ball</param>
                                 </condition>
-                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="272853582364477" type="Ball" />
                             </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="0" name="Set speed" sid="388446026807154" type="Ball">
-                                    <param id="0" name="Speed">Ball.DefaultSpeed</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
-                                <event-block sid="973207462627390">
-                                    <conditions />
+                                <event-block sid="222446759634303">
+                                    <conditions>
+                                        <condition behavior="Pin" id="0" name="Is pinned" sid="468489136532455" type="Ball" />
+                                        <condition id="-7" name="Compare instance variable" sid="314120333678743" type="Ball">
+                                            <param id="0" name="Instance variable">LastPlayerUID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
-                                        <action behavior="BlinkSine" id="0" name="Set active" sid="412047063250496" type="Ball">
-                                            <param id="0" name="State">0</param>
+                                        <action id="-9" name="Set value" sid="703378499083810" type="System">
+                                            <param id="0" name="Variable">BallStayingUID</param>
+                                            <param id="1" name="Value">Ball.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="727959548188906">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="990588025414048" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="278992842908313" type="System">
+                                            <param id="0" name="Variable">BallMovingUID</param>
+                                            <param id="1" name="Value">Ball.UID</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="336890483564419">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="295871613132104" type="System">
+                                    <param id="0" name="Variable">BallStayingUID</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="495767336608073" type="System">
+                                    <param id="0" name="Variable">BallMovingUID</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="985655106999939">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="472053368917199" type="Ball">
+                                            <param id="0" name="Unique ID">BallMovingUID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="136751057158593" type="System">
+                                            <param id="0" name="Variable">BallMovingAngle</param>
+                                            <param id="1" name="Value">Ball.Bullet.AngleOfMotion</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="719432091316446">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="841709374492465" type="Ball">
+                                            <param id="0" name="Unique ID">BallStayingUID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pin" id="1" name="Unpin" sid="966088346027218" type="Ball" />
+                                        <action behavior="BlinkSine" id="0" name="Set active" sid="593519374098599" type="Ball">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action disabled="1" id="-8" name="Set angle" sid="477631588227057" type="Ball">
+                                            <param id="0" name="Angle">BallMovingAngle</param>
+                                        </action>
+                                        <action behavior="Bullet" id="0" name="Set speed" sid="524886574729846" type="Ball">
+                                            <param id="0" name="Speed">Ball.DefaultSpeed</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="898020276876127" type="Ball">
+                                            <param id="0" name="Angle">BallMovingAngle + 180</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="431984776883930">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="977006166779175" type="System">
+                                    <param id="0" name="Object">Ball</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="967985294298890" type="Ball" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="604814259118972" type="Ball">
+                                    <param id="0" name="Speed">Ball.DefaultSpeed</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -758,10 +693,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="0" name="Call function" sid="913276099653271" type="Function">
-                            <param id="0" name="Name">&quot;PlayerHit&quot;</param>
-                            <param id="1" name="Parameter {n}">Ball.LastPlayerUID{###}1</param>
-                        </action>
                         <action id="0" name="Call function" sid="317970836303337" type="Function">
                             <param id="0" name="Name">&quot;PlayerReleaseBall&quot;</param>
                             <param id="1" name="Parameter {n}">Ball.LastPlayerUID{###}Ball.LastTeam = 1 ? 0 : 180{###}-1</param>
@@ -875,95 +806,17 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Parametri: 0: UID del Player.</comment>
+                        <comment>Parametri: 0: UID del Player, 1: Angolo di rilascio, 2: Potenza della palla (&quot;Fast&quot;, &quot;Medium&quot;, &quot;Slow&quot;) in base alle statistiche e all&apos;azione compiuta sul personaggio.</comment>
                         <event-block sid="388040140304503">
                             <conditions>
                                 <condition id="0" name="On function" sid="826903400649285" type="Function">
                                     <param id="0" name="Name">&quot;PlayerActionButtonPressed&quot;</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="948998235693626" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerStartTryingToGrab&quot;</param>
-                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>Parametri: 0: UID del Player.</comment>
-                        <event-block sid="333390275816406">
-                            <conditions>
-                                <condition id="0" name="On function" sid="136746406068331" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerActionButtonDown&quot;</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="404585903745844" type="Player">
-                                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                                </condition>
-                            </conditions>
                             <actions />
                             <sub-events>
-                                <event-block disabled="1" sid="554195521045201">
+                                <event-block sid="808999195570607">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="416749494303955" type="Player">
-                                            <param id="0" name="Instance variable">SkillGrabBallTryingToGrab</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="427054511383692" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerContinueTryingToGrab&quot;</param>
-                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="614359242947744">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="890028117903242" type="System" />
-                                        <condition id="-7" name="Compare instance variable" sid="992334264133746" type="Player">
-                                            <param id="0" name="Instance variable">SkillGrabBallIsGrabbing</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="510728998254048" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerContinueGrabbing&quot;</param>
-                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>Parametri: 0: UID del Player, 1: Angolo di rilascio, 2: Potenza della palla (&quot;Fast&quot;, &quot;Medium&quot;, &quot;Slow&quot;) in base alle statistiche e all&apos;azione compiuta sul personaggio.</comment>
-                        <event-block sid="996658909739789">
-                            <conditions>
-                                <condition id="0" name="On function" sid="257928965487291" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerActionButtonReleased&quot;</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="760117516705015" type="Player">
-                                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="574396627068173">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="486083561651926" type="Player">
-                                            <param id="0" name="Instance variable">SkillGrabBallTryingToGrab</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="343165191798584" type="Function">
-                                            <param id="0" name="Name">&quot;PlayerStopTryingToGrab&quot;</param>
-                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="317042494124892">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="666623044980215" type="System" />
                                         <condition id="-7" name="Compare instance variable" sid="252088020452194" type="Player">
                                             <param id="0" name="Instance variable">SkillGrabBallIsGrabbing</param>
                                             <param id="1" name="Comparison">0</param>
@@ -974,6 +827,17 @@
                                         <action id="0" name="Call function" sid="452178963036824" type="Function">
                                             <param id="0" name="Name">&quot;PlayerReleaseBall&quot;</param>
                                             <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}Function.Param(2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="766737445402789">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="464727218877486" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="948998235693626" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerStartTryingToGrab&quot;</param>
+                                            <param id="1" name="Parameter {n}">Function.Param(0)</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1258,6 +1122,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="617533201712830" type="PlayerGrabCollider">
+                            <param id="0" name="Instance variable">PlayerUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Player.UID</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="937544603211154" type="Player">
@@ -1268,25 +1137,91 @@
                             <param id="0" name="Instance variable">SkillGrabBallTryingToGrab</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="187000575041536" type="PlayerGrabCollider">
+                            <param id="0" name="Object">PlayerGrabShadow</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="681854354043617" type="PlayerGrabShadow">
+                            <param id="0" name="Width">PlayerGrabCollider.Width</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="160205743336863" type="PlayerGrabShadow">
+                            <param id="0" name="Height">PlayerGrabCollider.Height</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="789318562272278" type="PlayerGrabShadow">
+                            <param id="0" name="Pin to">PlayerGrabCollider</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="440202877188855" type="PlayerGrabShadow">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 6)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="136418451923286" type="PlayerGrabShadow">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 7)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="480782384208530" type="PlayerGrabShadow">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 8)</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="140364439976550" type="PlayerGrabShadow" />
+                        <action behavior="SineWidth" id="2" name="Set magnitude" sid="937325657803445" type="PlayerGrabShadow">
+                            <param id="0" name="Magnitude">Self.Width - Player.Width</param>
+                        </action>
+                        <action behavior="SineHeight" id="2" name="Set magnitude" sid="398645894833463" type="PlayerGrabShadow">
+                            <param id="0" name="Magnitude">Self.Height - Player.Height</param>
+                        </action>
+                        <action behavior="SineWidth" id="6" name="Update initial state" sid="951677419496151" type="PlayerGrabShadow" />
+                        <action behavior="SineHeight" id="6" name="Update initial state" sid="286619001697081" type="PlayerGrabShadow" />
+                        <action behavior="SineWidth" id="0" name="Set active" sid="670886051383286" type="PlayerGrabShadow">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="SineHeight" id="0" name="Set active" sid="290189611598543" type="PlayerGrabShadow">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="867199894417524" type="PlayerGrabShadow" />
+                        <action id="-25" name="Move to bottom" sid="343683523875413" type="PlayerGrabCollider" />
                     </actions>
                     <sub-events>
                         <event-block sid="704652112552450">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="591037259125693" type="PlayerGrabCollider">
-                                    <param id="0" name="Instance variable">PlayerUID</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Player.UID</param>
-                                </condition>
                                 <condition id="1" name="Is overlapping another object" sid="941051980489086" type="PlayerGrabCollider">
                                     <param id="0" name="Object">Ball</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="895062502761025" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerStartGrabbing&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.UID{###}Ball.UID</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="489488650283715">
+                                    <conditions>
+                                        <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="161142722287595" type="Ball" />
+                                        <condition id="-7" name="Compare instance variable" sid="928441964030082" type="Ball">
+                                            <param id="0" name="Instance variable">LastPlayerUID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="895062502761025" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerStartGrabbing&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.UID{###}Ball.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="617909236165606">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="298323730119882" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="353392555338034" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerStopTryingToGrab&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="900613354404123">
                             <conditions>
@@ -1340,53 +1275,65 @@
                         <condition id="-14" name="Pick by unique ID" sid="316528347689940" type="Ball">
                             <param id="0" name="Unique ID">Function.Param(1)</param>
                         </condition>
-                        <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="232705477677580" type="Ball" />
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="686542376042163" type="Player">
-                            <param id="0" name="Instance variable">SkillGrabBallTryingToGrab</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="281765965223681" type="Player">
-                            <param id="0" name="Instance variable">SkillGrabBallIsGrabbing</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="BlinkSine" id="0" name="Set active" sid="538019607634294" type="Ball">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="-1" name="Set X" sid="637762687581763" type="Ball">
-                            <param id="0" name="X">Player.X + ((Player.Width + Ball.Width) / 2 * (Player.Team = 1 ? 1 : -1))</param>
-                        </action>
-                        <action id="-2" name="Set Y" sid="780645008045877" type="Ball">
-                            <param id="0" name="Y">Player.Y</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="576010821184622" type="Ball">
-                            <param id="0" name="Pin to">Player</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="727755383032913" type="Ball">
-                            <param id="0" name="Instance variable">LastTeam</param>
-                            <param id="1" name="Value">Player.Team</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="422438788793842" type="Ball">
-                            <param id="0" name="Instance variable">LastPlayerNumber</param>
-                            <param id="1" name="Value">Player.PlayerNumber</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="736773481290007" type="Ball">
-                            <param id="0" name="Instance variable">LastPlayerUID</param>
-                            <param id="1" name="Value">Player.UID</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="183860020681536" type="Ball">
-                            <param id="0" name="Speed">Ball.DefaultSpeed + 500 * Player.Pow</param>
-                        </action>
-                        <action behavior="BlinkSine" id="0" name="Set active" sid="723282892936717" type="Ball">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="524833583516421" type="Ball">
-                            <param id="0" name="Instance variable">BlinkSeconds</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="545296422229999">
+                            <conditions>
+                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="232705477677580" type="Ball" />
+                                <condition id="-7" name="Compare instance variable" sid="369174715246288" type="Ball">
+                                    <param id="0" name="Instance variable">LastPlayerUID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="686542376042163" type="Player">
+                                    <param id="0" name="Instance variable">SkillGrabBallTryingToGrab</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="281765965223681" type="Player">
+                                    <param id="0" name="Instance variable">SkillGrabBallIsGrabbing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="BlinkSine" id="0" name="Set active" sid="538019607634294" type="Ball">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="637762687581763" type="Ball">
+                                    <param id="0" name="X">Player.X + ((Player.Width + Ball.Width) / 2 * (Player.Team = 1 ? 1 : -1))</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="780645008045877" type="Ball">
+                                    <param id="0" name="Y">Player.Y</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="576010821184622" type="Ball">
+                                    <param id="0" name="Pin to">Player</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="727755383032913" type="Ball">
+                                    <param id="0" name="Instance variable">LastTeam</param>
+                                    <param id="1" name="Value">Player.Team</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="422438788793842" type="Ball">
+                                    <param id="0" name="Instance variable">LastPlayerNumber</param>
+                                    <param id="1" name="Value">Player.PlayerNumber</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="736773481290007" type="Ball">
+                                    <param id="0" name="Instance variable">LastPlayerUID</param>
+                                    <param id="1" name="Value">Player.UID</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="183860020681536" type="Ball">
+                                    <param id="0" name="Speed">Ball.DefaultSpeed + 500 * Player.Pow</param>
+                                </action>
+                                <action behavior="BlinkSine" id="0" name="Set active" sid="723282892936717" type="Ball">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="524833583516421" type="Ball">
+                                    <param id="0" name="Instance variable">BlinkSeconds</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Parametri: 0: UID del Player, 1: angolo di rilascio della palla, 2: Aggiungi potenza alla palla (1 = Sì, 0 = No, -1 = Sminchissimo).</comment>
                 <event-block sid="814675190467784">
