@@ -878,19 +878,28 @@
                                 <event-block sid="487316656825637">
                                     <conditions>
                                         <condition behavior="Pin" id="0" name="Is pinned" sid="682412964811878" type="Ball" />
-                                        <condition id="-7" name="Compare instance variable" sid="330858887467370" type="Ball">
-                                            <param id="0" name="Instance variable">LastPlayerUID</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="101686354369507" type="Ball">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="243129026681640">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="908378514100571">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="488066986190615" type="System" />
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="862857458926786" type="Ball">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
                                         <event-block sid="617049025287687">
                                             <conditions>
@@ -915,10 +924,6 @@
                                                             <param id="0" name="Instance variable">LastSpeed</param>
                                                             <param id="1" name="Value">Self.LastSpeed - (100 * dt)</param>
                                                         </action>
-                                                        <action disabled="1" id="-10" name="Set value" sid="504028613787897" type="Ball">
-                                                            <param id="0" name="Instance variable">LastSpeed</param>
-                                                            <param id="1" name="Value">Self.LastSpeed - (Self.LastSpeed / 10 * dt)</param>
-                                                        </action>
                                                     </actions>
                                                 </event-block>
                                                 <event-block sid="963921853641788">
@@ -933,17 +938,17 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="395775183593498">
+                                <event-block sid="962002383768089">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="403489662945309" type="Ball">
+                                        <condition id="-7" name="Compare instance variable" sid="237078852536759" type="Ball">
                                             <param id="0" name="Instance variable">LastMovementAngle</param>
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Value">Self.Bullet.AngleOfMotion</param>
                                         </condition>
-                                        <condition behavior="Pin" id="0" name="Is pinned" sid="837780465684769" type="Ball" />
+                                        <condition behavior="Pin" id="0" name="Is pinned" sid="515727052580054" type="Ball" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="392414974552691" type="Ball">
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="804776769198059" type="Ball">
                                             <param id="0" name="Angle">Self.LastMovementAngle</param>
                                         </action>
                                     </actions>
@@ -1645,7 +1650,7 @@
                                         <condition id="-22" name="Else" sid="325916525813254" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="543032960890722" type="Ball">
+                                        <action disabled="1" id="-10" name="Set value" sid="543032960890722" type="Ball">
                                             <param id="0" name="Instance variable">LastMovementAngle</param>
                                             <param id="1" name="Value">Player.Team = 1 ? 0 : 180</param>
                                         </action>
