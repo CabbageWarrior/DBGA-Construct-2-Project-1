@@ -9,6 +9,10 @@
                 <condition id="-2" name="On start of layout" sid="221812450395585" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="861390482296353" type="System">
+                    <param id="0" name="Variable">CommandType</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
                 <action id="0" name="Call function" sid="533658169689038" type="Function">
                     <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                     <param id="1" name="Parameter {n}">1</param>
@@ -50,6 +54,17 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="709471770698040">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="457122164337744" type="GameTitle" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="779613960096898" type="System">
+                    <param id="0" name="Variable">CommandType</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="861469533332530" title="Menu Intro">
             <sub-events>
                 <event-group description="" sid="358765031454834" title="Menu Intro Controls">
@@ -59,7 +74,7 @@
                                 <condition id="-14" name="Compare variable" sid="238078487002583" type="System">
                                     <param id="0" name="Variable">CommandType</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -471,6 +486,9 @@
                                         <action id="-15" name="Set visible" sid="134370181069075" type="GameTutorialText">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
+                                        <action id="-15" name="Set visible" sid="454132236641080" type="GameTutorialBackground">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="131071872698179">
@@ -488,6 +506,9 @@
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="865699262755965" type="GameTutorialText">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="129120340979748" type="GameTutorialBackground">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>

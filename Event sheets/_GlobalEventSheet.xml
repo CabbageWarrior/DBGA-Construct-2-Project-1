@@ -13,7 +13,7 @@
         <variable constant="1" name="CHARACTER_DEFAULT_HEIGHT" sid="567042304574400" static="0" type="number">200</variable>
         <variable constant="1" name="CHARACTER_DEFAULT_WIDTH" sid="484529372780017" static="0" type="number">50</variable>
         <variable constant="1" name="CHARACTER_DEFAULT_SPEED" sid="830332573322609" static="0" type="number">800</variable>
-        <variable constant="1" name="CHARACTER_GRAB_COLLISION_RANGE" sid="885289075493017" static="0" type="number">75</variable>
+        <variable constant="1" name="CHARACTER_GRAB_COLLISION_RANGE" sid="885289075493017" static="0" type="number">85</variable>
         <variable constant="1" name="HUMAN_1_DEFAULT_CHARACTER" sid="952579267319169" static="0" type="number">1</variable>
         <variable constant="1" name="HUMAN_2_DEFAULT_CHARACTER" sid="798923984598612" static="0" type="number">2</variable>
         <variable constant="1" name="HUMAN_3_DEFAULT_CHARACTER" sid="816149502991344" static="0" type="number">5</variable>

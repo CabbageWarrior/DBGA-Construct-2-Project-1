@@ -107,6 +107,9 @@
                     <instance-variable name="BlinkSeconds" sid="902357064926555" type="number" />
                     <instance-variable name="CurrentNormalSpeed" sid="300282142526611" type="number" />
                     <instance-variable name="IsDirectShot" sid="250799473910773" type="number" />
+                    <instance-variable name="NoLastPlayerDamageTimer" sid="113207469035836" type="number" />
+                    <instance-variable comment="1: Sì; 0: No." name="SpecularShotEnabled" sid="204571500995552" type="number" />
+                    <instance-variable name="SpecularShotTimer" sid="537544003347083" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="361987747890016">
@@ -126,8 +129,24 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148657605407932" speed="5">
+                    <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="148657605407932" speed="0">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -403,6 +422,16 @@
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\iron man.png">
                             <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
+                            <collision-poly>
+                                <point x="0.210938" y="0.210938" />
+                                <point x="0.5" y="0.00585938" />
+                                <point x="0.751953" y="0.248047" />
+                                <point x="0.771484" y="0.5" />
+                                <point x="0.71875" y="0.71875" />
+                                <point x="0.5" y="0.990234" />
+                                <point x="0.238281" y="0.761719" />
+                                <point x="0.191406" y="0.5" />
+                            </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rverz\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Icons\team iron man\war machine.png">
                             <image-point name="SelectorBGPoint" x="0.195313" y="0.5" />
@@ -494,6 +523,40 @@
                 </animation-folder>
             </object-type>
             <object-type name="MenuTutorialText" sid="349939563067532">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PauseMenuButton" sid="525234251653446">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Order" sid="877777253950703" type="number" />
+                    <instance-variable name="Value" sid="912574224420360" type="string" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="676325537672751" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PauseMenuSelected" sid="171197706606717">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="SelectedOrder" sid="141447143325379" type="number" />
+                    <instance-variable name="SelectedValue" sid="890034599325577" type="string" />
+                    <instance-variable name="NextOrder" sid="185674208946855" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="147117986873630" speed="5">
+                        <frame duration="1" hotspotX="0.498576" hotspotY="0.497512" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PauseMenuText" sid="390737957670990">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PauseMenuTitle" sid="515552376865748">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="PauseMenuPlayer" sid="419533758371601">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -669,6 +732,14 @@
         <object-type name="GameTutorialText" sid="494896637463484">
             <plugin id="Text" />
         </object-type>
+        <object-type name="GameTutorialBackground" sid="754989218927899">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="668794060740037" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -686,6 +757,9 @@
                 <member>GameTutorialText</member>
                 <member>IntroMenuText</member>
                 <member>MenuTutorialText</member>
+                <member>PauseMenuPlayer</member>
+                <member>PauseMenuText</member>
+                <member>PauseMenuTitle</member>
                 <member>QuitTextFromBottom</member>
                 <member>QuitTextFromTop</member>
                 <member>TextDraft</member>
@@ -716,6 +790,7 @@
         <event-sheet>IntroEventSheet.xml</event-sheet>
         <event-sheet>CharacterSelectionEventSheet.xml</event-sheet>
         <event-sheet>QuitEventSheet.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />
