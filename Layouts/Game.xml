@@ -169,11 +169,14 @@
                         <LastTeam>0</LastTeam>
                         <LastPlayerNumber>0</LastPlayerNumber>
                         <LastPlayerUID>0</LastPlayerUID>
+                        <LastMovementAngle>0</LastMovementAngle>
+                        <LastSpeed>0</LastSpeed>
                         <DefaultSpeed>800</DefaultSpeed>
                         <DefaultDamage>1</DefaultDamage>
                         <Damage>1</Damage>
                         <BlinkSeconds>0</BlinkSeconds>
                         <CurrentNormalSpeed>400</CurrentNormalSpeed>
+                        <IsDirectShot>0</IsDirectShot>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -183,7 +186,7 @@
                         </behavior-instance>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>0</speed>
+                                <speed>1</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>Yes</bounce-off-solids>
@@ -205,6 +208,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Pin" />
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -260,6 +264,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="FlashDamage" />
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">
@@ -828,7 +833,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
-                        <color>0,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -838,8 +843,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>775</x>
-                        <y>75</y>
+                        <x>733</x>
+                        <y>201</y>
                         <z>0</z>
                         <width>450</width>
                         <height>200</height>

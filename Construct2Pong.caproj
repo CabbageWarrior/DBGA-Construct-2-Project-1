@@ -26,6 +26,7 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
@@ -98,11 +99,14 @@
                     <instance-variable comment="Last team who controlled the ball. 1: Stark; 2: Cap." name="LastTeam" sid="899644538489256" type="number" />
                     <instance-variable comment="Last Player Number of the player who controlled the ball. 1-4 = Player Number." name="LastPlayerNumber" sid="865514842274887" type="number" />
                     <instance-variable name="LastPlayerUID" sid="720312124280558" type="number" />
+                    <instance-variable name="LastMovementAngle" sid="155592332346368" type="number" />
+                    <instance-variable name="LastSpeed" sid="860033532951364" type="number" />
                     <instance-variable name="DefaultSpeed" sid="602519304237523" type="number" />
                     <instance-variable name="DefaultDamage" sid="250006956807136" type="number" />
                     <instance-variable name="Damage" sid="564350853660523" type="number" />
                     <instance-variable name="BlinkSeconds" sid="902357064926555" type="number" />
                     <instance-variable name="CurrentNormalSpeed" sid="300282142526611" type="number" />
+                    <instance-variable name="IsDirectShot" sid="250799473910773" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="361987747890016">
@@ -116,6 +120,9 @@
                     </behavior-type>
                     <behavior-type name="Pin" sid="860061782276998">
                         <behavior id="Pin" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="169221712600777">
+                        <behavior id="destroy" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -166,6 +173,9 @@
                     </behavior-type>
                     <behavior-type name="FlashDamage" sid="972984145052342">
                         <behavior id="Flash" />
+                    </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="839685813228765">
+                        <behavior id="destroy" />
                     </behavior-type>
                 </behaviors>
                 <effects>
@@ -656,6 +666,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="GameTutorialText" sid="494896637463484">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -670,6 +683,7 @@
                 <member>EndGameMenuText</member>
                 <member>GameStory</member>
                 <member>GameTitle</member>
+                <member>GameTutorialText</member>
                 <member>IntroMenuText</member>
                 <member>MenuTutorialText</member>
                 <member>QuitTextFromBottom</member>
