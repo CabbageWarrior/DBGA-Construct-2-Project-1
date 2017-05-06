@@ -31,6 +31,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="508898856286249" type="Audio">
+                            <param id="0" name="Audio file">INTRODUZIONE</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="772414799817402" type="GameStory" />
                         <action behavior="Fade" id="1" name="Start fade" sid="405742423705566" type="GameTitle" />
                         <action behavior="Fade" id="1" name="Start fade" sid="439548708931199" type="IntroTitleBackground" />

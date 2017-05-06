@@ -495,8 +495,8 @@
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
-                                <wait-time>6</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <wait-time>18.5</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -533,8 +533,8 @@
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
-                                <wait-time>6</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <wait-time>18.5</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -556,7 +556,7 @@
                 </instance>
                 <instance type="GameStory" uid="11">
                     <properties>
-                        <text>The world is in danger! The argue between Tony Stark e Steve Rogers about which one is the sexiest, could start a war and end the peace! Luckily Dr. Strange has a solution: a Dodgeball match!!!</text>
+                        <text>The world is in danger! The argue between Tony Stark e Steve Rogers about which one is the sexiest, could start a war! Luckily Dr. Strange has a solution: a Dodgeball match!!!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-64,400,0</font>
                         <color>255,255,255</color>
@@ -571,8 +571,8 @@
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
-                                <wait-time>6</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <wait-time>18.5</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>

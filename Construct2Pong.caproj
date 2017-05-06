@@ -11,6 +11,7 @@
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
@@ -740,6 +741,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio" sid="481789461559697">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -800,9 +804,37 @@
                 <analog-deadzone>25</analog-deadzone>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="109">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="Avvio Partita.ogg" />
+        <file name="Esplosione Barretta.ogg" />
+        <file name="Vittoria Partita.ogg" />
+        <file name="Pareggio Partita.ogg" />
+        <file name="Esplosione Barretta.m4a" />
+        <file name="Avvio Partita.m4a" />
+        <file name="Vittoria Partita.m4a" />
+        <file name="Pareggio Partita.m4a" />
+        <file name="INTRODUZIONE.m4a" />
+        <file name="INTRODUZIONE.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Game.ogg" />
+        <file name="Game.m4a" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
