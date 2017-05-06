@@ -629,6 +629,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="PowerUpsArray" uid="110">
+            <properties>
+                <width>2</width>
+                <height>4</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

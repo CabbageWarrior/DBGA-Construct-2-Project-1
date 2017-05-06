@@ -27,6 +27,7 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -197,6 +198,9 @@
                     <behavior-type name="DestroyOutsideLayout" sid="839685813228765">
                         <behavior id="destroy" />
                     </behavior-type>
+                    <behavior-type name="PowerUpTimer" sid="285471026071250">
+                        <behavior id="Timer" />
+                    </behavior-type>
                 </behaviors>
                 <effects>
                     <effect-type name="SetColor">
@@ -231,6 +235,9 @@
                     <instance-variable comment="1: Stark; 2: Cap." name="Team" sid="387491472830790" type="number" />
                     <instance-variable comment="1-4 = Player Number." name="PlayerNumber" sid="995638912094275" type="number" />
                     <instance-variable name="PlayerUID" sid="892929521261137" type="number" />
+                    <instance-variable name="DefaultR" sid="107035248966432" type="number" />
+                    <instance-variable name="DefaultG" sid="113016018318686" type="number" />
+                    <instance-variable name="DefaultB" sid="855548540121720" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="561232080372539">
@@ -330,6 +337,9 @@
             </object-type>
             <object-type name="PowerUp" sid="957990521659287">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CurrentPowerUp" sid="798347485467022" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Bullet" sid="419726922656006">
                         <behavior id="Bullet" />
@@ -337,9 +347,41 @@
                     <behavior-type name="Sine" sid="441277737395628">
                         <behavior id="Sin" />
                     </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="199924686908577">
+                        <behavior id="destroy" />
+                    </behavior-type>
                 </behaviors>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404485051171170" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="PowerUpsArray" sid="875335363509595">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type name="PowerUpEvidence" sid="805487023122269">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="769797366815513">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="409036516629031">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="629996465719169" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -794,7 +836,7 @@
         <event-sheet>IntroEventSheet.xml</event-sheet>
         <event-sheet>CharacterSelectionEventSheet.xml</event-sheet>
         <event-sheet>QuitEventSheet.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>_PowerUpEventSheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="1" />

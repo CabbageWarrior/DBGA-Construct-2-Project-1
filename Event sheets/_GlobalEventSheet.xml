@@ -18,6 +18,7 @@
         <variable constant="1" name="HUMAN_2_DEFAULT_CHARACTER" sid="798923984598612" static="0" type="number">2</variable>
         <variable constant="1" name="HUMAN_3_DEFAULT_CHARACTER" sid="816149502991344" static="0" type="number">5</variable>
         <variable constant="1" name="HUMAN_4_DEFAULT_CHARACTER" sid="650220921466025" static="0" type="number">6</variable>
+        <variable constant="1" name="POWER_UP_SPAWN_SECONDS_DELTA" sid="303028600119413" static="0" type="number">5</variable>
         <variable comment="0: No; 1: Sì." constant="0" name="IsIntroViewed" sid="332694909704563" static="0" type="number">0</variable>
         <variable comment="0: Main Menu; 1: Player; 2: End Game Menu; 3: Pause Menu; 4: Tutorial opened." constant="0" name="CommandType" sid="413793904628628" static="0" type="number">0</variable>
         <variable constant="0" name="Human_1_SelectedCharacter" sid="260329936874057" static="0" type="number">1</variable>
@@ -35,6 +36,10 @@
                 </action>
                 <action id="0" name="Call function" sid="131811325817715" type="Function">
                     <param id="0" name="Name">&quot;CharactersArrayCreate&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="939543539652080" type="Function">
+                    <param id="0" name="Name">&quot;PowerUpsArrayCreate&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
@@ -447,6 +452,71 @@
                                     <param id="0" name="X">7</param>
                                     <param id="1" name="Y">8</param>
                                     <param id="2" name="Value">60</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="240037802959857" title="Power Ups Functions">
+            <sub-events>
+                <event-block sid="953434855183283">
+                    <conditions>
+                        <condition id="0" name="On function" sid="986256312296542" type="Function">
+                            <param id="0" name="Name">&quot;PowerUpsArrayCreate&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>[Asse Y] 0: Nome logico, 1: Colore (R), 2: Colore (G), 3: Colore (B). NB: Le tonalità RGB in questo caso vanno da 0 a 100!</comment>
+                        <event-block sid="104139350963454">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Set at XY" sid="256658922234159" type="PowerUpsArray">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">&quot;HealingPotion&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="131829287746217" type="PowerUpsArray">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="576193428462227" type="PowerUpsArray">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="648913525928692" type="PowerUpsArray">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="491812715250102">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Set at XY" sid="539421905493958" type="PowerUpsArray">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">&quot;IncreaseSpeed&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="241825313269215" type="PowerUpsArray">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="104492268886920" type="PowerUpsArray">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="755756769402294" type="PowerUpsArray">
+                                    <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">3</param>
+                                    <param id="2" name="Value">100</param>
                                 </action>
                             </actions>
                         </event-block>

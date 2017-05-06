@@ -10,6 +10,7 @@
         <variable comment="1-4" constant="0" name="PausedByPlayerNumber" sid="691139144864681" static="0" type="number">0</variable>
         <include>_GlobalEventSheet</include>
         <include>_PlayerEventSheet</include>
+        <include>_PowerUpEventSheet</include>
         <event-block sid="505421257834110">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="212073954403541" type="System" />
@@ -282,6 +283,19 @@
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="830923633495482">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="338332803626142" type="System">
+                    <param id="0" name="Interval (seconds)">POWER_UP_SPAWN_SECONDS_DELTA</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="843250212424987" type="Function">
+                    <param id="0" name="Name">&quot;PowerUpSpawnInLoop&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
         </event-block>
         <event-group description="" sid="966546360194091" title="Menu">
             <sub-events>

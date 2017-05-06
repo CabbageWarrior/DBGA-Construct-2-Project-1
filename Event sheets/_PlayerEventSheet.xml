@@ -864,6 +864,40 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="755217169858978" title="Player Timers">
+            <sub-events>
+                <event-block sid="207262388537008">
+                    <conditions>
+                        <condition behavior="PowerUpTimer" id="0" name="On timer" sid="247335094199644" type="Player">
+                            <param id="0" name="Tag">&quot;PowerUpTimer&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="391723382112302" type="Function">
+                            <param id="0" name="Name">&quot;PlayerInitializeProperties&quot;</param>
+                            <param id="1" name="Parameter {n}">Player.UID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="768718633774029">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="413005724895044" type="LifeBar">
+                                    <param id="0" name="Instance variable">PlayerUID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Player.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="777722920176251" type="Function">
+                                    <param id="0" name="Name">&quot;LifeBarSetColor&quot;</param>
+                                    <param id="1" name="Parameter {n}">LifeBar.UID{###}LifeBar.DefaultR{###}LifeBar.DefaultG{###}LifeBar.DefaultB</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="417409925381096" title="Ball Timers">
             <sub-events>
                 <event-block sid="280404700830246">
@@ -1260,259 +1294,288 @@
                             <param id="0" name="Name">&quot;PlayerCreate&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-3" name="Create object" sid="901832795581809" type="System">
+                            <param id="0" name="Object to create">Player</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="380862760785891" type="Player">
+                            <param id="0" name="Object">LifeBarBackground</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;LifePin&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="781208654635106" type="Player">
+                            <param id="0" name="Object">LifeBar</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;LifePin&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="993990647259294" type="Player">
+                            <param id="0" name="Object">PlayerGrabCollider</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="254482214050372" type="Player">
+                            <param id="0" name="Instance variable">PlayerNumber</param>
+                            <param id="1" name="Value">Function.Param(3)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="281311219451195" type="Player">
+                            <param id="0" name="Instance variable">CharacterNumber</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="661277899536384" type="Player">
+                            <param id="0" name="Instance variable">Team</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="307521220440199" type="Player">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 3)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="336731224257642" type="Player">
+                            <param id="0" name="Instance variable">HPTotal</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 3)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="993412161785571" type="Player">
+                            <param id="0" name="Instance variable">Vel</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 4)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="941713298642168" type="Player">
+                            <param id="0" name="Instance variable">VelTotal</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 4)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="644868577184160" type="Player">
+                            <param id="0" name="Instance variable">Pow</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 5)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="589419321231910" type="Player">
+                            <param id="0" name="Instance variable">PowTotal</param>
+                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 5)</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="588053787989878">
+                        <event-block sid="483251455449339">
                             <conditions />
                             <actions>
-                                <action id="-3" name="Create object" sid="901832795581809" type="System">
-                                    <param id="0" name="Object to create">Player</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="X">Function.Param(0)</param>
-                                    <param id="3" name="Y">Function.Param(1)</param>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="309547943369599" type="LifeBarBackground">
+                                    <param id="0" name="Pin to">Player</param>
+                                    <param id="1" name="Mode">0</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="380862760785891" type="Player">
-                                    <param id="0" name="Object">LifeBarBackground</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">&quot;LifePin&quot;</param>
+                                <action id="-10" name="Set value" sid="211215503093806" type="LifeBarBackground">
+                                    <param id="0" name="Instance variable">PlayerUID</param>
+                                    <param id="1" name="Value">Player.UID</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="781208654635106" type="Player">
-                                    <param id="0" name="Object">LifeBar</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">&quot;LifePin&quot;</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="993990647259294" type="Player">
-                                    <param id="0" name="Object">PlayerGrabCollider</param>
-                                    <param id="1" name="Layer">2</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="254482214050372" type="Player">
+                                <action id="-10" name="Set value" sid="435899964681641" type="LifeBarBackground">
                                     <param id="0" name="Instance variable">PlayerNumber</param>
                                     <param id="1" name="Value">Function.Param(3)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="281311219451195" type="Player">
-                                    <param id="0" name="Instance variable">CharacterNumber</param>
-                                    <param id="1" name="Value">Function.Param(2)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="661277899536384" type="Player">
+                                <action id="-10" name="Set value" sid="241357450103343" type="LifeBarBackground">
                                     <param id="0" name="Instance variable">Team</param>
                                     <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="307521220440199" type="Player">
-                                    <param id="0" name="Instance variable">HP</param>
-                                    <param id="1" name="Value">CharactersArray.At(Function.Param(2), 3)</param>
+                                <action id="-24" name="Move to top" sid="274137342826032" type="LifeBarBackground" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="763888698553408">
+                            <conditions />
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="200223355766695" type="LifeBar">
+                                    <param id="0" name="Pin to">Player</param>
+                                    <param id="1" name="Mode">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="336731224257642" type="Player">
-                                    <param id="0" name="Instance variable">HPTotal</param>
-                                    <param id="1" name="Value">CharactersArray.At(Function.Param(2), 3)</param>
+                                <action id="-10" name="Set value" sid="897830124757724" type="LifeBar">
+                                    <param id="0" name="Instance variable">PlayerUID</param>
+                                    <param id="1" name="Value">Player.UID</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="993412161785571" type="Player">
-                                    <param id="0" name="Instance variable">Vel</param>
-                                    <param id="1" name="Value">CharactersArray.At(Function.Param(2), 4)</param>
+                                <action id="-10" name="Set value" sid="718199958847187" type="LifeBar">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Value">Function.Param(3)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="941713298642168" type="Player">
-                                    <param id="0" name="Instance variable">VelTotal</param>
-                                    <param id="1" name="Value">CharactersArray.At(Function.Param(2), 4)</param>
+                                <action id="-10" name="Set value" sid="311855049689528" type="LifeBar">
+                                    <param id="0" name="Instance variable">Team</param>
+                                    <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="644868577184160" type="Player">
-                                    <param id="0" name="Instance variable">Pow</param>
-                                    <param id="1" name="Value">CharactersArray.At(Function.Param(2), 5)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="589419321231910" type="Player">
-                                    <param id="0" name="Instance variable">PowTotal</param>
-                                    <param id="1" name="Value">CharactersArray.At(Function.Param(2), 5)</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="536628313941379" type="Player">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">CharactersArray.At(Function.Param(2), 6)</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="441225642153525" type="Player">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">CharactersArray.At(Function.Param(2), 7)</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="446836154193655" type="Player">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">CharactersArray.At(Function.Param(2), 8)</param>
+                                <action id="-24" name="Move to top" sid="225718098715419" type="LifeBar" />
+                                <action id="0" name="Call function" sid="745325849514916" type="Function">
+                                    <param id="0" name="Name">&quot;LifeBarSetColor&quot;</param>
+                                    <param id="1" name="Parameter {n}">LifeBar.UID{###}LifeBar.DefaultR{###}LifeBar.DefaultG{###}LifeBar.DefaultB</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="692034213842168">
-                                    <conditions>
-                                        <condition id="1" name="Compare at XY" sid="845128699043245" type="CharactersArray">
-                                            <param id="0" name="X">Function.Param(2)</param>
-                                            <param id="1" name="Y">1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">CHARACTER_TYPE_DEFAULT</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-6" name="Set height" sid="936909692738598" type="Player">
-                                            <param id="0" name="Height">CHARACTER_DEFAULT_HEIGHT</param>
-                                        </action>
-                                        <action id="-5" name="Set width" sid="383602739471505" type="Player">
-                                            <param id="0" name="Width">CHARACTER_DEFAULT_WIDTH</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="311428660757293">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="136623487935739" type="System" />
-                                        <condition id="1" name="Compare at XY" sid="505280126774394" type="CharactersArray">
-                                            <param id="0" name="X">Function.Param(2)</param>
-                                            <param id="1" name="Y">1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">CHARACTER_TYPE_TANK</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-6" name="Set height" sid="523252276982817" type="Player">
-                                            <param id="0" name="Height">CHARACTER_DEFAULT_HEIGHT * 3 / 2</param>
-                                        </action>
-                                        <action id="-5" name="Set width" sid="100518190240856" type="Player">
-                                            <param id="0" name="Width">CHARACTER_DEFAULT_WIDTH * 3 / 2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="443882593235881">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="834498009513325" type="System" />
-                                        <condition id="1" name="Compare at XY" sid="134276855342713" type="CharactersArray">
-                                            <param id="0" name="X">Function.Param(2)</param>
-                                            <param id="1" name="Y">1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">CHARACTER_TYPE_RUNNER</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-6" name="Set height" sid="950882362831905" type="Player">
-                                            <param id="0" name="Height">CHARACTER_DEFAULT_HEIGHT</param>
-                                        </action>
-                                        <action id="-5" name="Set width" sid="545805989981827" type="Player">
-                                            <param id="0" name="Width">CHARACTER_DEFAULT_WIDTH * 2 / 3</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="869796738145978">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="418736390182589" type="System" />
-                                        <condition id="1" name="Compare at XY" sid="461913743508132" type="CharactersArray">
-                                            <param id="0" name="X">Function.Param(2)</param>
-                                            <param id="1" name="Y">1</param>
-                                            <param id="2" name="Comparison">0</param>
-                                            <param id="3" name="Value">CHARACTER_TYPE_POWERED</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-6" name="Set height" sid="171095953968278" type="Player">
-                                            <param id="0" name="Height">CHARACTER_DEFAULT_HEIGHT * 3 / 4</param>
-                                        </action>
-                                        <action id="-5" name="Set width" sid="324639901350035" type="Player">
-                                            <param id="0" name="Width">CHARACTER_DEFAULT_WIDTH * 2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="918393146172266">
-                                    <conditions />
-                                    <actions>
-                                        <action behavior="8Direction" id="4" name="Set max speed" sid="330273956966102" type="Player">
-                                            <param id="0" name="Max Speed">CHARACTER_DEFAULT_SPEED / CHARACTER_STAT_POINTS_DEFAULT * Player.VelTotal</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="309547943369599" type="LifeBarBackground">
-                                            <param id="0" name="Pin to">Player</param>
-                                            <param id="1" name="Mode">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="211215503093806" type="LifeBarBackground">
-                                            <param id="0" name="Instance variable">PlayerUID</param>
-                                            <param id="1" name="Value">Player.UID</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="435899964681641" type="LifeBarBackground">
-                                            <param id="0" name="Instance variable">PlayerNumber</param>
-                                            <param id="1" name="Value">Function.Param(3)</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="241357450103343" type="LifeBarBackground">
-                                            <param id="0" name="Instance variable">Team</param>
-                                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
-                                        </action>
-                                        <action id="-24" name="Move to top" sid="274137342826032" type="LifeBarBackground" />
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="200223355766695" type="LifeBar">
-                                            <param id="0" name="Pin to">Player</param>
-                                            <param id="1" name="Mode">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="897830124757724" type="LifeBar">
-                                            <param id="0" name="Instance variable">PlayerUID</param>
-                                            <param id="1" name="Value">Player.UID</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="718199958847187" type="LifeBar">
-                                            <param id="0" name="Instance variable">PlayerNumber</param>
-                                            <param id="1" name="Value">Function.Param(3)</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="311855049689528" type="LifeBar">
-                                            <param id="0" name="Instance variable">Team</param>
-                                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
-                                        </action>
-                                        <action id="-24" name="Move to top" sid="225718098715419" type="LifeBar" />
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="275832691055800" type="PlayerGrabCollider">
-                                            <param id="0" name="Pin to">Player</param>
-                                            <param id="1" name="Mode">0</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="119537487382787" type="PlayerGrabCollider">
-                                            <param id="0" name="Instance variable">PlayerUID</param>
-                                            <param id="1" name="Value">Player.UID</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="164418086735154" type="PlayerGrabCollider">
-                                            <param id="0" name="Instance variable">PlayerNumber</param>
-                                            <param id="1" name="Value">Function.Param(3)</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="265744202580814" type="PlayerGrabCollider">
-                                            <param id="0" name="Instance variable">Team</param>
-                                            <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
-                                        </action>
-                                        <action id="-6" name="Set height" sid="481949029390260" type="PlayerGrabCollider">
-                                            <param id="0" name="Height">Player.Height + CHARACTER_GRAB_COLLISION_RANGE * 2</param>
-                                        </action>
-                                        <action id="-5" name="Set width" sid="410526765205107" type="PlayerGrabCollider">
-                                            <param id="0" name="Width">Player.Width + CHARACTER_GRAB_COLLISION_RANGE * 2</param>
-                                        </action>
-                                        <action id="-25" name="Move to bottom" sid="552278383346357" type="PlayerGrabCollider" />
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="438385487486841">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="335048195481354" type="Player">
-                                                    <param id="0" name="Instance variable">Team</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="161288892760259" type="System">
-                                                    <param id="0" name="Variable">HowManyTeam1</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="921311977860625">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="652928035157626" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="306629151883900" type="Player">
-                                                    <param id="0" name="Instance variable">Team</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">2</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Add to" sid="132103347770561" type="System">
-                                                    <param id="0" name="Variable">HowManyTeam2</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
+                        </event-block>
+                        <event-block sid="859365479808689">
+                            <conditions />
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="275832691055800" type="PlayerGrabCollider">
+                                    <param id="0" name="Pin to">Player</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="119537487382787" type="PlayerGrabCollider">
+                                    <param id="0" name="Instance variable">PlayerUID</param>
+                                    <param id="1" name="Value">Player.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="164418086735154" type="PlayerGrabCollider">
+                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                    <param id="1" name="Value">Function.Param(3)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="265744202580814" type="PlayerGrabCollider">
+                                    <param id="0" name="Instance variable">Team</param>
+                                    <param id="1" name="Value">CharactersArray.At(Function.Param(2), 0)</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="552278383346357" type="PlayerGrabCollider" />
+                                <action id="-6" name="Set height" sid="603632261060191" type="PlayerGrabCollider">
+                                    <param id="0" name="Height">Player.Height + CHARACTER_GRAB_COLLISION_RANGE * 2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="880709914049226" type="PlayerGrabCollider">
+                                    <param id="0" name="Width">Player.Width + CHARACTER_GRAB_COLLISION_RANGE * 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="918393146172266">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="573286102661678" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerInitializeProperties&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="438385487486841">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="335048195481354" type="Player">
+                                    <param id="0" name="Instance variable">Team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="161288892760259" type="System">
+                                    <param id="0" name="Variable">HowManyTeam1</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="921311977860625">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="652928035157626" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="306629151883900" type="Player">
+                                    <param id="0" name="Instance variable">Team</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="132103347770561" type="System">
+                                    <param id="0" name="Variable">HowManyTeam2</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="315093625243931">
+                    <conditions>
+                        <condition id="0" name="On function" sid="286973461879412" type="Function">
+                            <param id="0" name="Name">&quot;PlayerInitializeProperties&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="713819413550348" type="Player">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="678188865135997" type="Player">
+                            <param id="0" name="Max Speed">CHARACTER_DEFAULT_SPEED / CHARACTER_STAT_POINTS_DEFAULT * Player.VelTotal</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="536628313941379" type="Player">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 6)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="441225642153525" type="Player">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 7)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="446836154193655" type="Player">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 8)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="692034213842168">
+                            <conditions>
+                                <condition id="1" name="Compare at XY" sid="845128699043245" type="CharactersArray">
+                                    <param id="0" name="X">Player.CharacterNumber</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">CHARACTER_TYPE_DEFAULT</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="936909692738598" type="Player">
+                                    <param id="0" name="Height">CHARACTER_DEFAULT_HEIGHT</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="383602739471505" type="Player">
+                                    <param id="0" name="Width">CHARACTER_DEFAULT_WIDTH</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="311428660757293">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="136623487935739" type="System" />
+                                <condition id="1" name="Compare at XY" sid="505280126774394" type="CharactersArray">
+                                    <param id="0" name="X">Player.CharacterNumber</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">CHARACTER_TYPE_TANK</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="523252276982817" type="Player">
+                                    <param id="0" name="Height">CHARACTER_DEFAULT_HEIGHT * 3 / 2</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="100518190240856" type="Player">
+                                    <param id="0" name="Width">CHARACTER_DEFAULT_WIDTH * 3 / 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="443882593235881">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="834498009513325" type="System" />
+                                <condition id="1" name="Compare at XY" sid="134276855342713" type="CharactersArray">
+                                    <param id="0" name="X">Player.CharacterNumber</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">CHARACTER_TYPE_RUNNER</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="950882362831905" type="Player">
+                                    <param id="0" name="Height">CHARACTER_DEFAULT_HEIGHT</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="545805989981827" type="Player">
+                                    <param id="0" name="Width">CHARACTER_DEFAULT_WIDTH * 2 / 3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="869796738145978">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="418736390182589" type="System" />
+                                <condition id="1" name="Compare at XY" sid="461913743508132" type="CharactersArray">
+                                    <param id="0" name="X">Player.CharacterNumber</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">CHARACTER_TYPE_POWERED</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="171095953968278" type="Player">
+                                    <param id="0" name="Height">CHARACTER_DEFAULT_HEIGHT * 3 / 4</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="324639901350035" type="Player">
+                                    <param id="0" name="Width">CHARACTER_DEFAULT_WIDTH * 2</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -2107,6 +2170,34 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Parametri: 0: UID della LifeBar, 1: colore R, 2: colore G, 3: colore B.</comment>
+                <event-block sid="824913549053868">
+                    <conditions>
+                        <condition id="0" name="On function" sid="849420940189912" type="Function">
+                            <param id="0" name="Name">&quot;LifeBarSetColor&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="580801917876780" type="LifeBar">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="437349820206170" type="LifeBar">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="972536759617752" type="LifeBar">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">Function.Param(2)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="579996620622103" type="LifeBar">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">Function.Param(3)</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
