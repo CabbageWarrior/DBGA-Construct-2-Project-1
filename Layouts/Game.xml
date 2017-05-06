@@ -783,6 +783,8 @@
                         <SkillGrabBallEnabled>1</SkillGrabBallEnabled>
                         <SkillGrabBallTryingToGrab>0</SkillGrabBallTryingToGrab>
                         <SkillGrabBallIsGrabbing>0</SkillGrabBallIsGrabbing>
+                        <PowerUpShield>false</PowerUpShield>
+                        <PowerUpSpiderman>false</PowerUpSpiderman>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">

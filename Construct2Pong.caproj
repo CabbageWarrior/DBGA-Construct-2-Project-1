@@ -184,6 +184,8 @@
                     <instance-variable name="SkillGrabBallEnabled" sid="486677607566552" type="number" />
                     <instance-variable name="SkillGrabBallTryingToGrab" sid="171465504804379" type="number" />
                     <instance-variable name="SkillGrabBallIsGrabbing" sid="747493869920378" type="number" />
+                    <instance-variable name="PowerUpShield" sid="509675313025513" type="boolean" />
+                    <instance-variable name="PowerUpSpiderman" sid="967790593737874" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="903587181961033">

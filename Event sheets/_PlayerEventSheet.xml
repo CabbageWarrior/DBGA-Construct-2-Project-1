@@ -1577,6 +1577,32 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="980508980285317">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="490062764300663" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpSpiderman</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="756108172426896" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerReleaseBall&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID{###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="344271952187977">
+                            <conditions />
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="290216808662174" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpShield</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="844496341539520" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpSpiderman</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Parametri: 0: UID del Player.</comment>
