@@ -8,30 +8,41 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="812521210217568" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="337352947875761" type="Function">
+                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                    <param id="1" name="Parameter {n}">1{###}Human_1_SelectedCharacter{###}1</param>
+                </action>
+                <action id="0" name="Call function" sid="902081269708628" type="Function">
+                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                    <param id="1" name="Parameter {n}">2{###}Human_2_SelectedCharacter{###}1</param>
+                </action>
+                <action id="0" name="Call function" sid="256715196035316" type="Function">
+                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                    <param id="1" name="Parameter {n}">3{###}Human_3_SelectedCharacter{###}1</param>
+                </action>
+                <action id="0" name="Call function" sid="952857599336576" type="Function">
+                    <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
+                    <param id="1" name="Parameter {n}">4{###}Human_4_SelectedCharacter{###}1</param>
+                </action>
+                <action id="-9" name="Set value" sid="465991908986086" type="System">
+                    <param id="0" name="Variable">CommandType</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
             <sub-events>
-                <event-block sid="458896980838011">
-                    <conditions />
+                <event-block sid="943613826817198">
+                    <conditions>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="414089932566157" type="Audio">
+                            <param id="0" name="Tag">&quot;MenuBackgroundMusic&quot;</param>
+                        </condition>
+                    </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="337352947875761" type="Function">
-                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                            <param id="1" name="Parameter {n}">1{###}Human_1_SelectedCharacter{###}1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="902081269708628" type="Function">
-                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                            <param id="1" name="Parameter {n}">2{###}Human_2_SelectedCharacter{###}1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="256715196035316" type="Function">
-                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                            <param id="1" name="Parameter {n}">3{###}Human_3_SelectedCharacter{###}1</param>
-                        </action>
-                        <action id="0" name="Call function" sid="952857599336576" type="Function">
-                            <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
-                            <param id="1" name="Parameter {n}">4{###}Human_4_SelectedCharacter{###}1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="465991908986086" type="System">
-                            <param id="0" name="Variable">CommandType</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="0" name="Play" sid="470286196008346" type="Audio">
+                            <param id="0" name="Audio file">intense suspense</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;MenuBackgroundMusic&quot;</param>
                         </action>
                     </actions>
                 </event-block>

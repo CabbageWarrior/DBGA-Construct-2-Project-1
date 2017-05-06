@@ -834,6 +834,8 @@
     <music-folder>
         <file name="Game.ogg" />
         <file name="Game.m4a" />
+        <file name="intense suspense.m4a" />
+        <file name="intense suspense.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

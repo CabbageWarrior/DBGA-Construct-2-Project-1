@@ -4,6 +4,16 @@
     <name>QuitEventSheet</name>
     <events>
         <include>_GlobalEventSheet</include>
+        <event-block sid="233364535348375">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="121731112330448" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="423726979358537" type="Audio">
+                    <param id="0" name="Tag">&quot;MenuBackgroundMusic&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="586385508244501">
             <conditions>
                 <condition id="-1" name="Every tick" sid="702952494675115" type="System" />
