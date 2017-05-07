@@ -1575,7 +1575,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1700</x>
-                        <y>75</y>
+                        <y>50</y>
                         <z>0</z>
                         <width>150</width>
                         <height>100</height>
@@ -1605,7 +1605,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1300</x>
-                        <y>75</y>
+                        <y>50</y>
                         <z>0</z>
                         <width>150</width>
                         <height>100</height>
