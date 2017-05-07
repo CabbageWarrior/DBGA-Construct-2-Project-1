@@ -661,6 +661,59 @@
             <object-type name="PauseMenuPlayer" sid="419533758371601">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="CharacterDetailBackground" sid="576063846722911">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="PlayerNumber" sid="749938460342522" type="number" />
+                    <instance-variable name="CharacterDetailNumber" sid="498982837474394" type="number" />
+                </instance-variables>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="789685183710891" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="PadButtonAnchorTeam1" x="-0.181818" y="0.5" />
+                            <image-point name="PadButtonAnchorTeam2" x="1.18182" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CharacterDetailTitle" sid="930446465738206">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="CharacterDetailNumber" sid="708701448865212" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="CharacterDetailMinorBackground" sid="677763582859077">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CharacterDetailNumber" sid="974528999513868" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="981392510303553" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="PadButtonAnchorTeam1" x="-0.181818" y="0.5" />
+                            <image-point name="PadButtonAnchorTeam2" x="1.18182" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CharacterDetailParamTitle" sid="898564009770162">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="CharacterDetailNumber" sid="734577351194451" type="number" />
+                </instance-variables>
+            </object-type>
+            <object-type name="CharacterDetailParamValue" sid="226078801415850">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="CharacterDetailNumber" sid="590781854620825" type="number" />
+                    <instance-variable name="ValueType" sid="420020800858100" type="string" />
+                </instance-variables>
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="542028558954637">
             <plugin id="Keyboard" />
@@ -851,6 +904,9 @@
         </family>
         <family name="MonkeyIslandText" plugin-id="Text" sid="868286174038958">
             <members>
+                <member>CharacterDetailParamTitle</member>
+                <member>CharacterDetailParamValue</member>
+                <member>CharacterDetailTitle</member>
                 <member>CharacterRoleText</member>
                 <member>CharacterSelectorText</member>
                 <member>EndGameMenuText</member>

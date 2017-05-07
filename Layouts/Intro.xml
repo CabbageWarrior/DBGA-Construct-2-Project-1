@@ -429,7 +429,7 @@
                         <y>800</y>
                         <z>0</z>
                         <width>2000</width>
-                        <height>1000</height>
+                        <height>1500</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -439,15 +439,15 @@
                 </instance>
                 <instance type="GameTutorialText" uid="90">
                     <properties>
-                        <text>=== Rules ===\nThe objective of the game is to defeat the enemy team by hitting its members until they no longer have life points.\nIf a character gets hit by the ball without catching it, that character loses a life point.\nIf a character stops a ball thrown by an enemy without rebounds, the character who stopped the ball can throw it with more power.\nOnce stopped the ball, the player has three seconds to release it. If at the end of the three seconds the player still has the ball, it will be released with a very low speed.\nThe player could deviate the ball hitting it with another ball.\n\n=== Controls ===\nThe player can lead his character by the left analog stick of his gamepad.\nPressing the &quot;RT&quot; button at the right moment, the player can catch the ball.\nPressing the &quot;RT&quot; button the player can throw the ball he has just caught.\nThe player can lead the ball by the right analog stick of his gamepad.</text>
+                        <text>=== Rules ===\nThe objective of the game is to defeat the enemy team by hitting its members until they no longer have life points.\nIf a character gets hit by the ball without catching it, that character loses a life point.\nIf a character stops a ball thrown by an enemy without rebounds, the character who stopped the ball can throw it with more power.\nTo activate a Power-Up, the player has just to hit it by himself. The Power-Up assigned will be the one corresponding to the last colour of the Power-Up before the impact.\nOnce stopped the ball, the player has three seconds to release it. If at the end of the three seconds the player still has the ball, it will be released with a very low speed.\nOnce activated, the Power-Up lasts for ten seconds.\nThe player could deviate the ball hitting it with another ball.\n\n=== Controls ===\nThe player can lead his character by the left analog stick of his gamepad.\nPressing the &quot;RT&quot; button at the right moment, the player can catch the ball.\nPressing the &quot;RT&quot; button the player can throw the ball he has just caught.\nThe player can lead the ball by the right analog stick of his gamepad.\n\n=== Power-Ups ===\nHealth (Green): restores one life point except when the player has all his life points.\n\nFaster speed (Light blue): increases the player&apos;s speed.\n\nShield (White): while the Power-Up is on, the player is invulnerable.\n\nSpiderman (Turquoise): the player can automatically stop the ball. While the Power-Up is on, there is no time limit to release it.</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
                         <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <line-height>5</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -456,7 +456,7 @@
                         <y>800</y>
                         <z>0</z>
                         <width>1800</width>
-                        <height>1000</height>
+                        <height>1500</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

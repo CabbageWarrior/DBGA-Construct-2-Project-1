@@ -173,7 +173,7 @@
                                 <action id="3" name="Set at XY" sid="107431969219176" type="CharactersArray">
                                     <param id="0" name="X">2</param>
                                     <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">&quot;Vedova Nera&quot;</param>
+                                    <param id="2" name="Value">&quot;Black Widow&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="729761684875001" type="CharactersArray">
                                     <param id="0" name="X">2</param>
@@ -223,7 +223,7 @@
                                 <action id="3" name="Set at XY" sid="614501750857172" type="CharactersArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">&quot;Pantera Nera&quot;</param>
+                                    <param id="2" name="Value">&quot;Black Panther&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="654809234086710" type="CharactersArray">
                                     <param id="0" name="X">3</param>
@@ -373,7 +373,7 @@
                                 <action id="3" name="Set at XY" sid="837174361916627" type="CharactersArray">
                                     <param id="0" name="X">6</param>
                                     <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">&quot;Occhio di falco&quot;</param>
+                                    <param id="2" name="Value">&quot;Hawkeye&quot;</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="934243088775351" type="CharactersArray">
                                     <param id="0" name="X">6</param>

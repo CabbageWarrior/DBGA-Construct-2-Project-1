@@ -46,6 +46,112 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="395386206086197">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="788311796308359" type="System">
+                            <param id="0" name="Object">CharacterDetailBackground</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="500996127332210" type="CharacterDetailBackground">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">CharactersArray.At(Self.CharacterDetailNumber - 1, 6)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="812968701537056" type="CharacterDetailBackground">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">CharactersArray.At(Self.CharacterDetailNumber - 1, 7)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="547781675660014" type="CharacterDetailBackground">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">CharactersArray.At(Self.CharacterDetailNumber - 1, 8)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="533401983037028">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="302323648716755" type="System">
+                            <param id="0" name="Object">CharacterDetailParamValue</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="614015677694763" type="CharacterDetailBackground">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">CharactersArray.At(Self.CharacterDetailNumber - 1, 6)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="662073554906082" type="CharacterDetailBackground">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">CharactersArray.At(Self.CharacterDetailNumber - 1, 7)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="778581949359677" type="CharacterDetailBackground">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">CharactersArray.At(Self.CharacterDetailNumber - 1, 8)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="244733544702020">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="725282848383155" type="CharacterDetailParamValue">
+                                    <param id="0" name="Instance variable">ValueType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Health&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="228904321235366" type="CharacterDetailParamValue">
+                                    <param id="0" name="Text">CharactersArray.At(Self.CharacterDetailNumber - 1, 3)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="995596645464324">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="294095787376692" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="502888522299287" type="CharacterDetailParamValue">
+                                    <param id="0" name="Instance variable">ValueType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Speed&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="408950320332885" type="CharacterDetailParamValue">
+                                    <param id="0" name="Text">CharactersArray.At(Self.CharacterDetailNumber - 1, 4)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="438400027757470">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="821388083649177" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="507060750870224" type="CharacterDetailParamValue">
+                                    <param id="0" name="Instance variable">ValueType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Power&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="125752071213467" type="CharacterDetailParamValue">
+                                    <param id="0" name="Text">CharactersArray.At(Self.CharacterDetailNumber - 1, 5)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="967537883075222">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="591069472283569" type="System">
+                            <param id="0" name="Object">CharacterDetailBackground</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="355343006188749" type="CharacterDetailTitle">
+                            <param id="0" name="Text">CharactersArray.At(Self.CharacterDetailNumber - 1, 2)</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="656491096926398">
@@ -118,6 +224,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="923958025402151" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="566993860902037" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1{###}0</param>
@@ -140,6 +250,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="414870865634341" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="172245817224964" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1{###}0</param>
@@ -162,6 +276,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="594263914715583" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="256475371207436" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1{###}0</param>
@@ -184,6 +302,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="631340717885594" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="305933011150139" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1{###}0</param>
@@ -205,6 +327,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="676213138828726" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="785223424302322" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber - 1{###}0</param>
@@ -228,6 +354,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="249507727255022" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="988945081105418" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1{###}0</param>
@@ -250,6 +380,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="257463750989975" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="148486871909186" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1{###}0</param>
@@ -272,6 +406,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="508474533497020" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="703884448024287" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1{###}0</param>
@@ -294,6 +432,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="465300212760800" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="395449608790969" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1{###}0</param>
@@ -315,6 +457,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="133009789010959" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="309673781394487" type="Function">
                                             <param id="0" name="Name">&quot;SetMenuValue&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}CharacterSelectorText.SelectedCharacterNumber + 1{###}0</param>
@@ -338,6 +484,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="742865508355931" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="846331003616921" type="Function">
                                             <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
@@ -360,6 +510,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="993011476629672" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="609248787127651" type="Function">
                                             <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
@@ -382,6 +536,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="805362910697218" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="328843311537283" type="Function">
                                             <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
@@ -404,6 +562,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="321287684355528" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="700089088482077" type="Function">
                                             <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
@@ -425,6 +587,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="469806445358105" type="Function">
+                                            <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                            <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="867984259173627" type="Function">
                                             <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
                                             <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;Confirm&quot;</param>
@@ -626,6 +792,236 @@
                                                 <action id="0" name="Call function" sid="703291156542730" type="Function">
                                                     <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
                                                     <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;BackToMenu&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Character Detail: Open OR Close</comment>
+                                <event-block sid="306530623175804">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="230773318029190" type="Gamepad">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="299623591624803" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="782015526711857" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="817079807991669" type="CharacterDetailBackground">
+                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">CharacterSelectorText.SelectedCharacterNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="223280876806893">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="768775165480596" type="CharacterDetailBackground" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="834274808359143" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="465577649729193">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="400179450424197" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="699729969147237" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;OpenDetail&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="523104603438676">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="671310892220927" type="Gamepad">
+                                            <param id="0" name="Gamepad">1</param>
+                                            <param id="1" name="Button">2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="418397507107560" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="481311809051128" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="866037711740659" type="CharacterDetailBackground">
+                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">CharacterSelectorText.SelectedCharacterNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="452840276598358">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="464249147903203" type="CharacterDetailBackground" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="406806062466181" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="614383969690562">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="134944003531568" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="833888002318470" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;OpenDetail&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="959269069476498">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="385203450740809" type="Gamepad">
+                                            <param id="0" name="Gamepad">2</param>
+                                            <param id="1" name="Button">2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="310793399130732" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="678779256317718" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="105606276861531" type="CharacterDetailBackground">
+                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">CharacterSelectorText.SelectedCharacterNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="858186885932020">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="452759127892345" type="CharacterDetailBackground" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="901658816032546" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="255111669122520">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="537137392145336" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="373371784901671" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;OpenDetail&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="660400727201638">
+                                    <conditions>
+                                        <condition id="6" name="On button pressed" sid="412337101901433" type="Gamepad">
+                                            <param id="0" name="Gamepad">3</param>
+                                            <param id="1" name="Button">2</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="167958367709651" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="800440346314535" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="259624878664229" type="CharacterDetailBackground">
+                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">CharacterSelectorText.SelectedCharacterNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="762519495475180">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="726071778742411" type="CharacterDetailBackground" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="393868359687031" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="773165762309357">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="324578745642583" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="952868379079164" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;OpenDetail&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="179578466145003">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="367359663002541" type="Keyboard">
+                                            <param id="0" name="Key">17 (Ctrl)</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="911417902813023" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="973851954045795" type="CharacterSelectorText">
+                                            <param id="0" name="Instance variable">IsConfirmed</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="397211610889363" type="CharacterDetailBackground">
+                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">CharacterSelectorText.SelectedCharacterNumber</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="595755486854991">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="635646787957257" type="CharacterDetailBackground" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="867975041622334" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;CloseDetail&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="492458267159130">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="285518004954492" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="934500953191238" type="Function">
+                                                    <param id="0" name="Name">&quot;ExecuteMenuItem&quot;</param>
+                                                    <param id="1" name="Parameter {n}">CharacterSelectorText.PlayerNumber{###}&quot;OpenDetail&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1060,6 +1456,201 @@
                                             <param id="0" name="Layout">Intro</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="623704679828509">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="430432633736837" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="195737609792773" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;OpenDetail&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="335551433514989">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="844780521517095" type="CharacterDetailBackground">
+                                                    <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">CharacterSelectorText.SelectedCharacterNumber</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="814015585029094" type="CharacterDetailBackground">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Value">CharacterSelectorText.PlayerNumber</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="850554029578522" type="CharacterDetailBackground">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="136563634790754">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="194654820423477" type="CharacterDetailMinorBackground">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="587809954955817" type="CharacterDetailMinorBackground">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="821483687946730">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="685437092597941" type="CharacterDetailTitle">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="755930903619344" type="CharacterDetailTitle">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="627248663904111">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="920128097798530" type="System">
+                                                            <param id="0" name="Object">CharacterDetailParamTitle</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="454407282370308" type="CharacterDetailParamTitle">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="262757139151782" type="CharacterDetailParamTitle">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="426956197029251">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="304498306005669" type="System">
+                                                            <param id="0" name="Object">CharacterDetailParamValue</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="168806188939803" type="CharacterDetailParamValue">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="402813620258275" type="CharacterDetailParamValue">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="312139459189982">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="661923508205542" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="822767019742239" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;CloseDetail&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="494925551116514">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="451991287892191" type="CharacterDetailBackground">
+                                                    <param id="0" name="Instance variable">PlayerNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">CharacterSelectorText.PlayerNumber</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="134347045009536" type="CharacterDetailBackground">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="498797125123235">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="127943149965071" type="CharacterDetailMinorBackground">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="701486676549329" type="CharacterDetailMinorBackground">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="656334647248156">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="903603291760321" type="CharacterDetailTitle">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="110537022462436" type="CharacterDetailTitle">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="823323030897982">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="613300270652962" type="System">
+                                                            <param id="0" name="Object">CharacterDetailParamTitle</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="442583335512373" type="CharacterDetailParamTitle">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="705975401666837" type="CharacterDetailParamTitle">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="218548133046920">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="553716956050402" type="System">
+                                                            <param id="0" name="Object">CharacterDetailParamValue</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="172063124778509" type="CharacterDetailParamValue">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="981522871374132" type="CharacterDetailParamValue">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="237195079278946">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="496201602928139" type="CharacterDetailBackground">
+                                                            <param id="0" name="Instance variable">PlayerNumber</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
