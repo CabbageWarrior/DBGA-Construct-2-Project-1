@@ -836,6 +836,12 @@
         <object-type name="Audio" sid="481789461559697">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="ScoreText" sid="949637539469973">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Team" sid="304091755927415" type="number" />
+            </instance-variables>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -858,6 +864,7 @@
                 <member>PauseMenuTitle</member>
                 <member>QuitTextFromBottom</member>
                 <member>QuitTextFromTop</member>
+                <member>ScoreText</member>
                 <member>TextDraft</member>
                 <member>TextYouLose</member>
                 <member>TextYouWin</member>

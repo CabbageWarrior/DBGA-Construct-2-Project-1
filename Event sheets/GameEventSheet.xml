@@ -52,6 +52,34 @@
                 </action>
             </actions>
             <sub-events>
+                <event-block sid="768701411013893">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="595494405577780" type="ScoreText">
+                            <param id="0" name="Instance variable">Team</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="990609936034930" type="ScoreText">
+                            <param id="0" name="Text">Team1Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="722135185371187">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="151650793363154" type="ScoreText">
+                            <param id="0" name="Instance variable">Team</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="719379346899403" type="ScoreText">
+                            <param id="0" name="Text">Team2Score</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="781176229777663">
                     <conditions>
                         <condition id="5" name="Is tag playing" sid="295095874137206" type="Audio">
@@ -1508,7 +1536,12 @@
                                                     <param id="2" name="Value">0</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="477021072476400" type="System">
+                                                    <param id="0" name="Variable">Team2Score</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                             <sub-events>
                                                 <event-block sid="213092366248894">
                                                     <conditions>
@@ -1564,7 +1597,12 @@
                                                     <param id="2" name="Value">0</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="842518669616102" type="System">
+                                                    <param id="0" name="Variable">Team1Score</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
                                             <sub-events>
                                                 <event-block sid="852866302069725">
                                                     <conditions>
@@ -1610,6 +1648,34 @@
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
+                                        </event-block>
+                                        <event-block sid="310297017885531">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="979223726517183" type="ScoreText">
+                                                    <param id="0" name="Instance variable">Team</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="562257082070912" type="ScoreText">
+                                                    <param id="0" name="Text">Team1Score</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="998837754393812">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="259672332230760" type="ScoreText">
+                                                    <param id="0" name="Instance variable">Team</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="634063831599126" type="ScoreText">
+                                                    <param id="0" name="Text">Team2Score</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
