@@ -91,6 +91,11 @@
             </object-type>
             <object-type name="PlayFieldBackground" sid="855815032102818">
                 <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="PowerUpSpawnTimer" sid="280694525715887">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
                 <texture />
             </object-type>
         </object-folder>
@@ -379,6 +384,9 @@
                     </behavior-type>
                     <behavior-type name="DestroyOutsideLayout" sid="199924686908577">
                         <behavior id="destroy" />
+                    </behavior-type>
+                    <behavior-type name="GameFinishedFade" sid="792090142104227">
+                        <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
                 <effects>
