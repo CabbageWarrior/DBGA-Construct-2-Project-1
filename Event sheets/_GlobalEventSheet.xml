@@ -506,7 +506,7 @@
                                 <action id="3" name="Set at XY" sid="241825313269215" type="PowerUpsArray">
                                     <param id="0" name="X">1</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">100</param>
+                                    <param id="2" name="Value">0</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="104492268886920" type="PowerUpsArray">
                                     <param id="0" name="X">1</param>
@@ -515,6 +515,31 @@
                                 </action>
                                 <action id="3" name="Set at XY" sid="755756769402294" type="PowerUpsArray">
                                     <param id="0" name="X">1</param>
+                                    <param id="1" name="Y">3</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="677654252507591">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Set at XY" sid="789924550342771" type="PowerUpsArray">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">&quot;Shield&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="229681769791746" type="PowerUpsArray">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="923899952266530" type="PowerUpsArray">
+                                    <param id="0" name="X">2</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Value">100</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="864828100899087" type="PowerUpsArray">
+                                    <param id="0" name="X">2</param>
                                     <param id="1" name="Y">3</param>
                                     <param id="2" name="Value">100</param>
                                 </action>

@@ -696,11 +696,39 @@
                                     <param id="0" name="Instance variable">LastMovementAngle</param>
                                     <param id="1" name="Value">Self.Bullet.AngleOfMotion</param>
                                 </action>
-                                <action id="0" name="Call function" sid="657204462156719" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerHit&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.UID{###}Ball.Damage</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <comment>Faccio danno al giocatore solo se non ha lo Shield attivo.</comment>
+                                <event-block sid="286975033213665">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="925498698395098" type="Player">
+                                            <param id="0" name="Instance variable">PowerUpShield</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="657204462156719" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerHit&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.UID{###}Ball.Damage</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Altrimenti gli faccio solo cadere la palla.</comment>
+                                <event-block sid="823483679856533">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="498290828086945" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="749942887844622" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerReleaseBall&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.UID{###}0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="363694027529061" type="Function">
+                                            <param id="0" name="Name">&quot;PlayerStopTryingToGrab&quot;</param>
+                                            <param id="1" name="Parameter {n}">Player.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <comment>Di seguito i comportamenti comuni.</comment>
                         <event-block sid="836639410011942">
@@ -895,6 +923,48 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="154046125493452">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="877711529923791" type="System">
+                            <param id="0" name="Interval (seconds)">0.02</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="319281790409065" type="System">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="278359122964624" type="Player">
+                            <param id="0" name="Instance variable">PowerUpSpeed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="872015115445051" type="Player">
+                            <param id="0" name="Object">PlayerSpeedShadow</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="982352526150582" type="PlayerSpeedShadow">
+                            <param id="0" name="Width">Player.Width</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="139388782768307" type="PlayerSpeedShadow">
+                            <param id="0" name="Height">Player.Height</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="981632460440721" type="PlayerSpeedShadow">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 6)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="413682155132383" type="PlayerSpeedShadow">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 7)</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="379079205683082" type="PlayerSpeedShadow">
+                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">CharactersArray.At(Player.CharacterNumber, 8)</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="445961495426341" type="PlayerSpeedShadow" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -1593,6 +1663,10 @@
                         <event-block sid="344271952187977">
                             <conditions />
                             <actions>
+                                <action id="-13" name="Set boolean" sid="996303556213857" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpSpeed</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                                 <action id="-13" name="Set boolean" sid="290216808662174" type="Player">
                                     <param id="0" name="Instance variable">PowerUpShield</param>
                                     <param id="1" name="Value">0</param>

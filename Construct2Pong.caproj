@@ -184,6 +184,7 @@
                     <instance-variable name="SkillGrabBallEnabled" sid="486677607566552" type="number" />
                     <instance-variable name="SkillGrabBallTryingToGrab" sid="171465504804379" type="number" />
                     <instance-variable name="SkillGrabBallIsGrabbing" sid="747493869920378" type="number" />
+                    <instance-variable name="PowerUpSpeed" sid="162384625385008" type="boolean" />
                     <instance-variable name="PowerUpShield" sid="509675313025513" type="boolean" />
                     <instance-variable name="PowerUpSpiderman" sid="967790593737874" type="boolean" />
                 </instance-variables>
@@ -321,6 +322,33 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="494933203410024" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerExplosion" sid="669083922991446">
+                <plugin id="Particles" />
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
+            <object-type name="PlayerSpeedShadow" sid="151301229446479">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="264660964528564">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="832887966992246" speed="5">
+                        <frame duration="1" hotspotX="0.52" hotspotY="0.52" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -733,15 +761,6 @@
         </object-type>
         <object-type name="WinnerParticles2" sid="802147741736769">
             <plugin id="Particles" />
-            <texture />
-        </object-type>
-        <object-type name="PlayerExplosion" sid="669083922991446">
-            <plugin id="Particles" />
-            <effects>
-                <effect-type name="SetColor">
-                    <effect id="setcolor" />
-                </effect-type>
-            </effects>
             <texture />
         </object-type>
         <object-type name="Sprite4" sid="617862385960400">

@@ -229,9 +229,13 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="592362694377882" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="592362694377882" type="Function">
                                     <param id="0" name="Name">&quot;LifeBarSetColor&quot;</param>
                                     <param id="1" name="Parameter {n}">LifeBar.UID{###}PowerUpsArray.At(Function.Param(1), 1){###}PowerUpsArray.At(Function.Param(1), 2){###}PowerUpsArray.At(Function.Param(1), 3)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="526570672654169" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpSpeed</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action behavior="8Direction" id="4" name="Set max speed" sid="108124016620755" type="Player">
                                     <param id="0" name="Max Speed">Self.8Direction.MaxSpeed * 1.5</param>

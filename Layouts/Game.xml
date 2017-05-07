@@ -783,6 +783,7 @@
                         <SkillGrabBallEnabled>1</SkillGrabBallEnabled>
                         <SkillGrabBallTryingToGrab>0</SkillGrabBallTryingToGrab>
                         <SkillGrabBallIsGrabbing>0</SkillGrabBallIsGrabbing>
+                        <PowerUpSpeed>false</PowerUpSpeed>
                         <PowerUpShield>false</PowerUpShield>
                         <PowerUpSpiderman>false</PowerUpSpiderman>
                     </instance-variables>
@@ -884,6 +885,48 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerSpeedShadow" uid="112">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.2</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>25</x>
+                        <y>-400</y>
+                        <z>0</z>
+                        <width>25</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0.519999981</hotspotX>
+                        <hotspotY>0.519999981</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.300000012</opacity>
                     </world>
                 </instance>
             </instances>
