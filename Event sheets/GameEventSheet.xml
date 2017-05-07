@@ -16,12 +16,6 @@
                 <condition id="-2" name="On start of layout" sid="212073954403541" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Play" sid="173001992803416" type="Audio">
-                    <param id="0" name="Audio file">Avvio Partita</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
                 <action id="0" name="Call function" sid="907776665257420" type="Function">
                     <param id="0" name="Name">&quot;ResetGlobalVariables&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
@@ -49,6 +43,12 @@
                     <param id="0" name="Duration">POWER_UP_SPAWN_SECONDS_DELTA</param>
                     <param id="1" name="Type">1</param>
                     <param id="2" name="Tag">&quot;PowerUpSpawnTimer&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="173001992803416" type="Audio">
+                    <param id="0" name="Audio file">Avvio Partita</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -304,11 +304,6 @@
                 <action id="0" name="Call function" sid="843250212424987" type="Function">
                     <param id="0" name="Name">&quot;PowerUpSpawnInLoop&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action behavior="PowerUpSpawnTimer" disabled="1" id="0" name="Start timer" sid="828411009980506" type="PlayFieldBackground">
-                    <param id="0" name="Duration">POWER_UP_SPAWN_SECONDS_DELTA</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;PowerUpSpawnTimer&quot;</param>
                 </action>
             </actions>
         </event-block>

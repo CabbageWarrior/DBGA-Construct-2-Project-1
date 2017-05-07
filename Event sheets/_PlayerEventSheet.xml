@@ -660,6 +660,26 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Power Up Spiderman.</comment>
+                        <event-block sid="387942688545548">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="274544017249419" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="220484608710988" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpSpiderman</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="810201881216445" type="Player">
+                                    <param id="0" name="Instance variable">SkillGrabBallIsGrabbing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="834700120005515" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerStartGrabbing&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID{###}Ball.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <comment>Sono nel tempo di invulnerabilità del lanciatore.</comment>
                         <event-block sid="669965301893714">
                             <conditions>
@@ -1305,6 +1325,9 @@
                                 <event-block sid="766737445402789">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="464727218877486" type="System" />
+                                        <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="272874978806505" type="Player">
+                                            <param id="0" name="Instance variable">PowerUpSpiderman</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Call function" sid="948998235693626" type="Function">
@@ -1676,6 +1699,23 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="275124690513006">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="679842247883625" type="System">
+                                            <param id="0" name="Object">PowerUpSpidermanBorder</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="849495527781850" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="Instance variable">PlayerUID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Player.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="711005118341400" type="PowerUpSpidermanBorder" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1930,20 +1970,31 @@
                                             <param id="0" name="Pin to">Player</param>
                                             <param id="1" name="Mode">0</param>
                                         </action>
-                                        <action behavior="BlinkSine" id="0" name="Set active" sid="538019607634294" type="Ball">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action behavior="BlinkSine" id="0" name="Set active" sid="723282892936717" type="Ball">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="524833583516421" type="Ball">
-                                            <param id="0" name="Instance variable">BlinkSeconds</param>
-                                            <param id="1" name="Value">3</param>
-                                        </action>
                                         <action id="5" name="Set frame" sid="211575784478089" type="Ball">
                                             <param id="0" name="Frame number">Player.Team</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="686684086342225">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="630437598587492" type="Player">
+                                                    <param id="0" name="Instance variable">PowerUpSpiderman</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="BlinkSine" id="0" name="Set active" sid="538019607634294" type="Ball">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action behavior="BlinkSine" id="0" name="Set active" sid="723282892936717" type="Ball">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="524833583516421" type="Ball">
+                                                    <param id="0" name="Instance variable">BlinkSeconds</param>
+                                                    <param id="1" name="Value">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -2095,19 +2146,6 @@
                             <param id="0" name="Instance variable">HP</param>
                             <param id="1" name="Value">Function.Param(1)</param>
                         </action>
-                        <action behavior="FlashDamage" id="0" name="Flash" sid="387418656448263" type="Player">
-                            <param id="0" name="&apos;On&apos; time">0.05</param>
-                            <param id="1" name="&apos;Off&apos; time">0.05</param>
-                            <param id="2" name="Duration">0.2</param>
-                        </action>
-                        <action id="0" name="Call function" sid="850348030550314" type="Function">
-                            <param id="0" name="Name">&quot;PlayerReleaseBall&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.UID{###}0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="363147722785113" type="Function">
-                            <param id="0" name="Name">&quot;PlayerStopTryingToGrab&quot;</param>
-                            <param id="1" name="Parameter {n}">Player.UID</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="323825159790798">
@@ -2128,25 +2166,65 @@
                         <event-block sid="438525703575503">
                             <conditions>
                                 <condition id="-22" name="Else" sid="660974447989137" type="System" />
-                                <condition id="-7" name="Compare instance variable" sid="453912519444001" type="LifeBarBackground">
-                                    <param id="0" name="Instance variable">PlayerUID</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Player.UID</param>
-                                </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action behavior="FlashDamage" id="0" name="Flash" sid="387418656448263" type="Player">
+                                    <param id="0" name="&apos;On&apos; time">0.05</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.05</param>
+                                    <param id="2" name="Duration">0.2</param>
+                                </action>
+                                <action id="0" name="Call function" sid="850348030550314" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerReleaseBall&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID{###}0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="363147722785113" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerStopTryingToGrab&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block sid="481032823881713">
+                                <event-block sid="110839117470509">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="317636093182877" type="LifeBar">
+                                        <condition id="-7" name="Compare instance variable" sid="453912519444001" type="LifeBarBackground">
+                                            <param id="0" name="Instance variable">PlayerUID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">Player.UID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="481032823881713">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="317636093182877" type="LifeBar">
+                                                    <param id="0" name="Instance variable">PlayerUID</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">Player.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-6" name="Set height" sid="927239189919806" type="LifeBar">
+                                                    <param id="0" name="Height">LifeBarBackground.Height * Player.HP / Player.HPTotal</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="438724783518413">
+                                    <conditions>
+                                        <condition id="-11" name="For Each" sid="244574986747685" type="System">
+                                            <param id="0" name="Object">PowerUpSpidermanBorder</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="557992553667560" type="PowerUpSpidermanBorder">
                                             <param id="0" name="Instance variable">PlayerUID</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">Player.UID</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-6" name="Set height" sid="927239189919806" type="LifeBar">
-                                            <param id="0" name="Height">LifeBarBackground.Height * Player.HP / Player.HPTotal</param>
+                                        <action behavior="FlashDamage" id="0" name="Flash" sid="974955146083134" type="PowerUpSpidermanBorder">
+                                            <param id="0" name="&apos;On&apos; time">0.05</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.05</param>
+                                            <param id="2" name="Duration">0.2</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -2195,6 +2273,21 @@
                                     <param id="0" name="Variable">HowManyTeam2</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="398156907084813">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="211666318813599" type="System">
+                                    <param id="0" name="Object">PowerUpSpidermanBorder</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="664648134093535" type="PowerUpSpidermanBorder">
+                                    <param id="0" name="Instance variable">PlayerUID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Player.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="930747681469825" type="PowerUpSpidermanBorder" />
                             </actions>
                         </event-block>
                         <event-block sid="621969275290735">

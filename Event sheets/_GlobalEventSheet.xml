@@ -545,6 +545,31 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="478300313460774">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Set at XY" sid="430920499590032" type="PowerUpsArray">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Y">0</param>
+                                    <param id="2" name="Value">&quot;Spiderman&quot;</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="492295241020080" type="PowerUpsArray">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">90</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="971791784248426" type="PowerUpsArray">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Y">2</param>
+                                    <param id="2" name="Value">89</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="554816511766917" type="PowerUpsArray">
+                                    <param id="0" name="X">3</param>
+                                    <param id="1" name="Y">3</param>
+                                    <param id="2" name="Value">88</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
