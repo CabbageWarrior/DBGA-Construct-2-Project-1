@@ -556,17 +556,17 @@
                                 <action id="3" name="Set at XY" sid="492295241020080" type="PowerUpsArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">1</param>
-                                    <param id="2" name="Value">90</param>
+                                    <param id="2" name="Value">80</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="971791784248426" type="PowerUpsArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">2</param>
-                                    <param id="2" name="Value">89</param>
+                                    <param id="2" name="Value">100</param>
                                 </action>
                                 <action id="3" name="Set at XY" sid="554816511766917" type="PowerUpsArray">
                                     <param id="0" name="X">3</param>
                                     <param id="1" name="Y">3</param>
-                                    <param id="2" name="Value">88</param>
+                                    <param id="2" name="Value">100</param>
                                 </action>
                             </actions>
                         </event-block>

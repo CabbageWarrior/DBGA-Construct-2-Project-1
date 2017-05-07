@@ -922,6 +922,14 @@
         <file name="Pareggio Partita.m4a" />
         <file name="INTRODUZIONE.m4a" />
         <file name="INTRODUZIONE.ogg" />
+        <file name="Power Up Cura.m4a" />
+        <file name="Power Up Cura.ogg" />
+        <file name="Power Up Invulnerabilità.m4a" />
+        <file name="Power Up Invulnerabilità.ogg" />
+        <file name="Power Up Spiderman.m4a" />
+        <file name="Power Up Spiderman.ogg" />
+        <file name="Power Up Velocità.m4a" />
+        <file name="Power Up Velocità.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Game.ogg" />
