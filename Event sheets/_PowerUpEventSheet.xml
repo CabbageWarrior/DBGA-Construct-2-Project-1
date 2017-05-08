@@ -317,10 +317,16 @@
                                 <event-block sid="253149592874608">
                                     <conditions />
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="909540454964735" type="Player">
+                                        <action disabled="1" id="0" name="Spawn another object" sid="909540454964735" type="Player">
                                             <param id="0" name="Object">PowerUpSpidermanBorder</param>
                                             <param id="1" name="Layer">&quot;Game&quot;</param>
                                             <param id="2" name="Image point">&quot;SpidermanTop&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="268735460655330" type="System">
+                                            <param id="0" name="Object to create">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Player.X</param>
+                                            <param id="3" name="Y">Player.Y - (Player.Height / 2) + (PowerUpSpidermanBorder.Height / 2)</param>
                                         </action>
                                         <action behavior="Pin" id="0" name="Pin to object" sid="233141728212424" type="PowerUpSpidermanBorder">
                                             <param id="0" name="Pin to">Player</param>
@@ -338,10 +344,16 @@
                                 <event-block sid="338051758524505">
                                     <conditions />
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="497038709735292" type="Player">
+                                        <action disabled="1" id="0" name="Spawn another object" sid="497038709735292" type="Player">
                                             <param id="0" name="Object">PowerUpSpidermanBorder</param>
                                             <param id="1" name="Layer">&quot;Game&quot;</param>
                                             <param id="2" name="Image point">&quot;SpidermanBottom&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="279234521567008" type="System">
+                                            <param id="0" name="Object to create">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Player.X</param>
+                                            <param id="3" name="Y">Player.Y + (Player.Height / 2) - (PowerUpSpidermanBorder.Height / 2)</param>
                                         </action>
                                         <action behavior="Pin" id="0" name="Pin to object" sid="877759268917780" type="PowerUpSpidermanBorder">
                                             <param id="0" name="Pin to">Player</param>
@@ -359,10 +371,16 @@
                                 <event-block sid="618028139447518">
                                     <conditions />
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="839533580520098" type="Player">
+                                        <action disabled="1" id="0" name="Spawn another object" sid="839533580520098" type="Player">
                                             <param id="0" name="Object">PowerUpSpidermanBorder</param>
                                             <param id="1" name="Layer">&quot;Game&quot;</param>
                                             <param id="2" name="Image point">&quot;SpidermanLeft&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="375172553184924" type="System">
+                                            <param id="0" name="Object to create">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Player.X - (Player.Width / 2) + (PowerUpSpidermanBorder.Width / 2)</param>
+                                            <param id="3" name="Y">Player.Y</param>
                                         </action>
                                         <action behavior="Pin" id="0" name="Pin to object" sid="491571420003300" type="PowerUpSpidermanBorder">
                                             <param id="0" name="Pin to">Player</param>
@@ -380,10 +398,16 @@
                                 <event-block sid="261448223925077">
                                     <conditions />
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="567912694966036" type="Player">
+                                        <action disabled="1" id="0" name="Spawn another object" sid="567912694966036" type="Player">
                                             <param id="0" name="Object">PowerUpSpidermanBorder</param>
                                             <param id="1" name="Layer">&quot;Game&quot;</param>
                                             <param id="2" name="Image point">&quot;SpidermanRight&quot;</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="572486845431526" type="System">
+                                            <param id="0" name="Object to create">PowerUpSpidermanBorder</param>
+                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="2" name="X">Player.X + (Player.Width / 2) - (PowerUpSpidermanBorder.Width / 2)</param>
+                                            <param id="3" name="Y">Player.Y</param>
                                         </action>
                                         <action behavior="Pin" id="0" name="Pin to object" sid="235652833410945" type="PowerUpSpidermanBorder">
                                             <param id="0" name="Pin to">Player</param>

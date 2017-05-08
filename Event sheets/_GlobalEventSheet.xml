@@ -23,7 +23,7 @@
         <variable comment="0: Main Menu; 1: Player; 2: End Game Menu; 3: Pause Menu; 4: Tutorial opened." constant="0" name="CommandType" sid="413793904628628" static="0" type="number">0</variable>
         <variable constant="0" name="Human_1_SelectedCharacter" sid="260329936874057" static="0" type="number">1</variable>
         <variable constant="0" name="Human_2_SelectedCharacter" sid="351818965695792" static="0" type="number">2</variable>
-        <variable constant="0" name="Human_3_SelectedCharacter" sid="453149333797764" static="0" type="number">7</variable>
+        <variable constant="0" name="Human_3_SelectedCharacter" sid="453149333797764" static="0" type="number">5</variable>
         <variable constant="0" name="Human_4_SelectedCharacter" sid="849802142424756" static="0" type="number">6</variable>
         <variable constant="0" name="Team1Score" sid="708607705493034" static="0" type="number">0</variable>
         <variable constant="0" name="Team2Score" sid="581961243140851" static="0" type="number">0</variable>

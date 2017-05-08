@@ -6,9 +6,11 @@
         <variable constant="0" name="TimeStartLayout" sid="395280497992719" static="0" type="number">0</variable>
         <variable constant="0" name="HowManyTeam1" sid="996746662363840" static="0" type="number">0</variable>
         <variable constant="0" name="HowManyTeam2" sid="282976318598436" static="0" type="number">0</variable>
+        <variable comment="0: No; 1: Sì." constant="0" name="IsStarted" sid="930803259663557" static="0" type="number">0</variable>
         <variable comment="0: No; 1: Sì." constant="0" name="IsFinished" sid="748547435721753" static="0" type="number">0</variable>
         <variable constant="0" name="IsEntireChallengeEnded" sid="564987548607692" static="0" type="number">0</variable>
         <variable comment="1-4" constant="0" name="PausedByPlayerNumber" sid="691139144864681" static="0" type="number">0</variable>
+        <variable comment="Used to sync correctly the timer." constant="0" name="DeltaTime" sid="194089171849972" static="0" type="number">0</variable>
         <include>_GlobalEventSheet</include>
         <include>_PlayerEventSheet</include>
         <include>_PowerUpEventSheet</include>
@@ -40,16 +42,17 @@
                     <param id="0" name="Name">&quot;PlayerCreateAtRandom&quot;</param>
                     <param id="1" name="Parameter {n}">CharactersArray.At(Human_4_SelectedCharacter - 1, 0){###}Human_4_SelectedCharacter - 1{###}4</param>
                 </action>
-                <action behavior="PowerUpSpawnTimer" id="0" name="Start timer" sid="201916106638264" type="PlayFieldBackground">
-                    <param id="0" name="Duration">POWER_UP_SPAWN_SECONDS_DELTA</param>
-                    <param id="1" name="Type">1</param>
-                    <param id="2" name="Tag">&quot;PowerUpSpawnTimer&quot;</param>
-                </action>
                 <action id="0" name="Play" sid="173001992803416" type="Audio">
                     <param id="0" name="Audio file">Avvio Partita</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="161534626459145" type="Audio">
+                    <param id="0" name="Tag">&quot;Vittoria Partita&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="407836992597409" type="Audio">
+                    <param id="0" name="Tag">&quot;Pareggio Partita&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -154,6 +157,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="902374387779778">
+                    <conditions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="956982262721116" type="StartMatchCounter">
+                            <param id="0" name="Instance variable">CounterNumber</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="499841376781438" type="StartMatchCounter">
+                            <param id="0" name="Text">Self.CounterNumber</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="450679001507555" type="StartMatchCounter" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="873665060327725">
@@ -201,88 +217,100 @@
                     </actions>
                 </event-block>
                 <comment>Show Play Time</comment>
-                <event-block any="1" sid="171328834547890">
+                <event-block sid="193845015796609">
                     <conditions>
-                        <condition id="-2" inverted="1" name="Compare Y" sid="260261081397497" type="TimeTextHours">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                        </condition>
-                        <condition id="-2" inverted="1" name="Compare Y" sid="736679530020066" type="TimeTextSeparator">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                        </condition>
-                        <condition id="-2" inverted="1" name="Compare Y" sid="833307056191893" type="TimeTextMinutes">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                        <condition id="-14" name="Compare variable" sid="538211737889414" type="System">
+                            <param id="0" name="Variable">IsStarted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="253219521329885">
+                        <event-block any="1" sid="171328834547890">
                             <conditions>
-                                <condition id="-2" name="Compare Y" sid="673334123566418" type="TimeTextHours">
-                                    <param id="0" name="Comparison">2</param>
+                                <condition id="-2" inverted="1" name="Compare Y" sid="260261081397497" type="TimeTextHours">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                </condition>
+                                <condition id="-2" inverted="1" name="Compare Y" sid="736679530020066" type="TimeTextSeparator">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                </condition>
+                                <condition id="-2" inverted="1" name="Compare Y" sid="833307056191893" type="TimeTextMinutes">
+                                    <param id="0" name="Comparison">0</param>
                                     <param id="1" name="Y co-ordinate">Self.Height / 2</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="114371163044999" type="TimeTextHours">
-                                    <param id="0" name="Y">Self.Y + dt * 50</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="469617591310490">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="618067986964633" type="TimeTextSeparator">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="618796649090398" type="TimeTextSeparator">
-                                    <param id="0" name="Y">Self.Y + dt * 50</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="170669086327043">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="254908001381196" type="TimeTextMinutes">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="468752520254208" type="TimeTextMinutes">
-                                    <param id="0" name="Y">Self.Y + dt * 50</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="917234407963947">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="533522495196097" type="TimeTextHours">
-                                    <param id="0" name="Comparison">5</param>
-                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                </condition>
-                                <condition id="-2" name="Compare Y" sid="626518395983850" type="TimeTextSeparator">
-                                    <param id="0" name="Comparison">5</param>
-                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                </condition>
-                                <condition id="-2" name="Compare Y" sid="626842215550168" type="TimeTextMinutes">
-                                    <param id="0" name="Comparison">5</param>
-                                    <param id="1" name="Y co-ordinate">Self.Height / 2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Set Y" sid="216845324294036" type="TimeTextHours">
-                                    <param id="0" name="Y">Self.Height / 2</param>
-                                </action>
-                                <action id="-2" name="Set Y" sid="423534003273334" type="TimeTextSeparator">
-                                    <param id="0" name="Y">Self.Height / 2</param>
-                                </action>
-                                <action id="-2" name="Set Y" sid="131466720795797" type="TimeTextMinutes">
-                                    <param id="0" name="Y">Self.Height / 2</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="253219521329885">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="673334123566418" type="TimeTextHours">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="114371163044999" type="TimeTextHours">
+                                            <param id="0" name="Y">Self.Y + dt * 50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="469617591310490">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="618067986964633" type="TimeTextSeparator">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="618796649090398" type="TimeTextSeparator">
+                                            <param id="0" name="Y">Self.Y + dt * 50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="170669086327043">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="254908001381196" type="TimeTextMinutes">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="468752520254208" type="TimeTextMinutes">
+                                            <param id="0" name="Y">Self.Y + dt * 50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="917234407963947">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="533522495196097" type="TimeTextHours">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="626518395983850" type="TimeTextSeparator">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                        </condition>
+                                        <condition id="-2" name="Compare Y" sid="626842215550168" type="TimeTextMinutes">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Y co-ordinate">Self.Height / 2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="216845324294036" type="TimeTextHours">
+                                            <param id="0" name="Y">Self.Height / 2</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="423534003273334" type="TimeTextSeparator">
+                                            <param id="0" name="Y">Self.Height / 2</param>
+                                        </action>
+                                        <action id="-2" name="Set Y" sid="131466720795797" type="TimeTextMinutes">
+                                            <param id="0" name="Y">Self.Height / 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -297,10 +325,10 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="154537013573856" type="TimeTextHours">
-                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout) / 60 % 60), 2)</param>
+                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout - DeltaTime) / 60 % 60), 2)</param>
                         </action>
                         <action id="0" name="Set text" sid="927709395517414" type="TimeTextMinutes">
-                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout) % 60), 2)</param>
+                            <param id="0" name="Text">zeropad(int((time - TimeStartLayout - DeltaTime) % 60), 2)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -358,6 +386,76 @@
                     <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="390071352330039">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="270540406531579" type="StartMatchCounter" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="CountNumber" sid="153092380054386" static="0" type="number">0</variable>
+                <event-block sid="546108879547990">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="598530622243320" type="System">
+                            <param id="0" name="Variable">CountNumber</param>
+                            <param id="1" name="Value">StartMatchCounter.CounterNumber - 1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="495873099436417">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="252715518084064" type="System">
+                                    <param id="0" name="Variable">CountNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="599649949144301" type="StartMatchCounter" />
+                                <action id="-9" name="Set value" sid="610017489659080" type="System">
+                                    <param id="0" name="Variable">IsStarted</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="639234802524087" type="System">
+                                    <param id="0" name="Variable">DeltaTime</param>
+                                    <param id="1" name="Value">time - TimeStartLayout</param>
+                                </action>
+                                <action behavior="PowerUpSpawnTimer" id="0" name="Start timer" sid="951687167936677" type="PlayFieldBackground">
+                                    <param id="0" name="Duration">POWER_UP_SPAWN_SECONDS_DELTA</param>
+                                    <param id="1" name="Type">1</param>
+                                    <param id="2" name="Tag">&quot;PowerUpSpawnTimer&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="615565447524246" type="System">
+                                    <param id="0" name="Variable">CommandType</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="727917115684928">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="108644717515859" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="616743659445813">
+                                    <conditions />
+                                    <actions>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="228244261874094" type="StartMatchCounter" />
+                                        <action id="-10" name="Set value" sid="969311082044441" type="StartMatchCounter">
+                                            <param id="0" name="Instance variable">CounterNumber</param>
+                                            <param id="1" name="Value">CountNumber</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="395895381251073" type="StartMatchCounter">
+                                            <param id="0" name="Text">Self.CounterNumber</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="966546360194091" title="Menu">
             <sub-events>
@@ -1532,7 +1630,7 @@
                                             <param id="0" name="Audio file">Pareggio Partita</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                            <param id="1" name="Tag (optional)">&quot;Pareggio Partita&quot;</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="496898054585106" type="TextDraft">
                                             <param id="0" name="Visibility">1</param>
@@ -1548,7 +1646,7 @@
                                             <param id="0" name="Audio file">Vittoria Partita</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                            <param id="1" name="Tag (optional)">&quot;Vittoria Partita&quot;</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -1796,12 +1894,20 @@
                             <param id="0" name="Variable">HowManyTeam2</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-9" name="Set value" sid="198346201804487" type="System">
+                            <param id="0" name="Variable">IsStarted</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="-9" name="Set value" sid="473308197347184" type="System">
                             <param id="0" name="Variable">IsFinished</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="124576504902686" type="System">
                             <param id="0" name="Variable">CommandType</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="641097617780825" type="System">
+                            <param id="0" name="Variable">DeltaTime</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>

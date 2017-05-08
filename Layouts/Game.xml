@@ -1616,6 +1616,47 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="StartMatchCounter" uid="191">
+                    <properties>
+                        <text>x</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-1000,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <CounterNumber>0</CounterNumber>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>0.2</wait-time>
+                                <fade-out-time>0.00001</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1500</x>
+                        <y>850</y>
+                        <z>0</z>
+                        <width>1817</width>
+                        <height>1400</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

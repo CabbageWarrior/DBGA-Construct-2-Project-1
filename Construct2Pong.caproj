@@ -898,6 +898,17 @@
         <object-type name="GameMode" sid="434416897240526">
             <plugin id="Text" />
         </object-type>
+        <object-type name="StartMatchCounter" sid="725321749385795">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="CounterNumber" sid="773897373025792" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="758717400262053">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -925,6 +936,7 @@
                 <member>QuitTextFromBottom</member>
                 <member>QuitTextFromTop</member>
                 <member>ScoreText</member>
+                <member>StartMatchCounter</member>
                 <member>TextDraft</member>
                 <member>TextYouLose</member>
                 <member>TextYouWin</member>
