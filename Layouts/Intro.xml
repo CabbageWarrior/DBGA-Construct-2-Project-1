@@ -150,7 +150,7 @@
                 </instance>
                 <instance type="IntroMenuText" uid="17">
                     <properties>
-                        <text>Play 2vs2 best out of 5!</text>
+                        <text>Play 2vs2 best of 5!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>
