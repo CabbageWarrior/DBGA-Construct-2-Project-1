@@ -527,7 +527,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="101270380541992">
+                                <event-block disabled="1" sid="101270380541992">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="321043632862672" type="Keyboard">
                                             <param id="0" name="Key">27 (Esc)</param>
@@ -610,7 +610,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="239365803919363">
+                                <event-block disabled="1" sid="239365803919363">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="174298957976374" type="Keyboard">
                                             <param id="0" name="Key">37 (Left arrow)</param>
@@ -680,7 +680,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="876939934743416">
+                                <event-block disabled="1" sid="876939934743416">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="205550992842121" type="Keyboard">
                                             <param id="0" name="Key">39 (Right arrow)</param>
@@ -754,7 +754,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="700300249463477">
+                                <event-block disabled="1" sid="700300249463477">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="146925605723154" type="Keyboard">
                                             <param id="0" name="Key">32 (Barra Spaziatrice)</param>
@@ -837,7 +837,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="946957289726977">
+                                <event-block disabled="1" sid="946957289726977">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="729719280333027" type="Keyboard">
                                             <param id="0" name="Key">37 (Left arrow)</param>
@@ -907,7 +907,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="261846595290247">
+                                <event-block disabled="1" sid="261846595290247">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="652455537983835" type="Keyboard">
                                             <param id="0" name="Key">39 (Right arrow)</param>
@@ -977,7 +977,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="443720741818588">
+                                <event-block disabled="1" sid="443720741818588">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="762992961387528" type="Keyboard">
                                             <param id="0" name="Key">32 (Barra Spaziatrice)</param>
@@ -1047,7 +1047,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="742683389072236">
+                                <event-block disabled="1" sid="742683389072236">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="543488645696977" type="Keyboard">
                                             <param id="0" name="Key">8 (Backspace)</param>
@@ -1129,7 +1129,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="220358311731620">
+                                <event-block disabled="1" sid="220358311731620">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="151526141949643" type="Keyboard">
                                             <param id="0" name="Key">8 (Backspace)</param>

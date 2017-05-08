@@ -809,14 +809,6 @@
         <object-type name="DebugText" sid="140430659013010">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite" sid="890122763459844">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="393974145764388" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="TextYouWin" sid="357542435796099">
             <plugin id="Text" />
             <instance-variables>
@@ -842,18 +834,6 @@
             </instance-variables>
         </object-type>
         <object-type name="TextDraft" sid="194625547946754">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Text" sid="550332241793807">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Text2" sid="118361306579356">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Text3" sid="569587348422272">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Text4" sid="985788833512446">
             <plugin id="Text" />
         </object-type>
         <object-type name="IntroBackground" sid="793676802141480">
@@ -906,14 +886,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="247722835704548">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="690153136130590" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="WinnerParticles1" sid="223839296851019">
             <plugin id="Particles" />
             <texture />
@@ -922,11 +894,11 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
-        <object-type name="Sprite4" sid="617862385960400">
+        <object-type name="QuitBackground" sid="617862385960400">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="520533579495254" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\dbga_53\Desktop\maxresdefault.jpg" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_53\Downloads\WhatsApp Image 2017-05-08 at 16.35.08.jpeg" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -935,14 +907,6 @@
         </object-type>
         <object-type name="QuitTextFromBottom" sid="737939517266051">
             <plugin id="Text" />
-        </object-type>
-        <object-type name="Sprite5" sid="451812803006138">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248450162436532" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
         </object-type>
         <object-type name="HalfwayMarker" sid="873104034646073">
             <plugin id="Sprite" />
@@ -986,6 +950,18 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+        <object-type name="QuitText1" sid="283467016768127">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="QuitText3" sid="408794409586450">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="QuitText2" sid="648529277390757">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="QuitText4" sid="752268733164766">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -1010,6 +986,10 @@
                 <member>PauseMenuPlayer</member>
                 <member>PauseMenuText</member>
                 <member>PauseMenuTitle</member>
+                <member>QuitText1</member>
+                <member>QuitText2</member>
+                <member>QuitText3</member>
+                <member>QuitText4</member>
                 <member>QuitTextFromBottom</member>
                 <member>QuitTextFromTop</member>
                 <member>ScoreText</member>

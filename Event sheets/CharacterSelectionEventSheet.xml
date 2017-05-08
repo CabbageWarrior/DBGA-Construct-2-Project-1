@@ -336,7 +336,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="788765551092454">
+                                <event-block disabled="1" sid="788765551092454">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="555545355973725" type="Keyboard">
                                             <param id="0" name="Key">38 (Up arrow)</param>
@@ -466,7 +466,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="270466784654511">
+                                <event-block disabled="1" sid="270466784654511">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="596307724274859" type="Keyboard">
                                             <param id="0" name="Key">40 (Down arrow)</param>
@@ -596,7 +596,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="372688587981548">
+                                <event-block disabled="1" sid="372688587981548">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="629155810997135" type="Keyboard">
                                             <param id="0" name="Key">32 (Barra Spaziatrice)</param>
@@ -782,7 +782,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="651994665921112">
+                                <event-block disabled="1" sid="651994665921112">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="228240152422053" type="Keyboard">
                                             <param id="0" name="Key">27 (Esc)</param>
@@ -795,7 +795,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="566226452453292">
+                                        <event-block disabled="1" sid="566226452453292">
                                             <conditions>
                                                 <condition id="-8" name="Is boolean instance variable set" sid="207530665177670" type="CharacterSelectorText">
                                                     <param id="0" name="Instance variable">IsConfirmed</param>
@@ -808,7 +808,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="436821651458479">
+                                        <event-block disabled="1" sid="436821651458479">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="744378524141400" type="System" />
                                             </conditions>
@@ -1006,7 +1006,7 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block sid="179578466145003">
+                                <event-block disabled="1" sid="179578466145003">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="367359663002541" type="Keyboard">
                                             <param id="0" name="Key">17 (Ctrl)</param>
@@ -1027,7 +1027,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="595755486854991">
+                                        <event-block disabled="1" sid="595755486854991">
                                             <conditions>
                                                 <condition id="-9" name="Is visible" sid="635646787957257" type="CharacterDetailBackground" />
                                             </conditions>
@@ -1038,7 +1038,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="492458267159130">
+                                        <event-block disabled="1" sid="492458267159130">
                                             <conditions>
                                                 <condition id="-22" name="Else" sid="285518004954492" type="System" />
                                             </conditions>

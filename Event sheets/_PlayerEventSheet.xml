@@ -17,9 +17,9 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-group description="" sid="804482911679583" title="Keyboard for test">
+                        <event-group description="" disabled="1" sid="804482911679583" title="Keyboard for test">
                             <sub-events>
-                                <event-block sid="187508162472012">
+                                <event-block disabled="1" sid="187508162472012">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="676027546561435" type="Player">
                                             <param id="0" name="Instance variable">PlayerNumber</param>
@@ -29,9 +29,9 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-group description="" sid="995306926476441" title="Keyboard Player Movement">
+                                        <event-group description="" disabled="1" sid="995306926476441" title="Keyboard Player Movement">
                                             <sub-events>
-                                                <event-block sid="387726888950958">
+                                                <event-block disabled="1" sid="387726888950958">
                                                     <conditions>
                                                         <condition id="2" name="Key is down" sid="474601503672949" type="Keyboard">
                                                             <param id="0" name="Key">37 (Left arrow)</param>
@@ -44,7 +44,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="845449834470284">
+                                                <event-block disabled="1" sid="845449834470284">
                                                     <conditions>
                                                         <condition id="2" name="Key is down" sid="426391747409127" type="Keyboard">
                                                             <param id="0" name="Key">39 (Right arrow)</param>
@@ -57,7 +57,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="952306974754106">
+                                                <event-block disabled="1" sid="952306974754106">
                                                     <conditions>
                                                         <condition id="2" name="Key is down" sid="282048831461580" type="Keyboard">
                                                             <param id="0" name="Key">38 (Up arrow)</param>
@@ -70,7 +70,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="541013457559192">
+                                                <event-block disabled="1" sid="541013457559192">
                                                     <conditions>
                                                         <condition id="2" name="Key is down" sid="913455560083781" type="Keyboard">
                                                             <param id="0" name="Key">40 (Down arrow)</param>
@@ -85,7 +85,7 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-group>
-                                        <event-block sid="487546579072292">
+                                        <event-block disabled="1" sid="487546579072292">
                                             <conditions>
                                                 <condition id="0" name="On key pressed" sid="440077783586222" type="Keyboard">
                                                     <param id="0" name="Key">16 (Maiusc)</param>
@@ -98,7 +98,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="680062188740543">
+                                        <event-block disabled="1" sid="680062188740543">
                                             <conditions>
                                                 <condition id="0" name="On key pressed" sid="391962253875357" type="Keyboard">
                                                     <param id="0" name="Key">17 (Ctrl)</param>
@@ -111,7 +111,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="200480248078845">
+                                        <event-block disabled="1" sid="200480248078845">
                                             <conditions>
                                                 <condition id="0" name="On key pressed" sid="757020458655553" type="Keyboard">
                                                     <param id="0" name="Key">32 (Barra Spaziatrice)</param>

@@ -159,7 +159,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="733074329118109">
+                                <event-block disabled="1" sid="733074329118109">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="730646311160492" type="Keyboard">
                                             <param id="0" name="Key">38 (Up arrow)</param>
@@ -229,7 +229,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="783253902937678">
+                                <event-block disabled="1" sid="783253902937678">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="736454472200499" type="Keyboard">
                                             <param id="0" name="Key">40 (Down arrow)</param>
@@ -299,7 +299,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="729730514520994">
+                                <event-block disabled="1" sid="729730514520994">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="341650795777477" type="Keyboard">
                                             <param id="0" name="Key">32 (Barra Spaziatrice)</param>
@@ -381,7 +381,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="946111005699737">
+                                <event-block disabled="1" sid="946111005699737">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="773012443855160" type="Keyboard">
                                             <param id="0" name="Key">27 (Esc)</param>
