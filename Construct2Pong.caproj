@@ -714,6 +714,83 @@
                     <instance-variable name="ValueType" sid="420020800858100" type="string" />
                 </instance-variables>
             </object-type>
+            <object-type name="CharacterDetailInGameImage" sid="288060794192833">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="CharacterDetailNumber" sid="761267561606205" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736846276563184" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.497297">
+                            <image-point name="SelectorBGPoint" x="-2.1" y="0.497297" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.516667" hotspotY="0.497297" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Immagini Barrette\IronMan.JPG">
+                            <collision-poly>
+                                <point x="0.266667" y="0.167568" />
+                                <point x="0.75" y="0.167568" />
+                                <point x="0.75" y="0.827027" />
+                                <point x="0.266667" y="0.827027" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502703" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Immagini Barrette\Tank Ironman team.JPG">
+                            <collision-poly>
+                                <point x="0.133333" y="0.00540541" />
+                                <point x="0.866667" y="0.00540541" />
+                                <point x="0.866667" y="0.994595" />
+                                <point x="0.133333" y="0.994595" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.497297" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Immagini Barrette\Lethal Ironman team.JPG">
+                            <collision-poly>
+                                <point x="0" y="0.248649" />
+                                <point x="1" y="0.248649" />
+                                <point x="1" y="0.745946" />
+                                <point x="0" y="0.745946" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.516667" hotspotY="0.502703" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Immagini Barrette\Runner Ironman team.JPG">
+                            <collision-poly>
+                                <point x="0.333333" y="0.172973" />
+                                <point x="0.683333" y="0.172973" />
+                                <point x="0.683333" y="0.827027" />
+                                <point x="0.333333" y="0.827027" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502703" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Immagini Barrette\Captain america.JPG">
+                            <collision-poly>
+                                <point x="0.25" y="0.167568" />
+                                <point x="0.75" y="0.167568" />
+                                <point x="0.75" y="0.832432" />
+                                <point x="0.25" y="0.832432" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.516667" hotspotY="0.502703" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Immagini Barrette\Tank Captain team.JPG">
+                            <collision-poly>
+                                <point x="0.116667" y="0" />
+                                <point x="0.9" y="0" />
+                                <point x="0.9" y="1" />
+                                <point x="0.116667" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.497297" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Immagini Barrette\Lethal Captain team.JPG">
+                            <collision-poly>
+                                <point x="0" y="0.248649" />
+                                <point x="1" y="0.248649" />
+                                <point x="1" y="0.745946" />
+                                <point x="0" y="0.745946" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.516667" hotspotY="0.497297" original-source="C:\Users\dbga_53\Google Drive\Lavoro\DBGA\Progetti di gruppo\Construct 2 - Pong\Immagini Barrette\Runner Captain team.JPG">
+                            <collision-poly>
+                                <point x="0.333333" y="0.167568" />
+                                <point x="0.683333" y="0.167568" />
+                                <point x="0.683333" y="0.827027" />
+                                <point x="0.333333" y="0.827027" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="Keyboard" sid="542028558954637">
             <plugin id="Keyboard" />

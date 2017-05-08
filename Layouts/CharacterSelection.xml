@@ -1397,7 +1397,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.200000003</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="CharacterDetailMinorBackground" uid="133">
@@ -1422,7 +1422,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.200000003</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="CharacterDetailMinorBackground" uid="134">
@@ -1447,7 +1447,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.200000003</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="CharacterDetailMinorBackground" uid="135">
@@ -1472,7 +1472,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.200000003</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="CharacterDetailMinorBackground" uid="136">
@@ -1497,7 +1497,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.200000003</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="CharacterDetailMinorBackground" uid="137">
@@ -1522,7 +1522,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.200000003</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="CharacterDetailMinorBackground" uid="138">
@@ -1547,7 +1547,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.200000003</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="CharacterDetailMinorBackground" uid="139">
@@ -1572,7 +1572,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.200000003</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="CharacterDetailParamTitle" uid="140">
@@ -1580,7 +1580,7 @@
                         <text>Health:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1610,7 +1610,7 @@
                         <text>Speed:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1640,7 +1640,7 @@
                         <text>Health:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1670,7 +1670,7 @@
                         <text>Speed:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1697,10 +1697,10 @@
                 </instance>
                 <instance type="CharacterDetailParamTitle" uid="145">
                     <properties>
-                        <text>Power:</text>
+                        <text>Shot:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1730,7 +1730,7 @@
                         <text>Health:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1760,7 +1760,7 @@
                         <text>Speed:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1787,10 +1787,10 @@
                 </instance>
                 <instance type="CharacterDetailParamTitle" uid="148">
                     <properties>
-                        <text>Power:</text>
+                        <text>Shot:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1820,7 +1820,7 @@
                         <text>Health:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1850,7 +1850,7 @@
                         <text>Speed:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1877,10 +1877,10 @@
                 </instance>
                 <instance type="CharacterDetailParamTitle" uid="151">
                     <properties>
-                        <text>Power:</text>
+                        <text>Shot:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1907,10 +1907,10 @@
                 </instance>
                 <instance type="CharacterDetailParamTitle" uid="152">
                     <properties>
-                        <text>Power:</text>
+                        <text>Shot:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1940,7 +1940,7 @@
                         <text>Health:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -1970,7 +1970,7 @@
                         <text>Speed:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2000,7 +2000,7 @@
                         <text>Health:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2030,7 +2030,7 @@
                         <text>Speed:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2057,10 +2057,10 @@
                 </instance>
                 <instance type="CharacterDetailParamTitle" uid="157">
                     <properties>
-                        <text>Power:</text>
+                        <text>Shot:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2090,7 +2090,7 @@
                         <text>Health:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2120,7 +2120,7 @@
                         <text>Speed:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2147,10 +2147,10 @@
                 </instance>
                 <instance type="CharacterDetailParamTitle" uid="160">
                     <properties>
-                        <text>Power:</text>
+                        <text>Shot:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2180,7 +2180,7 @@
                         <text>Health:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2210,7 +2210,7 @@
                         <text>Speed:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2237,10 +2237,10 @@
                 </instance>
                 <instance type="CharacterDetailParamTitle" uid="163">
                     <properties>
-                        <text>Power:</text>
+                        <text>Shot:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2267,10 +2267,10 @@
                 </instance>
                 <instance type="CharacterDetailParamTitle" uid="164">
                     <properties>
-                        <text>Power:</text>
+                        <text>Shot:</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2300,7 +2300,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2331,7 +2331,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2362,7 +2362,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2393,7 +2393,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2424,7 +2424,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2455,7 +2455,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2486,7 +2486,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2517,7 +2517,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2548,7 +2548,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2579,7 +2579,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2610,7 +2610,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2641,7 +2641,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2672,7 +2672,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2703,7 +2703,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2734,7 +2734,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2765,7 +2765,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2796,7 +2796,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2827,7 +2827,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2858,7 +2858,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2889,7 +2889,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2920,7 +2920,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2951,7 +2951,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -2982,7 +2982,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -3013,7 +3013,7 @@
                         <text>0</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-32,400,0</font>
-                        <color>255,255,255</color>
+                        <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -3062,6 +3062,206 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterDetailInGameImage" uid="192">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>1</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CharacterDetailNumber>1</CharacterDetailNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>725</x>
+                        <y>375</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>185</height>
+                        <depth>0</depth>
+                        <hotspotX>0.516666651</hotspotX>
+                        <hotspotY>0.497297287</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterDetailInGameImage" uid="193">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>2</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CharacterDetailNumber>2</CharacterDetailNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>725</x>
+                        <y>725</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>185</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.502702713</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterDetailInGameImage" uid="194">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>3</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CharacterDetailNumber>3</CharacterDetailNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>725</x>
+                        <y>1075</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>185</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.497297287</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterDetailInGameImage" uid="195">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>4</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CharacterDetailNumber>4</CharacterDetailNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>725</x>
+                        <y>1425</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>185</height>
+                        <depth>0</depth>
+                        <hotspotX>0.516666651</hotspotX>
+                        <hotspotY>0.502702713</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterDetailInGameImage" uid="196">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>5</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CharacterDetailNumber>5</CharacterDetailNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2575</x>
+                        <y>375</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>185</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.502702713</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterDetailInGameImage" uid="197">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>6</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CharacterDetailNumber>6</CharacterDetailNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2575</x>
+                        <y>725</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>185</height>
+                        <depth>0</depth>
+                        <hotspotX>0.516666651</hotspotX>
+                        <hotspotY>0.502702713</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterDetailInGameImage" uid="198">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>7</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CharacterDetailNumber>7</CharacterDetailNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2575</x>
+                        <y>1075</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>185</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.497297287</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CharacterDetailInGameImage" uid="199">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>8</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CharacterDetailNumber>8</CharacterDetailNumber>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2575</x>
+                        <y>1425</y>
+                        <z>0</z>
+                        <width>60</width>
+                        <height>185</height>
+                        <depth>0</depth>
+                        <hotspotX>0.516666651</hotspotX>
+                        <hotspotY>0.497297287</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

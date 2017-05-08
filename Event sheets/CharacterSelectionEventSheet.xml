@@ -162,7 +162,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="916632228290793" type="GameMode">
-                            <param id="0" name="Text">&quot;Infinite mode!&quot;</param>
+                            <param id="0" name="Text">&quot;Single match!&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1524,6 +1524,20 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
+                                                <event-block sid="327567644044416">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="224308822630747" type="CharacterDetailInGameImage">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="821028098427057" type="CharacterDetailInGameImage">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                                 <event-block sid="821483687946730">
                                                     <conditions>
                                                         <condition id="-7" name="Compare instance variable" sid="685437092597941" type="CharacterDetailTitle">
@@ -1611,6 +1625,20 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-15" name="Set visible" sid="701486676549329" type="CharacterDetailMinorBackground">
+                                                            <param id="0" name="Visibility">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="934661908839526">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="321409743727158" type="CharacterDetailInGameImage">
+                                                            <param id="0" name="Instance variable">CharacterDetailNumber</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">CharacterDetailBackground.CharacterDetailNumber</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="115521739469341" type="CharacterDetailInGameImage">
                                                             <param id="0" name="Visibility">0</param>
                                                         </action>
                                                     </actions>

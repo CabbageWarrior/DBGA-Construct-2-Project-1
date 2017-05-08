@@ -398,7 +398,7 @@
                 </instance>
                 <instance type="IntroMenuText" uid="188">
                     <properties>
-                        <text>Play 2vs2 in Infinite mode!</text>
+                        <text>Play 2vs2 single match!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>
