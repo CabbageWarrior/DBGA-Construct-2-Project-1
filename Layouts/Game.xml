@@ -575,7 +575,7 @@
                         <LastTeam>0</LastTeam>
                         <LastPlayerNumber>0</LastPlayerNumber>
                         <LastPlayerUID>0</LastPlayerUID>
-                        <LastMovementAngle>0</LastMovementAngle>
+                        <LastMovementAngle>180</LastMovementAngle>
                         <LastSpeed>0</LastSpeed>
                         <DefaultSpeed>800</DefaultSpeed>
                         <DefaultDamage>1</DefaultDamage>

@@ -660,26 +660,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <comment>Power Up Spiderman.</comment>
-                        <event-block sid="387942688545548">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="274544017249419" type="System" />
-                                <condition id="-8" name="Is boolean instance variable set" sid="220484608710988" type="Player">
-                                    <param id="0" name="Instance variable">PowerUpSpiderman</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="810201881216445" type="Player">
-                                    <param id="0" name="Instance variable">SkillGrabBallIsGrabbing</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="834700120005515" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerStartGrabbing&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.UID{###}Ball.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <comment>Sono nel tempo di invulnerabilità del lanciatore.</comment>
                         <event-block sid="669965301893714">
                             <conditions>
@@ -699,6 +679,34 @@
                                 <action id="-10" name="Set value" sid="543604960086751" type="Ball">
                                     <param id="0" name="Instance variable">LastMovementAngle</param>
                                     <param id="1" name="Value">Self.Bullet.AngleOfMotion</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Power Up Spiderman.</comment>
+                        <event-block sid="387942688545548">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="274544017249419" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="220484608710988" type="Player">
+                                    <param id="0" name="Instance variable">PowerUpSpiderman</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="810201881216445" type="Player">
+                                    <param id="0" name="Instance variable">SkillGrabBallIsGrabbing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="779320627292409" type="Player">
+                                    <param id="0" name="Instance variable">SkillGrabBallEnabled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="879082214905538" type="Player">
+                                    <param id="0" name="Instance variable">SkillGrabBallTryingToGrab</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="834700120005515" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerStartGrabbing&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID{###}Ball.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -879,13 +887,17 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block bookmark="1" sid="719432091316446">
+                                <event-block sid="719432091316446">
                                     <conditions>
                                         <condition id="-14" name="Pick by unique ID" sid="841709374492465" type="Ball">
                                             <param id="0" name="Unique ID">BallStayingUID</param>
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="-10" name="Set value" sid="691659761044645" type="Ball">
+                                            <param id="0" name="Instance variable">LastMovementAngle</param>
+                                            <param id="1" name="Value">BallMovingAngle</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="477303187479824" type="Function">
                                             <param id="0" name="Name">&quot;PlayerReleaseBall&quot;</param>
                                             <param id="1" name="Parameter {n}">Ball.LastPlayerUID{###}0</param>
