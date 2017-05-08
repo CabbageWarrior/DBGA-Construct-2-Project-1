@@ -164,6 +164,9 @@
                         <action id="0" name="Set text" sid="916632228290793" type="GameMode">
                             <param id="0" name="Text">&quot;Single match!&quot;</param>
                         </action>
+                        <action id="0" name="Set text" sid="168784629483582" type="GameMode">
+                            <param id="0" name="Text">&quot;Win best of &quot; &amp; GameTypeBetterOfX &amp; &quot; series!&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="813040819935687">
@@ -172,7 +175,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="874904490761225" type="GameMode">
-                            <param id="0" name="Text">&quot;Win &quot; &amp; (floor(GameTypeBetterOfX / 2) + 1) &amp; &quot; matches out of &quot; &amp; GameTypeBetterOfX &amp; &quot;!&quot;</param>
+                            <param id="0" name="Text">&quot;Win best of &quot; &amp; GameTypeBetterOfX &amp; &quot; series!&quot;</param>
                         </action>
                     </actions>
                 </event-block>
