@@ -7,6 +7,7 @@
         <variable constant="0" name="HowManyTeam1" sid="996746662363840" static="0" type="number">0</variable>
         <variable constant="0" name="HowManyTeam2" sid="282976318598436" static="0" type="number">0</variable>
         <variable comment="0: No; 1: Sì." constant="0" name="IsFinished" sid="748547435721753" static="0" type="number">0</variable>
+        <variable constant="0" name="IsEntireChallengeEnded" sid="564987548607692" static="0" type="number">0</variable>
         <variable comment="1-4" constant="0" name="PausedByPlayerNumber" sid="691139144864681" static="0" type="number">0</variable>
         <include>_GlobalEventSheet</include>
         <include>_PlayerEventSheet</include>
@@ -52,6 +53,29 @@
                 </action>
             </actions>
             <sub-events>
+                <event-block sid="683159321117559">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="253332273168255" type="System">
+                            <param id="0" name="Variable">IsEntireChallengeEnded</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="466631007589785" type="System">
+                            <param id="0" name="Variable">Team1Score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="957863391753627" type="System">
+                            <param id="0" name="Variable">Team2Score</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="592838570046395" type="System">
+                            <param id="0" name="Variable">IsEntireChallengeEnded</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="768701411013893">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="595494405577780" type="ScoreText">
@@ -1676,6 +1700,62 @@
                                                     <param id="0" name="Text">Team2Score</param>
                                                 </action>
                                             </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Verifica fine challenge.</comment>
+                                <event-block sid="423705944777103">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="439861428864322" type="System">
+                                            <param id="0" name="Variable">GameTypeBetterOfX</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="227120506988078">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="298077997117456" type="System">
+                                                    <param id="0" name="Variable">Team1Score</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">GameTypeBetterOfX / 2</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="612015140286376" type="System">
+                                                    <param id="0" name="Variable">Team2Score</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">GameTypeBetterOfX / 2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="414395138925625" type="System">
+                                                    <param id="0" name="Variable">IsEntireChallengeEnded</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block bookmark="1" sid="836082845982807">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="596195617222362" type="System">
+                                                            <param id="0" name="Variable">Team1Score</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">GameTypeBetterOfX / 2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                                <event-block sid="141450797892285">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="965778338472448" type="System" />
+                                                        <condition id="-14" name="Compare variable" sid="888354692187769" type="System">
+                                                            <param id="0" name="Variable">Team2Score</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">GameTypeBetterOfX / 2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>

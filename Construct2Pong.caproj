@@ -895,6 +895,9 @@
                 <instance-variable name="Team" sid="304091755927415" type="number" />
             </instance-variables>
         </object-type>
+        <object-type name="GameMode" sid="434416897240526">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="SpawnPoint" plugin-id="Sprite" sid="552868307339780">
@@ -910,6 +913,7 @@
                 <member>CharacterRoleText</member>
                 <member>CharacterSelectorText</member>
                 <member>EndGameMenuText</member>
+                <member>GameMode</member>
                 <member>GameStory</member>
                 <member>GameTitle</member>
                 <member>GameTutorialText</member>

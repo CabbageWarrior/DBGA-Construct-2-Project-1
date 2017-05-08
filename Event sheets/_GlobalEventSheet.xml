@@ -27,6 +27,7 @@
         <variable constant="0" name="Human_4_SelectedCharacter" sid="849802142424756" static="0" type="number">6</variable>
         <variable constant="0" name="Team1Score" sid="708607705493034" static="0" type="number">0</variable>
         <variable constant="0" name="Team2Score" sid="581961243140851" static="0" type="number">0</variable>
+        <variable comment="0: Infinite, N: the player with &gt;50% wins is the winner." constant="0" name="GameTypeBetterOfX" sid="949260005840429" static="0" type="number">0</variable>
         <event-block sid="310475909449286">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="693286711239400" type="System" />

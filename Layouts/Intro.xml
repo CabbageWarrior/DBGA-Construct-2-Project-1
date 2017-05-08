@@ -79,13 +79,13 @@
                     </properties>
                     <instance-variables>
                         <Order>1</Order>
-                        <Value>Play</Value>
+                        <Value>PlayBestOf5</Value>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1525</x>
-                        <y>675</y>
+                        <x>925</x>
+                        <y>-250</y>
                         <z>0</z>
                         <width>300</width>
                         <height>150</height>
@@ -104,14 +104,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Order>2</Order>
+                        <Order>3</Order>
                         <Value>Tutorial</Value>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1525</x>
-                        <y>775</y>
+                        <x>1775</x>
+                        <y>-250</y>
                         <z>0</z>
                         <width>300</width>
                         <height>150</height>
@@ -130,14 +130,14 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Order>3</Order>
+                        <Order>4</Order>
                         <Value>Quit</Value>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1525</x>
-                        <y>900</y>
+                        <x>2225</x>
+                        <y>-250</y>
                         <z>0</z>
                         <width>300</width>
                         <height>150</height>
@@ -150,9 +150,9 @@
                 </instance>
                 <instance type="IntroMenuText" uid="17">
                     <properties>
-                        <text>Play 2vs2!</text>
+                        <text>Play 2vs2 best out of 5!</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-48,400,0</font>
+                        <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -175,11 +175,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1525</x>
-                        <y>687.5</y>
+                        <x>1512.5</x>
+                        <y>712.5</y>
                         <z>0</z>
-                        <width>525</width>
-                        <height>125</height>
+                        <width>400</width>
+                        <height>175</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -191,46 +191,7 @@
                     <properties>
                         <text>Tutorial</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-48,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <Order>2</Order>
-                    </instance-variables>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0</blue>
-                                <green>0</green>
-                                <red>0</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1525</x>
-                        <y>775</y>
-                        <z>0</z>
-                        <width>350</width>
-                        <height>100</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="IntroMenuText" uid="19">
-                    <properties>
-                        <text>Quit</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-48,400,0</font>
+                        <font>Arial,-37,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -254,7 +215,46 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1525</x>
-                        <y>875</y>
+                        <y>1000</y>
+                        <z>0</z>
+                        <width>350</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="IntroMenuText" uid="19">
+                    <properties>
+                        <text>Quit</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-37,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <Order>4</Order>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1525</x>
+                        <y>1100</y>
                         <z>0</z>
                         <width>250</width>
                         <height>125</height>
@@ -280,7 +280,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1000</x>
+                        <x>475</x>
                         <y>-250</y>
                         <z>0</z>
                         <width>351</width>
@@ -392,6 +392,71 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="IntroMenuText" uid="188">
+                    <properties>
+                        <text>Play 2vs2 in Infinite mode!</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-37,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <Order>2</Order>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0</blue>
+                                <green>0</green>
+                                <red>0</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1525</x>
+                        <y>862.5</y>
+                        <z>0</z>
+                        <width>325</width>
+                        <height>200</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="IntroMenuButton" uid="189">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Order>2</Order>
+                        <Value>PlayInfinite</Value>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1350</x>
+                        <y>-250</y>
+                        <z>0</z>
+                        <width>300</width>
+                        <height>150</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

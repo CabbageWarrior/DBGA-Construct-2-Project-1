@@ -152,6 +152,30 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="583315115073653">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="825144319624927" type="System">
+                            <param id="0" name="Variable">GameTypeBetterOfX</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="916632228290793" type="GameMode">
+                            <param id="0" name="Text">&quot;Infinite mode!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="813040819935687">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="279159202694853" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="874904490761225" type="GameMode">
+                            <param id="0" name="Text">&quot;Win &quot; &amp; (floor(GameTypeBetterOfX / 2) + 1) &amp; &quot; matches out of &quot; &amp; GameTypeBetterOfX &amp; &quot;!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="656491096926398">
