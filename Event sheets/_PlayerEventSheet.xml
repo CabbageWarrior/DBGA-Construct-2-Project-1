@@ -1023,7 +1023,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="BlinkSine" id="1" name="Set period" sid="555995028283928" type="Ball">
-                                    <param id="0" name="Period">Ball.BlinkSeconds / 2</param>
+                                    <param id="0" name="Period">Ball.BlinkSeconds / 4</param>
                                 </action>
                                 <action id="-12" name="Subtract from" sid="472433241880934" type="Ball">
                                     <param id="0" name="Instance variable">BlinkSeconds</param>
@@ -1507,6 +1507,15 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="918393146172266">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Call function" sid="573286102661678" type="Function">
+                                    <param id="0" name="Name">&quot;PlayerInitializeProperties&quot;</param>
+                                    <param id="1" name="Parameter {n}">Player.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="859365479808689">
                             <conditions />
                             <actions>
@@ -1532,15 +1541,6 @@
                                 </action>
                                 <action id="-5" name="Set width" sid="880709914049226" type="PlayerGrabCollider">
                                     <param id="0" name="Width">Player.Width + CHARACTER_GRAB_COLLISION_RANGE * 2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="918393146172266">
-                            <conditions />
-                            <actions>
-                                <action id="0" name="Call function" sid="573286102661678" type="Function">
-                                    <param id="0" name="Name">&quot;PlayerInitializeProperties&quot;</param>
-                                    <param id="1" name="Parameter {n}">Player.UID</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1951,7 +1951,7 @@
                                         <condition id="-22" name="Else" sid="325916525813254" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action disabled="1" id="-10" name="Set value" sid="543032960890722" type="Ball">
+                                        <action id="-10" name="Set value" sid="543032960890722" type="Ball">
                                             <param id="0" name="Instance variable">LastMovementAngle</param>
                                             <param id="1" name="Value">Player.Team = 1 ? 0 : 180</param>
                                         </action>
